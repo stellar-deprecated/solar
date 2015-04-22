@@ -1,0 +1,8 @@
+a, a:link, a:active, a:hover, a:visited {
+  color: inherit;
+}
+
+// When styling links, use `a, a:link`
+a, a:link {
+  text-decoration: underline;
+}
