@@ -1,0 +1,30 @@
+.kelp-flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 12;
+
+  border: 3px solid lightblue;
+}
+.kelp-flex-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 12;
+
+  border: 3px solid orange;
+}
+
+.kelp-flex { flex: 12; }
+.kelp-flex-2 { flex: 2; }
+.kelp-flex-4 { flex: 4; }
+.kelp-flex-6 { flex: 6; }
+.kelp-flex-8 { flex: 8; }
+.kelp-flex-10 { flex: 10; }
+.kelp-flex-12 { flex: 12; }
+
+// I think we should only limit it to numbers less than 12
+// .kelp-flex-18 { flex: 18; }
+// .kelp-flex-24 { flex: 24; }
+// .kelp-flex-36 { flex: 36; }
+// .kelp-flex-48 { flex: 48; }

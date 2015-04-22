@@ -1,0 +1,9 @@
+$kelp-colors: (
+  primary: #000,
+  secondary: #777777,
+);
+
+// Feature: add support for tint and shade (mix)
+@function kelp-color($color-name) {
+  @return map-get($kelp-colors, $color-name)
+}

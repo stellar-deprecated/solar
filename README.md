@@ -68,4 +68,5 @@ Flexbox with a default basis of 12. Here is an example of how it would look like
 Classes:
 - kelp-flex-row
 - kelp-flex-col
-- kelp-flex-[n] (where n is flex-basis; available for evens below 12 and some above 12: 2, 4, 6, 8, 10, 12, 18, 24, 36)
+- kelp-flex-box
+- kelp-flex-box-[n] (where n is flex-basis; available for evens below 12 and some above 12: 2, 4, 6, 8, 10, 12, 18, 24, 36)
