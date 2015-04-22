@@ -1,4 +1,17 @@
+p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
 .button {
-  border: 1px solid kelp-color(primary);
+  display: inline-block;
   padding: 8px 16px;
+  margin: 0;
+  border: 1px solid kelp-color(primary);
+
+  background: none;
+}
+
+.button.is-disabled {
+  cursor: not-allowed;
 }

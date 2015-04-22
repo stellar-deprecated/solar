@@ -4,8 +4,7 @@ This is a roadmap of the kelp framework. Roadmap currently centered around devel
 Do not proceed on any theme work until it is actually implemented in kelp
 
 ## v0.1: mcs mvp; kelp beginnings
-- [ ] border box
-- [ ] buttons
+- [x] buttons
 - [ ] webapp chrome (with sticky bottoms)
 - [ ] flex inputs
 
