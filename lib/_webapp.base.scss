@@ -1,11 +1,11 @@
 @mixin kelp-webApp() {
-  position: absolute;
+  @include kelp-flex-col();
+
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-
-  @include kelp-flex-col();
 }
 
 @mixin kelp-webApp-bar() {
@@ -14,6 +14,7 @@
 
 @mixin kelp-webApp-content() {
   @include kelp-flex-grow(12);
+
   height: 0;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;

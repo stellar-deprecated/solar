@@ -57,6 +57,7 @@ This will later be moved out to its own repository. For now, it will remain in h
 - Developer might not have access to html code (unable to add/remove classes)
 - Developer either familiar with kelp or has time to learn about kelp (not for hackathons)
 - Bandwidth is somewhat cheap (it's fine to have kelp styles mirror lib for styling with classes)
+- CSS class namespace is a scarce commodity (careful naming of classes)
 
 ### Layout
 #### kelp-flex
