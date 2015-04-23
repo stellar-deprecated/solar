@@ -1,0 +1,36 @@
+@mixin kelp-webApp() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  @include kelp-flex-col();
+}
+
+@mixin kelp-webApp-bar() {
+  @include kelp-flex-row();
+}
+
+@mixin kelp-webApp-content() {
+  @include kelp-flex-grow(12);
+  height: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+// tab bar
+@mixin kelp-webApp-tabBar() {
+  @include kelp-flex-row();
+  list-style-type: none;
+
+  li {
+    @include kelp-flex-item();
+    display: inline-block;
+    text-align: center;
+  }
+
+  li a {
+    width: 100%;
+  }
+}

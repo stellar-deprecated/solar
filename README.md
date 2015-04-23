@@ -53,6 +53,11 @@ Each kelp module may add styles and the order of which files come first is sensi
 ## css component documentation
 This will later be moved out to its own repository. For now, it will remain in here as a draft.
 
+## Designed with the assumptions
+- Developer might not have access to html code (unable to add/remove classes)
+- Developer either familiar with kelp or has time to learn about kelp (not for hackathons)
+- Bandwidth is somewhat cheap (it's fine to have kelp styles mirror lib for styling with classes)
+
 ### Layout
 #### kelp-flex
 Flexbox with a default basis of 12. Here is an example of how it would look like with the basis set

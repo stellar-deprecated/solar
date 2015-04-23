@@ -1,21 +1,18 @@
-.kelp-flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex: 12;
 
-  border: 3px solid lightblue;
+// flex parents
+.kelp-flex-row {
+  @include kelp-flex-row(12);
 }
 .kelp-flex-col {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex: 12;
-
-  border: 3px solid orange;
+  @include kelp-flex-col(12);
 }
 
-.kelp-flex { flex: 12; }
+// flex children
+.kelp-flex-grow {
+  flex-grow:  12;
+}
+
+.kelp-flex-item { @include kelp-flex-item(); }
 .kelp-flex-2 { flex: 2; }
 .kelp-flex-4 { flex: 4; }
 .kelp-flex-6 { flex: 6; }

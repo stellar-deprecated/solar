@@ -1,0 +1,15 @@
+.kelp-webApp {
+  @include kelp-webApp();
+}
+
+.kelp-webApp-bar {
+  @include kelp-webApp();
+}
+
+.kelp-webApp-content {
+  @include kelp-webApp();
+}
+
+.kelp-webApp-tabBar {
+  @include kelp-webApp-tabBar();
+}

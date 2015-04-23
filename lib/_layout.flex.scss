@@ -1,0 +1,28 @@
+
+
+// A basis should be passed in if the row is to double as a kelp-flex-item
+@mixin kelp-flex-row($basis:null) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @if ($basis) {
+    flex: $basis;
+  }
+}
+
+@mixin kelp-flex-col($basis:null) {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @if ($basis) {
+    flex: $basis;
+  }
+}
+
+@mixin kelp-flex-item($basis:12) {
+  flex: $basis;
+}
+
+@mixin kelp-flex-grow($basis:12) {
+  flex-grow: $basis;
+}

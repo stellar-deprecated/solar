@@ -1,9 +1,22 @@
 $kelp-colors: (
-  primary: #000,
+  primary: lime,
   secondary: #777777,
+
+  // ui elements
+  ui-dark: #444,
+  ui-light: #ccc,
 );
 
 // Feature: add support for tint and shade (mix)
 @function kelp-color($color-name) {
-  @return map-get($kelp-colors, $color-name)
+  @return map-get($kelp-colors, $color-name);
+}
+
+
+// TODO: consider better name for tint/shade
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
 }
