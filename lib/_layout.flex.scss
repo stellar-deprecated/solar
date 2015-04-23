@@ -4,7 +4,6 @@
 @mixin kelp-flex-row($basis:null) {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   @if ($basis) {
     flex: $basis;
   }
@@ -13,7 +12,6 @@
 @mixin kelp-flex-col($basis:null) {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   @if ($basis) {
     flex: $basis;
   }
