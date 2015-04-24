@@ -50,9 +50,6 @@ Each kelp module may add styles and the order of which files come first is sensi
 ## File Conventions
 - Each library should contain an `_index.scss` file as its entry point.
 
-## css component documentation
-This will later be moved out to its own repository. For now, it will remain in here as a draft.
-
 ## Designed with the assumptions
 - Developer might not have access to html code (unable to add/remove classes)
 - Developer either familiar with kelp or has time to learn about kelp (not for hackathons)
@@ -78,6 +75,12 @@ Cons:
 ### Mixins vs classes
 - There currently is no way to have inheritance of mixins through sass. That would require a custom preprocessor module to be written
 
+
+## lost grid
+Kelp also uses lost, a postcss grid system.
+
+## css component documentation
+This will later be moved out to its own repository. For now, it will remain in here as a draft.
 
 ### Layout
 #### kelp-flex
