@@ -59,6 +59,26 @@ This will later be moved out to its own repository. For now, it will remain in h
 - Bandwidth is somewhat cheap (it's fine to have kelp styles mirror lib for styling with classes)
 - CSS class namespace is a scarce commodity (careful naming of classes)
 
+## Design decisions and rationale
+
+### Developers will have access to html most of the time
+Developers usually have access to html code (chrome of the app). However, there are cases when they will not (cross-organizational widgets). In these cases though, the developers shouldn't really be changing the widget and if they do need to make drastic changes, they can fork them.
+
+### App specific css is necessary?
+
+### One global organizational theme
+Pros:
+- simple
+
+Cons:
+- One massive theme repository to manage changes. one feature change requires changes in two repositories
+
+### Widgets should use both the generic class names
+
+### Mixins vs classes
+- There currently is no way to have inheritance of mixins through sass. That would require a custom preprocessor module to be written
+
+
 ### Layout
 #### kelp-flex
 Flexbox with a default basis of 12. Here is an example of how it would look like with the basis set

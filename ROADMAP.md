@@ -5,7 +5,7 @@ Do not proceed on any theme work until it is actually implemented in kelp
 
 ## v0.1: mcs mvp; kelp beginnings
 - [x] buttons
-- [ ] webapp chrome (with sticky bottoms)
+- [x] webapp chrome (with sticky bottoms)
 - [ ] flex inputs
 
 ## v?: widgetizable
