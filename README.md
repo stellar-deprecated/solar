@@ -1,16 +1,31 @@
 # kelp
 
-Kelp is a front-end framework developed specifically for modular apps.
+Kelp is a front-end framework developed specifically for modular apps with cross organization shared widgets.
 
-## 2 minute overview
-### Goals
-- Reusable & cross organizational modularity (adding classes to items not always possible)
-- Mobile first
+## Getting started
+Before writing css on the consumer level (widgets and states), please have look through the style guide and have a general understanding of how kelp works.
+Before writing css on the framework level (core and extensions) or starting a new `kelp` project, please read the architecture overview.
 
-### Conventions
-Kelp is more than just a set of sass files. It is also set of conventions. Kelp modules and consumers should follow the kelp conventions. These conventions are designed to enable developers to write css in a unified, clean, and modular way.
+## Design philosophies/goals
+The design decision of `kelp` has been influenced by these main goals:
+- **Mobile first**: creating a mobile site THEN scaling up to desktop
+- **Unopinionated design core**: including simple unopinionated look and feel for the core
+- **Easy to get started**: favoring simplicity for the 90% of use cases over the 10% complex
+- **Cross organizational**: enabling easy sharing of widgets to work across multiple organizations
+
+## Conventions
+Kelp is more than just a set of sass/js files. It is also set of conventions. Kelp extensions and consumers should follow the kelp conventions. These conventions are designed to enable developers to write css in a unified, clean, and modular way.
 
 These conventions should be keep the css organized while still being easy to understand. Developers new to this framework should be able to write code meaningfully without being bogged down by heavy conventions.
+
+## Architecture
+
+### File architecture
+There are multiple layers in the `kelp` ecosystem. In order from general/global to specific:
+- Core
+- Extensions (including themes)
+- States
+- Widgets
 
 ### Library vs styles
 In the kelp framework, there is a distinction between two sets of files in a module: a library and styles:
@@ -18,12 +33,14 @@ In the kelp framework, there is a distinction between two sets of files in a mod
 - **styles**: a set of sass files that consumes sass functions/mixins/variables and generates output css code
 
 ### Kelp core module
-The core library defines the sass functions and variables that other modules use and extend. This library is also extensively used by the framework.
+The core library defines the sass functions and variables that other extensions use and extend. This library is also extensively used by the framework.
 
 The styles contain the basic framework functionality. It lays out the basic styling and classes.
 
-### Modules and themes
-By default, kelp is the only module used in the kelp framework. Additional extensions can be brought in to add or change functionality. Themes are a type of module that only changes the look and feel of kelp.
+### Extensions and themes
+By default, kelp core is the only thing needed in the kelp framework. Additional extensions can be brought in to add or change functionality. Themes are a type of module that only changes the look and feel of kelp.
+
+Each extension should contain an `_index.scss` file as its entry point in each of it's folder `lib` and `styles`.
 
 ### Packet of libraries
 A packet is a convenient way of calling the kelp libraries used in a project.
@@ -35,67 +52,16 @@ Consumers may need in include multiple kelp libraries at once. Packets simplify 
 In order to use extensions and themes, one must create a custom packet. Projects using gulp can utilize `gulp-kelp-packet` to generate packets.
 
 ### Bundle of styles
-Each kelp module may add styles and the order of which files come first is sensitive. A kelp bundle manages this by compiling all the styles brought by modules into a single kelp bundle file. The `gulp-kelp-bundle` tool is [soon to be] provided to compile the bundle.
+Each kelp module may add styles and the order of which files come first is sensitive. A kelp bundle manages this by compiling all the styles brought by extensions into a single kelp bundle file. The (soon to be written) `gulp-kelp-bundle` tool is provided to compile the bundle.
 
 ### Compilation process
 1. Create the kelp packet.
 2. Compile the kelp bundle, and other css. Each file imports the bundle.
 
 ## CSS Conventions
-### sass function based objects over class based objects
 
-## Design decisions yet to be made
-- How to define widgets on the `kelp` level
+### Build
+kelp uses ruby-sass and postcss for some additional features such as `autoprefixing` for browser compatibility.
 
 ## File Conventions
 - Each library should contain an `_index.scss` file as its entry point.
-
-## Designed with the assumptions
-- Developer might not have access to html code (unable to add/remove classes)
-- Developer either familiar with kelp or has time to learn about kelp (not for hackathons)
-- Bandwidth is somewhat cheap (it's fine to have kelp styles mirror lib for styling with classes)
-- CSS class namespace is a scarce commodity (careful naming of classes)
-
-## Design decisions and rationale
-
-### Developers will have access to html most of the time
-Developers usually have access to html code (chrome of the app). However, there are cases when they will not (cross-organizational widgets). In these cases though, the developers shouldn't really be changing the widget and if they do need to make drastic changes, they can fork them.
-
-### App specific css is necessary?
-
-### One global organizational theme
-Pros:
-- simple
-
-Cons:
-- One massive theme repository to manage changes. one feature change requires changes in two repositories
-
-### Widgets should use both the generic class names
-
-### Mixins vs classes
-- There currently is no way to have inheritance of mixins through sass. That would require a custom preprocessor module to be written
-
-
-## lost grid
-Kelp also uses lost, a postcss grid system.
-
-## css component documentation
-This will later be moved out to its own repository. For now, it will remain in here as a draft.
-
-### Layout
-#### kelp-flex
-Flexbox with a default basis of 12. Here is an example of how it would look like with the basis set
-```
-| 1/2 basis: 12 | 1/2 basis: 12 | (total: 24)
-| 1/3 basis: 12 | 1/3 basis: 12 | 1/3 basis: 12 | (total: 36)
-| 2/3 basis: 12 | 1/3 basis: 6 | (total: 18)
-| 3/4 basis: 12 | 1/4 basis: 4 | (total: 16)
-| 60% basis: 12 | 20% basis: 4 | 20% basis: 4 | (total: 20)
-| 50% basis: 12 | 16.6% basis: 4 | 16.6% basis: 4 | 16.6% basis: 4 | (total: 24)
-```
-
-Classes:
-- kelp-flex-row
-- kelp-flex-col
-- kelp-flex-box
-- kelp-flex-box-[n] (where n is flex-basis; available for evens below 12 and some above 12: 2, 4, 6, 8, 10, 12, 18, 24, 36)
