@@ -7,10 +7,9 @@ p {
 
 .k-button {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 0.3888em 0.7777em; // (1.3333^2-1)/2: borderless button becomes 1.333^2 the height of base font
   margin: 0;
   border: 1px solid kelp-color(primary);
-
   background: none;
 }
 
