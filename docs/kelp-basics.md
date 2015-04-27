@@ -1,4 +1,4 @@
-# Kelp components (non-themable)
+# Kelp basics (non-themable)
 
 ## Layout
 ### kelp-flex

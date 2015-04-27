@@ -1,4 +1,4 @@
-# Kelp modules (themable)
+# Kelp components (themable)
 
 ## Buttons
 
