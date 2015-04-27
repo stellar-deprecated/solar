@@ -5,7 +5,7 @@ p {
   margin-bottom: 1em;
 }
 
-.button {
+.k-button {
   display: inline-block;
   padding: 8px 16px;
   margin: 0;
@@ -14,6 +14,6 @@ p {
   background: none;
 }
 
-.button.is-disabled {
+.k-button.is-disabled {
   cursor: not-allowed;
 }

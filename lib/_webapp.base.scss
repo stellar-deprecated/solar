@@ -1,5 +1,5 @@
-@mixin kelp-webApp() {
-  @include kelp-flex-col();
+@mixin k-webApp() {
+  @include K-flex-col();
 
   position: fixed;
   top: 0;
@@ -8,12 +8,12 @@
   left: 0;
 }
 
-@mixin kelp-webApp-bar() {
-  @include kelp-flex-row();
+@mixin k-webApp-bar() {
+  @include K-flex-row();
 }
 
-@mixin kelp-webApp-content() {
-  @include kelp-flex-grow(12);
+@mixin k-webApp-content() {
+  @include K-flex-grow(12);
 
   height: 0;
   overflow-y: scroll;
@@ -21,12 +21,12 @@
 }
 
 // tab bar
-@mixin kelp-webApp-tabBar() {
-  @include kelp-flex-row();
+@mixin k-webApp-tabBar() {
+  @include K-flex-row();
   list-style-type: none;
 
   li {
-    @include kelp-flex-item();
+    @include K-flex-item();
     display: inline-block;
     text-align: center;
   }

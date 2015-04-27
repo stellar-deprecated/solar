@@ -1,7 +1,7 @@
 
 
 // A basis should be passed in if the row is to double as a kelp-flex-item
-@mixin kelp-flex-row($basis:null) {
+@mixin K-flex-row($basis:null) {
   display: flex;
   flex-direction: row;
   @if ($basis) {
@@ -9,7 +9,7 @@
   }
 }
 
-@mixin kelp-flex-col($basis:null) {
+@mixin K-flex-col($basis:null) {
   display: flex;
   flex-direction: column;
   @if ($basis) {
@@ -17,10 +17,10 @@
   }
 }
 
-@mixin kelp-flex-item($basis:12) {
+@mixin K-flex-item($basis:12) {
   flex: $basis;
 }
 
-@mixin kelp-flex-grow($basis:12) {
+@mixin K-flex-grow($basis:12) {
   flex-grow: $basis;
 }
