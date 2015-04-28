@@ -11,7 +11,10 @@
 @import 'layout.flex';
 
 @import 'elements.links';
-@import 'elements.button';
+
+@import 'forms.base';
+@import 'forms.buttons';
+@import 'forms.inputs';
 
 // incubated kelp-webApp module
 @import 'webapp.index';

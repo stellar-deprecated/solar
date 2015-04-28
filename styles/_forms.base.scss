@@ -1,0 +1,26 @@
+
+// Base form resets and styling
+input {
+  border: none;
+  padding: 0.3333em 0.6666em; // (1.333[..]^2*18-18-2)/2/18
+
+  -webkit-appearance: none;
+  line-height: 1.5;
+  border-radius: 0;
+  border: 1px solid $kColor-F;
+}
+
+input, .k-button {
+  padding: 0.3333em 0.6666em; // (1.333[..]^2*18-18-2)/2/18
+  margin: 0;
+  border: 1px solid $kColor-F;
+  background: #fff;
+}
+
+.k-button:focus, input:focus {
+  // to make a glow, use box-shadow
+
+  box-shadow: 0 0 2px $kColor-A;
+  border: 1px solid $kColor-A;
+  outline: none;
+}

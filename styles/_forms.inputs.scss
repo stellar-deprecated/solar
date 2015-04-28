@@ -1,0 +1,24 @@
+
+.k-form {
+  padding: 0.3333em;
+  background: $kColor-C;
+}
+
+.k-form__group {
+  @include K-flex-row();
+  flex-wrap: nowrap;
+  margin-bottom: 0.3333em;
+}
+.k-form__group__input {
+  flex: 1;
+}
+
+// Prevent double borders by targeting form items that have something on their
+// left. In effect, this consistently gives border to the higher layered elements (the ones
+// that appear later) by allowing their borders be the dominant one that shows up.
+// The later ones already cover the previous ones' bow-shadow and outline glow.
+// If the theme uses other colors for borders, an alternate way to do this is by
+// setting margin-right to -1px;
+.k-form__group__input:not(:last-child), .k-form__group__addon:not(:last-child)  {
+  border-right: 0;
+}
