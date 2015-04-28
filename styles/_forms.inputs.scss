@@ -9,7 +9,7 @@
   flex-wrap: nowrap;
   margin-bottom: 0.3333em;
 }
-.k-form__group__input {
+.k-form__group__main {
   flex: 1;
 }
 
@@ -19,6 +19,6 @@
 // The later ones already cover the previous ones' bow-shadow and outline glow.
 // If the theme uses other colors for borders, an alternate way to do this is by
 // setting margin-right to -1px;
-.k-form__group__input:not(:last-child), .k-form__group__addon:not(:last-child)  {
+.k-form__group__main:not(:last-child), .k-form__group__addon:not(:last-child)  {
   border-right: 0;
 }
