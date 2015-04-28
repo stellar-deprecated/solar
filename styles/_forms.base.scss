@@ -2,7 +2,10 @@
 // Base form resets and styling
 input {
   border: none;
-  padding: 0.3333em 0.6666em; // (1.333[..]^2*18-18-2)/2/18
+
+  // padding top-bottom: (1.333[..]^2*18-18-2)/2/18
+  // padding left and right: we don't want it to scale when font size is bigger so that it lines up
+  padding: 0.3333em 12px;
 
   -webkit-appearance: none;
   line-height: 1.5;

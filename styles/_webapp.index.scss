@@ -3,11 +3,11 @@
 }
 
 .k-webApp-bar {
-  @include k-webApp();
+  @include k-webApp-bar();
 }
 
 .k-webApp-content {
-  @include k-webApp();
+  @include k-webApp-content();
 }
 
 .k-webApp-tabBar {
