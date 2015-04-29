@@ -2,15 +2,17 @@
 
 ## Responsiveness
 ### Breakpoints
-Kelp is build in a mobile first way and breakpoints only use `min-width`. Styles in smaller breakpoints cascade to larger breakpoints until overwritten by those larger breakpoints. These breakpoints are shared by both media queries and element queries.
+Kelp is build in a mobile first way and breakpoints only use `min-width`. Styles in smaller breakpoints cascade to larger breakpoints until overwritten by those larger breakpoints. These breakpoints are shared by both media queries and element queries. The smallest screen we reasonably design for is 240px.
 
-- **x-small** `xs`: `min-width: 240px`
-- **small** `s`: `min-width: 360px`
-- **medium** `m`: `min-width: 540px`
-- **large** `l`: `min-width: 780px`
-- **x-large** `xl`: `min-width: 1060px`
+- **x-small** `xs`: `min-width: 360px`
+- **small** `s`: `min-width: 480px`
+- **medium** `m`: `min-width: 640px`
+- **large** `l`: `min-width: 840px`
+- **x-large** `xl`: `min-width: 1080px`
 
-Why? There are no such thing as a perfect set of breakpoints but these are fine grained and flexible. Each breakpoint is 60px in growth greater than the previous one (240 + 120 = 360; 360 + 180 = 540; 540 + 240 = 780).
+Why? There are no such thing as a perfect set of breakpoints but these are fine grained and flexible. Each breakpoint is quadratically (60px) bigger than the previous one (360 + 120 = 480; 480 + 160 = 640; 640 + 200 = 840; 640 + 200 = 1080).
+
+These breakpoints are represented as `em`'s in the code but should still refer to these set pixel sizes.
 
 ### Media queries
 Media queries respond to the screen width. Usage:
