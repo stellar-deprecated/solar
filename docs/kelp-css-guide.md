@@ -147,6 +147,11 @@ be used; one example is shown below.
 ### Removing borders
 When removing borders, set the border with a value of `0` instead of `none`. Setting it to `0` preserves the color and stroke type while `none` completely resets it to the initial style. With removing it using a `0`, the border (same stroke/color) can be added back on later by simply setting a border-width.
 
+### z-index
+The z-index space is precious. Keep z-index low by only using z indexes in the range of -5 to 10. Stay as close to a z-index of 0 as much as you can ().
+
+When you need to work with z-indexes in children elements, create a stacking context by making the element "positioned" (not position: static). Use z-index: auto (the initial value) if you don't need z-indexes on an element.
+
 ### Comments
 Do not use block comments (`/* */`). Instead, use the double slash to write comments `//`.
 
