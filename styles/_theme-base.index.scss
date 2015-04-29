@@ -22,12 +22,12 @@ select {
 
 
 select {
-  padding-right: 2.5%; // space so the text does not collide with the padding
+  padding-right: 28px; // 14 + 7*2 space so the text does not collide with the caret
 
   background: #fff
     kInlineImage-caret-down($kColor-F)
     no-repeat
-    95% 50%
+    calc(100% - 7px) 50%
     ;
 }
 
@@ -67,7 +67,7 @@ select:focus {
   padding-right: 12px;
 }
 
-// Fix the pading on selects
+// reapply the padding on selects
 .k-inputGroup select {
-  padding-right: 2.5%;
+  padding-right: 28px;
 }
