@@ -1,47 +1,9 @@
-#
-
-## em vs px vs rem
-Whether to use em, px, or rem is a topic that there is no global consensus. px offers simplicity; em offers inheritance; and rem is good for zoom
-
-That said, there are better ways to work. kelp will follow these conventions
-
-### em
-The `em` unit inherits its size from the font size of the current element. If not defined, it will be the inherited font sizes. Keep in mind that em will inherit from its parent and thus you must be careful to not have a cascading effect
-
-`em` are good for used for:
-- media queries
-- buttons: padding should grow/shrink with the font size
-- anything that you want to scale with font size
-
-### px
-The `px` unit is an absolute measurement of a css "pixel". 1px will always be 1px.
-
-`px` is good for:
-- zoom sensitive items:
-  - borders -- so that when zoomed out they don't get rounded to 0
-  - border radius
-- gutters (for grids)
-- absolutes that don't change
-
-### rem
-The `rem` unit inherits its size from the html base font size.
-
-`rem` is good for browsers that give the option to zoom text only. However, this is mostly relevant to a previous era of web development (IE6,7) where text would only be zoomable if em or rem units inherited from the browser stylesheet. Now, most browsers zoom the reference pixel instead of the base font size. In mobile devices, zooming is often in the form of pinch to zoom. Due to these changes, rem provides very little benefit over px. Additionally, using rem requires conversion from px to rem, adding cognitive load for something basely affects users. Lastly, rem support is still a bit weird in some browsers.
-
-### Rounding and subpixels
-We should treat font sizes as if they were exact to the sub pixel. Browsers are moving towards that direction and even in ones that don't support subpixel rendering, font sizes still look and work mostly fine.
-
-Borders should not be subpixels since many browsers currently can't handle these cases well.
-
-## Typography
-
-### line height
-line height should be expressed as unitless numbers
+#Kelp css guide
 
 ## Style guide
 ### CSS Selectors
 Kelp and css should use the following syntax for selectors:
-```
+```css
 namespace-itemName[__descendantName|--modifierName]
 ```
 
@@ -182,14 +144,78 @@ be used; one example is shown below.
 }
 ```
 
+### Removing borders
+When removing borders, set the border with a value of `0` instead of `none`. Setting it to `0` preserves the color and stroke type while `none` completely resets it to the initial style. With removing it using a `0`, the border (same stroke/color) can be added back on later by simply setting a border-width.
+
 ### Comments
 Do not use block comments (`/* */`). Instead, use the double slash to write comments `//`.
 
-## Specificity
+### Specificity
 The css selector syntax is designed to keep css specificity low (0,1,0). Use as few selectors as by adding classes to things when necessary.
 
-## Readability/clarity/usefulness over perfection
+### Embedding colors inside svg inline images
+SVG images sometimes use as inline background values. You can use the sass variable interpolation to put a variable inside a svg fill. When doing so, package them into reusable units:
+```css
+@function kInlineImage-caret($fillColor) {
+  @return url('data:image/svg+xml;utf8,<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><path d="M0 0l7 8 7-8h-14z" sketch:type="MSShapeGroup" fill="#{$fillColor}"/></svg>');
+}
+```
+<!-- '}
+```
+ wah my syntax highlighter is messed up
+-->
+
+### Sass variables and functions
+Sass variables and function should be prefixed with a `k` and have no dashes. Then, it should have the type of variable, a dash, then the variable name. For example:
+```
+$kColor-accent
+```
+
+Kelp already has a definition for a few types of variables/functions in sass:
+- kColor
+- kInlineImage
+
+### Readability/clarity/usefulness over perfection
 It is important to follow this styleguide as much as possible. Exceptions can and will occur though, and in those cases, use your best judgement and lean towards the side of making things easy for others to understand.
+
+
+## em vs px vs rem
+Whether to use em, px, or rem is a topic that there is no global consensus. px offers simplicity; em offers inheritance; and rem is good for zoom
+
+That said, there are better ways to work. kelp will follow these conventions
+
+### em
+The `em` unit inherits its size from the font size of the current element. If not defined, it will be the inherited font sizes. Keep in mind that em will inherit from its parent and thus you must be careful to not have a cascading effect
+
+`em` are good for used for:
+- media queries
+- buttons: padding should grow/shrink with the font size
+- anything that you want to scale with font size
+
+### px
+The `px` unit is an absolute measurement of a css "pixel". 1px will always be 1px.
+
+`px` is good for:
+- zoom sensitive items:
+  - borders -- so that when zoomed out they don't get rounded to 0
+  - border radius
+- gutters (for grids)
+- absolutes that don't change
+
+### rem
+The `rem` unit inherits its size from the html base font size.
+
+`rem` is good for browsers that give the option to zoom text only. However, this is mostly relevant to a previous era of web development (IE6,7) where text would only be zoomable if em or rem units inherited from the browser stylesheet. Now, most browsers zoom the reference pixel instead of the base font size. In mobile devices, zooming is often in the form of pinch to zoom. Due to these changes, rem provides very little benefit over px. Additionally, using rem requires conversion from px to rem, adding cognitive load for something basely affects users. Lastly, rem support is still a bit weird in some browsers.
+
+### Rounding and subpixels
+We should treat font sizes as if they were exact to the sub pixel. Browsers are moving towards that direction and even in ones that don't support subpixel rendering, font sizes still look and work mostly fine.
+
+Borders should not be subpixels since many browsers currently can't handle these cases well.
+
+## Typography
+
+### line height
+line height should be expressed as unitless numbers
 
 ## Credits & attribution
 Shoutouts to a lot of the people who have written and taught about the practices that kelp uses. Specifically but not limited to: @necolas, @mdo, @fat.

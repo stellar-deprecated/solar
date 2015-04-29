@@ -14,7 +14,10 @@
 
 @import 'forms.base';
 @import 'forms.buttons';
-@import 'forms.inputs';
+@import 'forms.inputGroup';
+
+// incubated kelp-theme-base, a slightly opinionated base styles aiming for usability and themability
+@import 'theme-base.index';
 
 // incubated kelp-webApp module
 @import 'webapp.index';

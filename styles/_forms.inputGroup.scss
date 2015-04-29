@@ -1,0 +1,43 @@
+
+.k-form {
+}
+
+.k-inputGroup {
+  @include K-flex-row();
+  flex-wrap: wrap;
+}
+
+// Three different types of children:
+//   - main (default): grows with a basis of 12
+//   - full: grows and takes up a whole row
+//   - addon: does not grow/shrink and keeps its normal size
+//
+// Unfortunately, consumer developers are unable to change classes. They may
+// override the flex settings. Stylings should be set on the item much as possible.
+.k-inputGroup__item {
+  flex: 12 0 auto;
+}
+.k-inputGroup__item--full {
+  flex: 12 0 100%;
+}
+.k-inputGroup__item--addon {
+  flex: 0 0 auto;
+}
+
+// Prevent double borders by targeting form items that have something on their
+// left. In effect, this consistently gives border to the higher layered elements (the ones
+// that appear later) by allowing their borders be the dominant one that shows up.
+// The later ones already cover the previous ones' bow-shadow and outline glow.
+// If the theme uses other colors for borders, an alternate way to do this is by
+// setting margin-right to -1px;
+//
+// This does not get applied to full because full has the whole row. In
+// [mobile first] responsive layouts from full to main, the consumer developer
+// would simply remove border-right themself. This covers most use cases in which
+// responsiveness goes from full to just a main item.
+//
+// TL;DR this removes border-right sizing on the right side of inputs with
+// (supposedly) nothing on their right.
+.k-inputGroup__item:not(:last-child):not(.k-inputGroup__item--full) {
+  border-right: 0;
+}

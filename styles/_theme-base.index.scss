@@ -1,0 +1,66 @@
+
+// some svg images we can use later
+
+@function kInlineImage-caret-down($fillColor) {
+  @return url('data:image/svg+xml;utf8,<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><path d="M0 0l7 8 7-8h-14z" sketch:type="MSShapeGroup" fill="#{$fillColor}"/></svg>');
+}
+
+
+// general forms
+.k-button,
+input,
+select {
+  // padding top-bottom: (1.333[..]^2*18-18-2)/2/18
+  padding: 0.3333em 0.6666em;
+  margin: 0;
+  border: 1px solid $kColor-F;
+
+  border-radius: 0;
+  background: #fff;
+}
+
+
+select {
+  padding-right: 2.5%; // space so the text does not collide with the padding
+
+  background: #fff
+    kInlineImage-caret-down($kColor-F)
+    no-repeat
+    95% 50%
+    ;
+}
+
+// Accessibility :focus glow
+.k-button:focus,
+input:focus,
+select:focus {
+  // to make a glow, use box-shadow
+
+  box-shadow: 0 0 2px $kColor-A;
+  border: 1px solid $kColor-A;
+  outline: none;
+}
+
+// k-form
+.k-form {
+  padding: 0.3333em;
+  background: $kColor-C;
+}
+
+// k-inputGroup
+.k-inputGroup {
+  margin-bottom: 0.3333em;
+}
+
+// We want things to line up in an input group when things get bigger
+.k-inputGroup input,
+.k-inputGroup select,
+.k-inputGroup .k-button {
+  // padding left and right: in inputGroups, even the big items should line up
+  padding: 0.3333em 12px;
+}
+
+// Fix the pading on selects
+.k-inputGroup select {
+  padding-right: 2.5%;
+}
