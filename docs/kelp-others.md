@@ -28,7 +28,7 @@ Media queries respond to the screen width. Usage:
 ```
 
 ### Element queries
-Element queries respond to the closest element that has element queries enabled. The breakpoint chose will be based on the parent's width (not including padding or border). Element query parents can not nest.
+Element queries respond to the closest element that has element queries enabled. The breakpoint chosen will be based on the parent's width (not including padding or border). Element query parents can not nest.
 
 Warning: Only use element queries on elements that won't change in size due to the element query styles. If this is not followed, an infinite loop of ping-ponging styles can happen.
 
