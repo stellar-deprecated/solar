@@ -42,9 +42,10 @@ select:hover {
 .k-button:focus,
 input:focus,
 select:focus {
-  // to make a glow, use box-shadow
+  position: relative;
+  z-index: 2;
 
-  box-shadow: inset 0 0 2px $kColor-A;
+  box-shadow: 0 0 2px $kColor-A;
   border: 1px solid $kColor-A;
   outline: none;
 }
