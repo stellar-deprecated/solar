@@ -9,14 +9,14 @@
 <button class="k-button">This is a button.button</button>
 
 ## inputGroup `.k-inputGroup`
-k-inputGroup is an opinionated flex component for laying out and combining inputs, buttons, and addons. It is often used inside a form but can be used in other places dealing with buttons and addons too.
+k-inputGroup is an opinionated flex row component for laying out form elements and addons. It is often used inside a form but can be used in other places dealing with buttons and addons too.
 The k-inputGroup parent is a flex row. It can house three types of children items:
 
-| item type | classes                                         | basic css `flex` | description                                             |
-|-----------|-------------------------------------------------|------------------|---------------------------------------------------------|
-| main      | `k-inputGroup__item`                            | flex: 12 0 auto; | flex-grows with a basis of 12                           |
-| full      | `.k-inputGroup__item.k-inputGroup__item--full`  | flex: 12 0 100%; | fills to the whole row; pushes others to different rows |
-| addon     | `.k-inputGroup__item.k-inputGroup__item--addon` | flex: 0 0 auto;  | takes up the space it needs; doesn't grow or shrink     |
+| item type | classes                                         | basic css `flex` | description                                                    |
+|-----------|-------------------------------------------------|------------------|----------------------------------------------------------------|
+| main      | `k-inputGroup__item`                            | flex: 12 0 auto; | flex-grows with a basis of 12; 0 basis (may shrink to nothing) |
+| full      | `.k-inputGroup__item.k-inputGroup__item--full`  | flex: 12 0 100%; | fills to the whole row; pushes others to different rows        |
+| addon     | `.k-inputGroup__item.k-inputGroup__item--addon` | flex: 0 0 auto;  | takes up the space it needs; doesn't grow or shrink            |
 
 Here are some examples to illustrate how inputGroup works.
 

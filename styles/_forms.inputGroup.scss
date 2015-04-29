@@ -7,15 +7,10 @@
   flex-wrap: wrap;
 }
 
-// Three different types of children:
-//   - main (default): grows with a basis of 12
-//   - full: grows and takes up a whole row
-//   - addon: does not grow/shrink and keeps its normal size
-//
 // Unfortunately, consumer developers are unable to change classes. They may
-// override the flex settings. Stylings should be set on the item much as possible.
+// override the flex settings. Stylings should be set on the base item (and not modifiers) much as possible.
 .k-inputGroup__item {
-  flex: 12 0 auto;
+  flex: 12 0 0;
 }
 .k-inputGroup__item--full {
   flex: 12 0 100%;

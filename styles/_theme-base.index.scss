@@ -10,8 +10,9 @@
 .k-button,
 input,
 select {
-  // padding top-bottom: (1.333[..]^2*18-18-2)/2/18
-  padding: 0.3333em 0.6666em;
+  // padding top/bottom: (1.333[..]^2*18-18-2)/2/18
+  // Then, adjusted to be more balanced since equal top/bottom would have balance on the top
+  padding: 0.35em 0.6666em 0.3166em 0.6666em;
   margin: 0;
   border: 1px solid $kColor-F;
 
@@ -30,21 +31,26 @@ select {
     ;
 }
 
+// Accessibility :hover glow
+.k-button:hover,
+input:hover,
+select:hover {
+  box-shadow: inset 0 0 2px $kColor-F;
+}
+
 // Accessibility :focus glow
 .k-button:focus,
 input:focus,
 select:focus {
   // to make a glow, use box-shadow
 
-  box-shadow: 0 0 2px $kColor-A;
+  box-shadow: inset 0 0 2px $kColor-A;
   border: 1px solid $kColor-A;
   outline: none;
 }
 
 // k-form
 .k-form {
-  padding: 0.3333em;
-  background: $kColor-C;
 }
 
 // k-inputGroup
@@ -57,7 +63,8 @@ select:focus {
 .k-inputGroup select,
 .k-inputGroup .k-button {
   // padding left and right: in inputGroups, even the big items should line up
-  padding: 0.3333em 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 // Fix the pading on selects
