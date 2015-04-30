@@ -12,6 +12,8 @@ Each item has a title, condition of when we will need it, and the tasks associat
   - [ ] inputGroup
   - [ ] dropdown usability
 
+## v0.2: modal
+
 ## v0.2: widget helpers
 - [ ] themable padding
 
@@ -36,3 +38,5 @@ Necessary when we want to use kelp in other projects
 - [ ] gulp-kelp
   - [ ] kelp packet
   - [ ] kelp bundle
+  
+## v: notifications
