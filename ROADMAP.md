@@ -12,10 +12,17 @@ Each item has a title, condition of when we will need it, and the tasks associat
   - [ ] inputGroup
   - [ ] dropdown usability
 
-## v0.2: modal
+## v: gulp utility
+Necessary when we want to use kelp in other projects
+- [x] gulp-kelp
+  - [x] kelp packet
+  - [x] kelp bundle
 
 ## v0.2: widget helpers
 - [ ] themable padding
+
+## v0.2: modal
+
 
 ## v0.3: typography
 - [ ] typography
@@ -33,10 +40,5 @@ When the consumer code will actually need to scale bigger.
   - [ ] page responsiveness (media queries)
   - [ ] widget responsiveness (element queries)
 
-## v?: gulp utility
-Necessary when we want to use kelp in other projects
-- [ ] gulp-kelp
-  - [ ] kelp packet
-  - [ ] kelp bundle
-  
+
 ## v: notifications

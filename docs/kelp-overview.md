@@ -45,12 +45,11 @@ Don't use these features:
 - @extend
 - nesting
 
-### Kelp packet
-To use kelp component mixins, a root scss file (not starting with an underscore) must import the kelp packet which includes all of this functionality:
+### Kelp library bundle
+To use kelp component mixins, a root scss file (not starting with an underscore) must import the kelp library bundle which includes all of this functionality:
 ```
-@import 'kelp-packet';
+@import 'kelp-library-bundle';
 ```
-
 
 ## Kelp Ecosystem Architecture
 
@@ -76,24 +75,23 @@ By default, kelp core is the only thing needed in the kelp framework. Additional
 
 Each extension should contain an `_index.scss` file as its entry point in each of it's folder `lib` and `styles`.
 
-### Packet of libraries
-A packet is a convenient way of calling the kelp libraries used in a project.
+### Kelp library bundle
+A kelp library bundle is a convenient way of calling the kelp libraries used in a project.
 
 Consumers may need in include multiple kelp libraries at once. Packets simplify this by wrapping all the includes into one entry point to the kelp library with a one liner:
 ```css
-@import "kelp-packet";
+@import "kelp-lib-bundle";
 ```
-In order to use extensions and themes, one must create a custom packet. Projects using gulp can utilize `gulp-kelp-packet` to generate packets.
+In order to use extensions and themes, one must create a custom packet. Projects using gulp can utilize `gulp-kelp` to generate packets.
 
-### Bundle of styles
-Each kelp module may add styles and the order of which files come first is sensitive. A kelp bundle manages this by compiling all the styles brought by extensions into a single kelp bundle file. The (soon to be written) `gulp-kelp-bundle` tool is provided to compile the bundle.
+### Kelp css bundle
+A kelp css bundle is a compiled `.css` file containing all the css styles from kelp and extensions used.
+
+Each kelp module may add styles and the order of which files come first is sensitive. A kelp css bundle manages this by compiling all the styles brought by extensions into a single kelp bundle file. The `gulp-kelp` tool can compile the scss files in each of your extensions into css.
 
 ### Compilation process
-1. Create the kelp packet.
-2. Compile the kelp bundle, and other css. Each file imports the bundle.
-
-### Build
-kelp uses ruby-sass and postcss for some additional features such as `autoprefixing` for browser compatibility.
+1. Create the kelp library bundle.
+2. Compile the kelp css, and other css. Each file imports the bundle.
 
 ## File Conventions
 - Each library should contain an `_index.scss` file as its entry point.
