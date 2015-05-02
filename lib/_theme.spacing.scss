@@ -1,0 +1,17 @@
+// Contains variables that control spacing of the app
+
+$kSpacing-formPadding: 0.66666em;
+
+// Aligned spacing.
+// Some inputs may have bigger font sizes than others and in those cases, it is
+// important to use a fixed size.
+// This is also useful for when something wants to have consistent padding.
+$kSpacing-formPadding-fixed: 12px;
+
+
+// margins between items like forms
+$kSpacing-marginXSmall: 0.33333em;
+$kSpacing-marginSmall: 0.66666em;
+
+$kSpacing-marginXSmall-fixed: 6px;
+$kSpacing-marginSmall-fixed: 12px;
