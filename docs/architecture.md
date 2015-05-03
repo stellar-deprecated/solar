@@ -66,6 +66,7 @@ In order, this is what happens:
   b. add `kelp-theme-base/styles/_index.scss`
   c. add `kelp-utilities/styles/_index.scss`
   d. sass compilation into one file
+```
 
 ## Current gulp support
-`gulp-kelp` currently exists to build these two files. It can genera It currently does not do much and does not have to ability to flatten the scss files into one file nor doe it compile
+`gulp-kelp` currently exists to build these two files. It currently does not do much and does not have to ability to flatten the scss files into one file nor does it compile the css-bundle. Still, the plugin can makes it much easier to build the kelp bundles.
