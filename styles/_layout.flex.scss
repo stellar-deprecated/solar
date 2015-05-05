@@ -1,10 +1,10 @@
 
 // flex parents
 .K-flex-row {
-  @include K-flex-row(12);
+  @include K-flex-row;
 }
 .K-flex-col {
-  @include K-flex-col(12);
+  @include K-flex-col;
 }
 
 // flex children

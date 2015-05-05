@@ -1,5 +1,5 @@
-@mixin k-webApp() {
-  @include K-flex-col();
+@mixin k-webApp {
+  @include K-flex-col;
 
   position: fixed;
   top: 0;
@@ -8,12 +8,12 @@
   left: 0;
 }
 
-@mixin k-webApp-bar() {
-  @include K-flex-row();
+@mixin k-webApp-bar {
+  @include K-flex-row;
 }
 
-@mixin k-webApp-content() {
-  @include K-flex-grow(12);
+@mixin k-webApp-content {
+  @include K-flex-item;
 
   height: 0;
   overflow-y: scroll;
@@ -21,12 +21,12 @@
 }
 
 // tab bar
-@mixin k-webApp-tabBar() {
-  @include K-flex-row();
+@mixin k-webApp-tabBar {
+  @include K-flex-row;
   list-style-type: none;
 
   li {
-    @include K-flex-item();
+    @include K-flex-item;
     display: inline-block;
     text-align: center;
   }

@@ -44,7 +44,7 @@ Each line should fill up the whole row.
   <button class="k-button k-inputGroup__item k-inputGroup__item--addon" value="addon">addon</button>
 </div>
 
-### Example 3: labels and vertical alignment
+### Example 3: labels and vertical alignment (flex align)
 Labels aid usability by effectively expanding the click area for the input. By using the label as the parent `k-inputGroup`, we get simpler markup by not needing the `for` attribute.
 
 By default, items in k-inputGroup are aligned to the center via [flexbox align](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items).
