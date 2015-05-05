@@ -12,11 +12,20 @@
 .k-inputGroup__item {
   flex: 12 0 0;
 }
+// primary item modifiers
 .k-inputGroup__item--full {
   flex: 12 0 100%;
 }
 .k-inputGroup__item--addon {
   flex: 0 0 auto;
+}
+
+// auxiliary item modifiers
+.k-inputGroup__item--flexEnd {
+  align-self: flex-end;
+}
+.k-inputGroup__item--flexStart {
+  align-self: flex-start;
 }
 
 // Prevent double borders by targeting form items that have something on their

@@ -31,7 +31,6 @@ Here are some examples to illustrate how inputGroup works.
   </select>
 </div>
 
-
 ### Example 2: main + full + addon
 With `kelp-theme-base` (a base theme that currently lives inside `kelp`), the first item is expected to not have a right border because there is usually other elements on the same row. The full should have a border on the right because it is not expected to have something on the right.
 
@@ -45,8 +44,80 @@ Each line should fill up the whole row.
   <button class="k-button k-inputGroup__item k-inputGroup__item--addon" value="addon">addon</button>
 </div>
 
+### Example 3: labels and vertical alignment
+Labels aid usability by effectively expanding the click area for the input. By using the label as the parent `k-inputGroup`, we get simpler markup by not needing the `for` attribute.
+
+By default, items in k-inputGroup are aligned to the center via [flexbox align](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items).
+
+<label class="k-inputGroup demo">
+  <span class="k-inputGroup__item k-inputGroup__item--addon demo__label">flex: 0 0 25%</span>
+  <input class="k-inputGroup__item demo__main" placeholder="I'm just a default" type="text">
+</label>
+<label class="k-inputGroup demo">
+  <span class="k-inputGroup__item k-inputGroup__item--addon demo__label demo__label--end">align-self: flex-end</span>
+  <input class="k-inputGroup__item demo__main demo__main--huge" placeholder="Label aligned to flex-end" type="text">
+</label>
+<label class="k-inputGroup demo">
+  <span class="k-inputGroup__item k-inputGroup__item--addon demo__label">By default, items in k-inputGroup are aligned to the center.<br /><br />The item on the right would be centered.</span>
+  <input class="k-inputGroup__item demo__main" placeholder="(default) align-self: center" type="text">
+</label>
+<label class="k-inputGroup demo">
+  <span class="k-inputGroup__item k-inputGroup__item--addon demo__label">The input can be aligned to the end if desired<br /><br />(align-self: flex-start)</span>
+  <input class="k-inputGroup__item demo__main demo__main--flexStart" placeholder="align-self: flex-start" type="text">
+</label>
+<label class="k-inputGroup demo">
+  <span class="k-inputGroup__item k-inputGroup__item--addon demo__label">Or it could be at the end too<br /><br />(align-self: flex-end)</span>
+  <input class="k-inputGroup__item demo__main demo__main--flexEnd" placeholder="align-self: flex-end" type="text">
+</label>
+
+```html
+<label class="k-inputGroup demo">
+  <span class="k-inputGroup__item k-inputGroup__item--addon demo__label">flex: 0 0 25%</span>
+  <input class="k-inputGroup__item demo__main" placeholder="I'm just a default" type="text">
+</label>
+<label class="k-inputGroup demo">
+  <span class="k-inputGroup__item k-inputGroup__item--addon demo__label demo__label--end">align-self: flex-end</span>
+  <input class="k-inputGroup__item demo__main demo__main--huge" placeholder="Label aligned to flex-end" type="text">
+</label>
+<label class="k-inputGroup demo">
+  <span class="k-inputGroup__item k-inputGroup__item--addon demo__label">By default, items in k-inputGroup are aligned to the center.<br /><br />The item on the right would be centered.</span>
+  <input class="k-inputGroup__item demo__main" placeholder="(default) align-self: center" type="text">
+</label>
+<label class="k-inputGroup demo">
+  <span class="k-inputGroup__item k-inputGroup__item--addon demo__label">The input can be aligned to the end if desired<br /><br />(align-self: flex-start)</span>
+  <input class="k-inputGroup__item demo__main demo__main--flexStart" placeholder="align-self: flex-start" type="text">
+</label>
+<label class="k-inputGroup demo">
+  <span class="k-inputGroup__item k-inputGroup__item--addon demo__label">Or it could be at the end too<br /><br />(align-self: flex-end)</span>
+  <input class="k-inputGroup__item demo__main demo__main--flexEnd" placeholder="align-self: flex-end" type="text">
+</label>
+```
+
+```css
+.demo {
+  outline: 1px solid pink;
+}
+.demo__label {
+  flex: 0 0 25%;
+}
+
+// modifiers
+.demo__label--end {
+  align-self: flex-end;
+}
+.demo__main--huge {
+  font-size: 1.7777em;
+}
+.demo__main--flexStart {
+  align-self: flex-start;
+}
+.demo__main--flexEnd {
+  align-self: flex-end;
+}
+```
+
 ### Advanced notes:
 
-k-inputGroup also handles edgecases such as maintaining consistent left/right padding with bigger font size and preventing double borders.
+k-inputGroup also handles edgecases such as maintaining consistent left/right padding with bigger font size. It pulls sizing from `$kSpacing`.
 
 While one could configure k-inputGroup flex direction to be a column, this is not something that kelp supports out of the box since it is a rare use case.
