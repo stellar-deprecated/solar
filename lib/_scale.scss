@@ -7,7 +7,7 @@
 // variables are here to provide a simple common functionality between widgets
 // (a main philosophy tenet of kelp).
 $K-scale-base1Px: 18;
-$K-scale-base2Px: 21;
+$K-scale-base2Px: 21; // bigger than base1
 $K-scale-ratio: 1.33333333333333333333; // more decimals for more precision
 
 
@@ -17,66 +17,66 @@ $K-scale-d: $K-scale-base2Px
         * $K-scale-ratio
         * $K-scale-ratio
         * $K-scale-ratio
-        + 'px';
+        + px;
 
 // base1*scale^3
 $K-scale-c: $K-scale-base1Px
         * $K-scale-ratio
         * $K-scale-ratio
         * $K-scale-ratio
-        + 'px';
+        + px;
 
 // base2*scale^2
 $K-scale-b: $K-scale-base2Px
         * $K-scale-ratio
         * $K-scale-ratio
-        + 'px';
+        + px;
 
 // base1*scale^2
 $K-scale-a: $K-scale-base1Px
         * $K-scale-ratio
         * $K-scale-ratio
-        + 'px';
+        + px;
 
 // base2*scale^1
 $K-scale-1: $K-scale-base2Px
         * $K-scale-ratio
-        + 'px';
+        + px;
 
 // base1*scale^1
 $K-scale-2: $K-scale-base1Px
         * $K-scale-ratio
-        + 'px';
+        + px;
 
 // base2*scale^0
 $K-scale-3: $K-scale-base2Px
-          + 'px';
+          + px;
 
 // base1*scale^0
 $K-scale-4: $K-scale-base1Px
-        + 'px';
+        + px;
 
 // base2/scale^-1
 $K-scale-5: $K-scale-base2Px
         / $K-scale-ratio
-        + 'px';
+        + px;
 
 // base1/scale^-1
 $K-scale-6: $K-scale-base1Px
         / $K-scale-ratio
-        + 'px';
+        + px;
 
 // base2*scale^-2
 $K-scale-7: $K-scale-base2Px
         / $K-scale-ratio
         / $K-scale-ratio
-        + 'px';
+        + px;
 
 // base1*scale^-2
 $K-scale-8: $K-scale-base1Px
         / $K-scale-ratio
         / $K-scale-ratio
-        + 'px';
+        + px;
 
 
 
@@ -92,50 +92,50 @@ $K-scale-8: $K-scale-base1Px
 // have very little usage for font sizes but can be used in paddings relative to
 // the
 $K-scale-up1: $K-scale-ratio
-        + 'em';
+        + em;
 $K-scale-up2: $K-scale-ratio
         * $K-scale-ratio
-        + 'em';
+        + em;
 $K-scale-up3: $K-scale-ratio
         * $K-scale-ratio
         * $K-scale-ratio
-        + 'em';
+        + em;
 $K-scale-up4: $K-scale-ratio
         * $K-scale-ratio
         * $K-scale-ratio
         * $K-scale-ratio
-        + 'em';
+        + em;
 $K-scale-up5: $K-scale-ratio
         * $K-scale-ratio
         * $K-scale-ratio
         * $K-scale-ratio
         * $K-scale-ratio
-        + 'em';
+        + em;
 $K-scale-down1: 1
         / $K-scale-ratio
-        + 'em';
+        + em;
 $K-scale-down2: 1
         / $K-scale-ratio
         / $K-scale-ratio
-        + 'em';
+        + em;
 $K-scale-down3: 1
         / $K-scale-ratio
         / $K-scale-ratio
         / $K-scale-ratio
-        + 'em';
+        + em;
 $K-scale-down4: 1
         / $K-scale-ratio
         / $K-scale-ratio
         / $K-scale-ratio
         / $K-scale-ratio
-        + 'em';
+        + em;
 $K-scale-down5: 1
         / $K-scale-ratio
         / $K-scale-ratio
         / $K-scale-ratio
         / $K-scale-ratio
         / $K-scale-ratio
-        + 'em';
+        + em;
 
 
 // // tests:
