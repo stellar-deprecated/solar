@@ -1,6 +1,6 @@
 {
   "name": "kelp",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A front-end framework for modular web apps",
   "main": "index.json",
   "scripts": {
