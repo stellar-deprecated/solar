@@ -1,0 +1,167 @@
+// The Kelp core default scale uses:
+// http://www.modularscale.com/?18,21&px&1.33333333333333333333&js&text
+// This basic example assumes that we use two bases and one scale. Themes that wish
+// to change this will have to redefine all these variables
+// Additionally, themes that want to redefine the type system may choose to use
+// the modularscale-sass plugin. However, for defaults, it is an overkill. These
+// variables are here to provide a simple common functionality between widgets
+// (a main philosophy tenet of kelp).
+$K-scale-base1Px: 18;
+$K-scale-base2Px: 21;
+$K-scale-ratio: 1.33333333333333333333; // more decimals for more precision
+
+
+// Absolute scale
+// base2*scale^3
+$K-scale-d: $K-scale-base2Px
+        * $K-scale-ratio
+        * $K-scale-ratio
+        * $K-scale-ratio
+        + 'px';
+
+// base1*scale^3
+$K-scale-c: $K-scale-base1Px
+        * $K-scale-ratio
+        * $K-scale-ratio
+        * $K-scale-ratio
+        + 'px';
+
+// base2*scale^2
+$K-scale-b: $K-scale-base2Px
+        * $K-scale-ratio
+        * $K-scale-ratio
+        + 'px';
+
+// base1*scale^2
+$K-scale-a: $K-scale-base1Px
+        * $K-scale-ratio
+        * $K-scale-ratio
+        + 'px';
+
+// base2*scale^1
+$K-scale-1: $K-scale-base2Px
+        * $K-scale-ratio
+        + 'px';
+
+// base1*scale^1
+$K-scale-2: $K-scale-base1Px
+        * $K-scale-ratio
+        + 'px';
+
+// base2*scale^0
+$K-scale-3: $K-scale-base2Px
+          + 'px';
+
+// base1*scale^0
+$K-scale-4: $K-scale-base1Px
+        + 'px';
+
+// base2/scale^-1
+$K-scale-5: $K-scale-base2Px
+        / $K-scale-ratio
+        + 'px';
+
+// base1/scale^-1
+$K-scale-6: $K-scale-base1Px
+        / $K-scale-ratio
+        + 'px';
+
+// base2*scale^-2
+$K-scale-7: $K-scale-base2Px
+        / $K-scale-ratio
+        / $K-scale-ratio
+        + 'px';
+
+// base1*scale^-2
+$K-scale-8: $K-scale-base1Px
+        / $K-scale-ratio
+        / $K-scale-ratio
+        + 'px';
+
+
+
+// Relative scale
+// For the same of simplicity, not using exponents
+// In this default scale, each time we increase by "one", we are actually going
+// up by two levels. For example, inheriting a base font size of $K-scale-3 and
+// then using $K-scale-up1, we actually end up at $K-scale-1. Using $K-scale-up1
+// would bring us to $K-scale-b
+//
+// The usefulness of the relative type scale is not just limited to font sizes.
+// These are extremely useful for other elements such as paddings. Sizes like up5
+// have very little usage for font sizes but can be used in paddings relative to
+// the
+$K-scale-up1: $K-scale-ratio
+        + 'em';
+$K-scale-up2: $K-scale-ratio
+        * $K-scale-ratio
+        + 'em';
+$K-scale-up3: $K-scale-ratio
+        * $K-scale-ratio
+        * $K-scale-ratio
+        + 'em';
+$K-scale-up4: $K-scale-ratio
+        * $K-scale-ratio
+        * $K-scale-ratio
+        * $K-scale-ratio
+        + 'em';
+$K-scale-up5: $K-scale-ratio
+        * $K-scale-ratio
+        * $K-scale-ratio
+        * $K-scale-ratio
+        * $K-scale-ratio
+        + 'em';
+$K-scale-down1: 1
+        / $K-scale-ratio
+        + 'em';
+$K-scale-down2: 1
+        / $K-scale-ratio
+        / $K-scale-ratio
+        + 'em';
+$K-scale-down3: 1
+        / $K-scale-ratio
+        / $K-scale-ratio
+        / $K-scale-ratio
+        + 'em';
+$K-scale-down4: 1
+        / $K-scale-ratio
+        / $K-scale-ratio
+        / $K-scale-ratio
+        / $K-scale-ratio
+        + 'em';
+$K-scale-down5: 1
+        / $K-scale-ratio
+        / $K-scale-ratio
+        / $K-scale-ratio
+        / $K-scale-ratio
+        / $K-scale-ratio
+        + 'em';
+
+
+// // tests:
+// .K-scale-debug-absolute {
+//   K-scale-d: $K-scale-d;
+//   K-scale-c: $K-scale-c;
+//   K-scale-b: $K-scale-b;
+//   K-scale-a: $K-scale-a;
+//   K-scale-1: $K-scale-1;
+//   K-scale-2: $K-scale-2;
+//   K-scale-3: $K-scale-3;
+//   K-scale-4: $K-scale-4;
+//   K-scale-5: $K-scale-5;
+//   K-scale-6: $K-scale-6;
+//   K-scale-7: $K-scale-7;
+//   K-scale-8: $K-scale-8;
+// }
+// .K-scale-debug-relative {
+//   K-scale-up5: $K-scale-up5;
+//   K-scale-up4: $K-scale-up4;
+//   K-scale-up3: $K-scale-up3;
+//   K-scale-up2: $K-scale-up2;
+//   K-scale-up1: $K-scale-up1;
+//   K-scale-down1: $K-scale-down1;
+//   K-scale-down2: $K-scale-down2;
+//   K-scale-down3: $K-scale-down3;
+//   K-scale-down4: $K-scale-down4;
+//   K-scale-down5: $K-scale-down5;
+// }
