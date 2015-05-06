@@ -171,14 +171,17 @@ SVG images sometimes use as inline background values. You can use the sass varia
 -->
 
 ### Sass variables and functions
-Sass variables and function should be prefixed with a `k` and have no dashes. Then, it should have the type of variable, a dash, then the variable name. For example:
+The syntax for naming kelp core variables are similar to that of basics and components. First, it starts out with a prefix: `k` for themable and `K` for non-themable. Then, the category, and then subcategories or name of the variable.
 ```
-$kColor-accent
+Syntax: (k|K)-category[-subCategory|-name]
 ```
 
+It is prefixed in such a unique way because.
+
 Kelp already has a definition for a few types of variables/functions in sass:
-- kColor
-- kInlineImage
+- k-color
+
+Kelp does not use sass maps because it wants to stay as simple as possible so that in the future it may be ported to another system (such as postcss).
 
 ### Readability/clarity/usefulness over perfection
 It is important to follow this styleguide as much as possible. Exceptions can and will occur though, and in those cases, use your best judgement and lean towards the side of making things easy for others to understand.
@@ -217,7 +220,8 @@ We should treat font sizes as if they were exact to the sub pixel. Browsers are 
 
 Borders should not be subpixels since many browsers currently can't handle these cases well.
 
-## Typography
+## Typography and scale
+Take a look at the scale docs.
 
 ### line height
 line height should be expressed as unitless numbers

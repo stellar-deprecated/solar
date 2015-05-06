@@ -7,12 +7,12 @@ $kelp-colors: (
   ui-light: #ccc,
 );
 
-$kColor-A: slateblue;
-$kColor-B: aquamarine;
-$kColor-C: lightcyan;
-$kColor-D: pink;
-$kColor-E: #555;
-$kColor-F: #AAA;
+$k-color-A: slateblue;
+$k-color-B: aquamarine;
+$k-color-C: lightcyan;
+$k-color-D: pink;
+$k-color-E: #555;
+$k-color-F: #AAA;
 
 $kelp-colors: (
   primary: lime, // placeholder
@@ -23,13 +23,13 @@ $kelp-colors: (
   ui-light: #ccc,
 );
 
-// These kColors are temporary until we have a proper color system defined
-$kColor-A: slateblue;
-$kColor-B: aquamarine;
-$kColor-C: lightcyan;
-$kColor-D: pink;
-$kColor-E: #555;
-$kColor-F: #AAA;
+// These k-colors are temporary until we have a proper color system defined
+$k-color-A: slateblue;
+$k-color-B: aquamarine;
+$k-color-C: lightcyan;
+$k-color-D: pink;
+$k-color-E: #555;
+$k-color-F: #AAA;
 
 // Feature: add support for tint and shade (mix)
 @function kelp-color($color-name) {

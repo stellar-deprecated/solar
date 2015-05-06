@@ -118,6 +118,6 @@ By default, items in k-inputGroup are aligned to the center via [flexbox align](
 
 ### Advanced notes:
 
-k-inputGroup also handles edgecases such as maintaining consistent left/right padding with bigger font size. It pulls sizing from `$kSpacing`.
+k-inputGroup also handles edgecases such as maintaining consistent left/right padding with bigger font size. It pulls sizing from `$k-spacing`.
 
 While one could configure k-inputGroup flex direction to be a column, this is not something that kelp supports out of the box since it is a rare use case.

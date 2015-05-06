@@ -13,7 +13,7 @@ select {
   // Then, adjusted to be more balanced since equal top/bottom would have balance on the top
   padding: 0.35em 0.6666em 0.3166em 0.6666em;
   margin: 0;
-  border: 1px solid $kColor-F;
+  border: 1px solid $k-color-F;
 
   border-radius: 0;
   background: #fff;
@@ -25,7 +25,7 @@ select {
 
   cursor: pointer;
   background: #fff
-    kInlineImage-caret-down($kColor-F)
+    kInlineImage-caret-down($k-color-F)
     no-repeat
     calc(100% - 7px) 50%
     ;
@@ -35,7 +35,7 @@ select {
 .k-button:hover,
 input:hover,
 select:hover {
-  box-shadow: 0 0 3px $kColor-F;
+  box-shadow: 0 0 3px $k-color-F;
 }
 
 // Accessibility :focus glow
@@ -45,8 +45,8 @@ select:focus {
   position: relative;
   z-index: 2;
 
-  box-shadow: 0 0 3px $kColor-A;
-  border: 1px solid $kColor-A;
+  box-shadow: 0 0 3px $k-color-A;
+  border: 1px solid $k-color-A;
   outline: none;
 }
 
