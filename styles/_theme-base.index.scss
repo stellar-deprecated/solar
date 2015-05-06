@@ -1,6 +1,5 @@
 
-// some svg images we can use later
-
+// TODO: this function doesn't belong here
 @function kInlineImage-caret-down($fillColor) {
   @return url('data:image/svg+xml;utf8,<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><path d="M0 0l7 8 7-8h-14z" sketch:type="MSShapeGroup" fill="#{$fillColor}"/></svg>');
 }
