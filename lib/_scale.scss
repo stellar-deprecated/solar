@@ -91,51 +91,52 @@ $k-scale-8: $k-scale-base1Px
 // These are extremely useful for other elements such as paddings. Sizes like up5
 // have very little usage for font sizes but can be used in paddings relative to
 // the
-$k-scale-up1: $k-scale-ratio
-        + em;
-$k-scale-up2: $k-scale-ratio
+$k-scale-up1raw: $k-scale-ratio;
+$k-scale-up2raw: $k-scale-ratio
+        * $k-scale-ratio;
+$k-scale-up3raw: $k-scale-ratio
         * $k-scale-ratio
-        + em;
-$k-scale-up3: $k-scale-ratio
-        * $k-scale-ratio
-        * $k-scale-ratio
-        + em;
-$k-scale-up4: $k-scale-ratio
+        * $k-scale-ratio;
+$k-scale-up4raw: $k-scale-ratio
         * $k-scale-ratio
         * $k-scale-ratio
-        * $k-scale-ratio
-        + em;
-$k-scale-up5: $k-scale-ratio
+        * $k-scale-ratio;
+$k-scale-up5raw: $k-scale-ratio
         * $k-scale-ratio
         * $k-scale-ratio
         * $k-scale-ratio
-        * $k-scale-ratio
-        + em;
-$k-scale-down1: 1
+        * $k-scale-ratio;
+$k-scale-down1raw: 1
+        / $k-scale-ratio;
+$k-scale-down2raw: 1
         / $k-scale-ratio
-        + em;
-$k-scale-down2: 1
-        / $k-scale-ratio
-        / $k-scale-ratio
-        + em;
-$k-scale-down3: 1
+        / $k-scale-ratio;
+$k-scale-down3raw: 1
         / $k-scale-ratio
         / $k-scale-ratio
-        / $k-scale-ratio
-        + em;
-$k-scale-down4: 1
+        / $k-scale-ratio;
+$k-scale-down4raw: 1
         / $k-scale-ratio
         / $k-scale-ratio
         / $k-scale-ratio
-        / $k-scale-ratio
-        + em;
-$k-scale-down5: 1
+        / $k-scale-ratio;
+$k-scale-down5raw: 1
         / $k-scale-ratio
         / $k-scale-ratio
         / $k-scale-ratio
         / $k-scale-ratio
-        / $k-scale-ratio
-        + em;
+        / $k-scale-ratio;
+
+$k-scale-up1: $k-scale-up1raw + em;
+$k-scale-up2: $k-scale-up2raw + em;
+$k-scale-up3: $k-scale-up3raw + em;
+$k-scale-up4: $k-scale-up4raw + em;
+$k-scale-up5: $k-scale-up5raw + em;
+$k-scale-down1: $k-scale-down1raw + em;
+$k-scale-down2: $k-scale-down2raw + em;
+$k-scale-down3: $k-scale-down3raw + em;
+$k-scale-down4: $k-scale-down4raw + em;
+$k-scale-down5: $k-scale-down5raw + em;
 
 
 // // tests:
