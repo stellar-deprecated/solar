@@ -22,6 +22,7 @@ select {
 
 select {
   padding-right: 28px; // 14 + 7*2 space so the text does not collide with the caret
+  -webkit-appearance: none;
 
   cursor: pointer;
   background: #fff
