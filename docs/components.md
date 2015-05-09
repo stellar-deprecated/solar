@@ -44,77 +44,221 @@ Each line should fill up the whole row.
   <button class="k-button k-inputGroup__item k-inputGroup__item--addon" value="addon">addon</button>
 </div>
 
-### Example 3: labels and vertical alignment (flex align)
+### Example 3: `<label>`s and vertical alignment (flex align)
 Labels aid usability by effectively expanding the click area for the input. By using the label as the parent `k-inputGroup`, we get simpler markup by not needing the `for` attribute.
 
 By default, items in k-inputGroup are aligned to the center via [flexbox align](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items).
 
-<label class="k-inputGroup kelpDocs-inputGroup3">
-  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup3__label">flex: 0 0 25%</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main" placeholder="I'm just a default" type="text">
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup__label">flex: 0 0 25%</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item" placeholder="I'm just a default" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup3">
-  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup3__label kelpDocs-inputGroup3__label--end">align-self: flex-end</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main kelpDocs-inputGroup3__main--huge" placeholder="Label aligned to flex-end" type="text">
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup__label kelpDocs-inputGroup__label--end">align-self: flex-end</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="Label aligned to flex-end" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup3">
-  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup3__label">By default, items in k-inputGroup are aligned to the center.<br /><br />The item on the right would be centered.</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main" placeholder="(default) align-self: center" type="text">
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup__label">By default, items in k-inputGroup are aligned to the center.<br /><br />The item on the right would be centered.</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item" placeholder="(default) align-self: center" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup3">
-  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup3__label">The input can be aligned to the end if desired<br /><br />(align-self: flex-start)</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main kelpDocs-inputGroup3__main--flexStart" placeholder="align-self: flex-start" type="text">
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup__label">The input can be aligned to the end if desired<br /><br />(align-self: flex-start)</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--flexStart" placeholder="align-self: flex-start" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup3">
-  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup3__label">Or it could be at the end too<br /><br />(align-self: flex-end)</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main kelpDocs-inputGroup3__main--flexEnd" placeholder="align-self: flex-end" type="text">
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup__label">Or it could be at the end too<br /><br />(align-self: flex-end)</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--flexEnd" placeholder="align-self: flex-end" type="text">
 </label>
 
 ```html
-<label class="k-inputGroup kelpDocs-inputGroup3">
-  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup3__label">flex: 0 0 25%</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main" placeholder="I'm just a default" type="text">
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup__label">flex: 0 0 25%</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item" placeholder="I'm just a default" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup3">
-  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup3__label kelpDocs-inputGroup3__label--end">align-self: flex-end</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main kelpDocs-inputGroup3__main--huge" placeholder="Label aligned to flex-end" type="text">
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup__label kelpDocs-inputGroup__label--end">align-self: flex-end</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="Label aligned to flex-end" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup3">
-  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup3__label">By default, items in k-inputGroup are aligned to the center.<br /><br />The item on the right would be centered.</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main" placeholder="(default) align-self: center" type="text">
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup__label">By default, items in k-inputGroup are aligned to the center.<br /><br />The item on the right would be centered.</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item" placeholder="(default) align-self: center" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup3">
-  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup3__label">The input can be aligned to the end if desired<br /><br />(align-self: flex-start)</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main kelpDocs-inputGroup3__main--flexStart" placeholder="align-self: flex-start" type="text">
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup__label">The input can be aligned to the end if desired<br /><br />(align-self: flex-start)</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--flexStart" placeholder="align-self: flex-start" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup3">
-  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup3__label">Or it could be at the end too<br /><br />(align-self: flex-end)</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main kelpDocs-inputGroup3__main--flexEnd" placeholder="align-self: flex-end" type="text">
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup__label">Or it could be at the end too<br /><br />(align-self: flex-end)</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--flexEnd" placeholder="align-self: flex-end" type="text">
 </label>
 ```
 
 ```css
-.kelpDocs-inputGroup3 {
+.kelpDocs-inputGroup--bordered {
   outline: 1px solid pink;
 }
-.kelpDocs-inputGroup3__label {
+.kelpDocs-inputGroup__label--25 {
   flex: 0 0 25%;
 }
 
 // modifiers
-.kelpDocs-inputGroup3__label--end {
+.kelpDocs-inputGroup__label--end {
   align-self: flex-end;
 }
-.kelpDocs-inputGroup3__main--huge {
-  font-size: 1.7777em;
+.kelpDocs-inputGroup__item--huge {
+  font-size: $k-scale-up2;
 }
-.kelpDocs-inputGroup3__main--flexStart {
+.kelpDocs-inputGroup__item--flexStart {
   align-self: flex-start;
 }
-.kelpDocs-inputGroup3__main--flexEnd {
+.kelpDocs-inputGroup__item--flexEnd {
   align-self: flex-end;
 }
 ```
+
+### Example 4: inputGroup item--tag (k-inputGroup__item--tag)
+Tags are inputGroup items that wrap, vertically center, and pad its contents. A tag will vertically stretch to fill up the row.
+
+<label class="k-inputGroup">
+  <span class="k-inputGroup__item k-inputGroup__item--tag">
+    <span>`k-inputGroup__item--label > span`</span>
+  </span>
+  <input class="k-inputGroup__item" placeholder="I'm just a default" type="text">
+</label>
+
+```html
+<label class="k-inputGroup">
+  <span class="k-inputGroup__item k-inputGroup__item--tag">
+    <span>`k-inputGroup__item--label > span`</span>
+  </span>
+  <input class="k-inputGroup__item" placeholder="I'm just a default" type="text">
+</label>
+```
+
+<label class="k-inputGroup kelpDocs-inputGroup">
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="I'm huge" type="text">
+  <span class="k-inputGroup__item k-inputGroup__item--tag">
+    <span>Still stretched and centered</span>
+  </span>
+</label>
+
+```html
+<label class="k-inputGroup kelpDocs-inputGroup">
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="I'm huge" type="text">
+  <span class="k-inputGroup__item k-inputGroup__item--tag">
+    <span>Still stretched and centered</span>
+  </span>
+</label>
+```
+
+<div class="k-inputGroup">
+  <button class="k-inputGroup__item k-button k-inputGroup__item--addon">Mix</button>
+  <input class="k-inputGroup__item--addon" id="kelpDocs-inputGroup-and" type="text" placeholder="and">
+  <label for="kelpDocs-inputGroup-and" class="k-inputGroup__item k-inputGroup__item--tag">
+    <span>match! (remember to use label `for` carefully)</span>
+  </label>
+</div>
+
+```html
+<div class="k-inputGroup">
+  <button class="k-inputGroup__item k-button k-inputGroup__item--addon">Mix</button>
+  <input class="k-inputGroup__item--addon" id="kelpDocs-inputGroup-and" type="text" placeholder="and">
+  <label for="kelpDocs-inputGroup-and" class="k-inputGroup__item k-inputGroup__item--tag">
+    <span>match! (remember to use label `for` carefully)</span>
+  </label>
+</div>
+```
+
+<label class="k-inputGroup">
+  <span class="k-inputGroup__item k-inputGroup__item--tag k-inputGroup__item--addon">
+    <input class="k-inputGroup__item--addon" type="checkbox">
+  </span>
+  <span class="k-inputGroup__item k-inputGroup__item--tag k-inputGroup__item--addon">
+    <span>Tags can be used with inputs inside them too</span>
+  </span>
+</label>
+
+```html
+<label class="k-inputGroup">
+  <span class="k-inputGroup__item k-inputGroup__item--tag k-inputGroup__item--addon">
+    <input class="k-inputGroup__item--addon" type="checkbox">
+  </span>
+  <span class="k-inputGroup__item k-inputGroup__item--tag k-inputGroup__item--addon">
+    <span>Tags can be used with inputs inside them too</span>
+  </span>
+</label>
+```
+
+
+### Example 5: inputGroup item--tag (k-inputGroup__item--block)
+Blocks work like tags in the previous example except that there is no background or border. This is particularly useful for checkboxes. There is still a 1px transparent border to maintain consistent sizing with tags.
+
+
+<label class="k-inputGroup">
+  <span class="k-inputGroup__item k-inputGroup__item--block">
+    <span>`k-inputGroup__item--label > span`</span>
+  </span>
+  <input class="k-inputGroup__item" placeholder="I'm just a default" type="text">
+</label>
+<label class="k-inputGroup kelpDocs-inputGroup">
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="I'm huge" type="text">
+  <span class="k-inputGroup__item k-inputGroup__item--block">
+    <span>Still stretched and centered</span>
+  </span>
+</label>
+<div class="k-inputGroup">
+  <button class="k-inputGroup__item k-button k-inputGroup__item--addon">Mix</button>
+  <input class="k-inputGroup__item--addon" id="kelpDocs-inputGroup-and2" type="text" placeholder="and">
+  <label for="kelpDocs-inputGroup-and2" class="k-inputGroup__item k-inputGroup__item--tag">
+    <span>match! (remember to use label `for` carefully)</span>
+  </label>
+</div>
+<label class="k-inputGroup">
+  <span class="k-inputGroup__item k-inputGroup__item--block k-inputGroup__item--addon">
+    <input class="k-inputGroup__item--addon" type="checkbox">
+  </span>
+  <span class="k-inputGroup__item k-inputGroup__item--block k-inputGroup__item--addon">
+    <span>Tags can be used with inputs inside them too</span>
+  </span>
+</label>
+<label class="k-inputGroup">
+  <span class="k-inputGroup__item k-inputGroup__item--block k-inputGroup__item--addon">
+    <input class="k-inputGroup__item--addon" type="checkbox">
+  </span>
+  <span class="k-inputGroup__item">In some cases (like with checkboxes), you might not want to use blocks for text because of the double margin. Simply use `.k-inputGroup__item` without any modifiers</span>
+</label>
+<label class="k-inputGroup">
+  <span class="k-inputGroup__item k-inputGroup__item--block k-inputGroup__item--addon">
+    <input class="k-inputGroup__item--addon" type="checkbox">
+  </span>
+  <span class="k-inputGroup__item">The above will look like this</span>
+</label>
+
+```html
+<!-- it is the same as the above example except with
+  the word block instead of tag -->
+
+<div class="k-inputGroup">
+  <button class="k-inputGroup__item k-button k-inputGroup__item--addon">Mix</button>
+  <input class="k-inputGroup__item--addon" id="kelpDocs-inputGroup-and2" type="text" placeholder="and">
+  <label for="kelpDocs-inputGroup-and2" class="k-inputGroup__item k-inputGroup__item--tag">
+    <span>match! (remember to use label `for` carefully)</span>
+  </label>
+</div>
+```
+
+### Example 6: inputGroup item--block (k-inputGroup__item--block)
+Blocks work like tags in the previous example except that there is no background or border. This is particularly useful for checkboxes. There is still a 1px transparent border to maintain consistent sizing with tags.
+
+
+### Example 7: Other cases (dealing with flex)
+Some times, you would want to do something with custom sizes like this:
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--addon kelpDocs-inputGroup--25">flex: 0 0 25%</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup3__main" placeholder="I'm just a default" type="text">
+</label>
+
+You may ask why inputGroup doesn't have something for columns right out of the box instead of having to write your own flex. The answer is that k-inputGroup is just one module doing what it does best: grouping inputs together. For flex positioning and sizing, you will either have to write your own or use flex utilities.
 
 ### Advanced notes:
 

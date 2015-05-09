@@ -60,11 +60,21 @@ select:focus {
   margin-bottom: 0.66666em;
   align-items: center;
 }
+.k-inputGroup__item--tag {
+  border: 1px solid $k-color-F;
+  background: whiten($k-color-G, 50%);
+}
+.k-inputGroup__item--block {
+  // Keep the box model consistent with tags
+  border: 1px solid transparent;
+}
 
 // We want things to line up in an input group when things get bigger
 .k-inputGroup input,
 .k-inputGroup select,
-.k-inputGroup .k-button {
+.k-inputGroup .k-button,
+.k-inputGroup__item--tag,
+.k-inputGroup__item--block {
   // padding left and right: in inputGroups, even the big items should line up
   padding-left: 12px;
   padding-right: 12px;
