@@ -85,7 +85,7 @@ User defined namespace:
 Use two spaces for indentation and don't use tabs.
 
 ### Declaration Order
-When declaring selectors, do so in this order:
+When declaring properties, do so in this order:
 ```css
 .selector {
   // Positioning
