@@ -9,7 +9,41 @@
   flex-direction: column;
 }
 
-// (default)
+// These will not take in any arguments. If a developer wants to use custom
+// basis, they must write their own flex values or explicitly set flex-basis.
+// The reason is to preserve simplicity.
+
+// keyword sizes
+@mixin K-flexChild-share {
+  flex: 12 0 0%;
+}
+@mixin K-flexChild-addon {
+  flex: 0 0 auto;
+}
+@mixin K-flexChild-full {
+  flex: 12 0 100%;
+}
+
+// main sizes
+@mixin K-flexChild-1of2 {
+  flex: 0 0 50%;
+}
+@mixin K-flexChild-1of3 {
+  flex: 0 0 33.33333%;
+}
+@mixin K-flexChild-1of4 {
+  flex: 0 0 25%;
+}
+@mixin K-flexChild-1of5 {
+  flex: 0 0 20%;
+}
+@mixin K-flexChild-1of6 {
+  flex: 0 0 16.66666%;
+}
+@mixin K-flexChild-1of12 {
+  flex: 0 0 8.33333%;
+}
+
 @mixin K-flex-item($basis:12) {
   flex: 12 0 auto;
 }

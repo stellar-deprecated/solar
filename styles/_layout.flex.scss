@@ -1,4 +1,38 @@
+// flex children sizing types
+// keyword sizes
+.K-flexChild-share {
+  @include K-flexChild-share;
+}
+.K-flexChild-addon {
+  @include K-flexChild-addon;
+}
+.K-flexChild-full {
+  @include K-flexChild-full;
+}
 
+// main sizes
+.K-flexChild-1of2 {
+  @include K-flexChild-1of2;
+}
+.K-flexChild-1of3 {
+  @include K-flexChild-1of3;
+}
+.K-flexChild-1of4 {
+  @include K-flexChild-1of4;
+}
+.K-flexChild-1of5 {
+  @include K-flexChild-1of5;
+}
+.K-flexChild-1of6 {
+  @include K-flexChild-1of6;
+}
+.K-flexChild-1of12 {
+  @include K-flexChild-1of12;
+}
+
+
+
+// Old deprecated stuff
 // flex parents
 .K-flex-row {
   @include K-flex-row;
