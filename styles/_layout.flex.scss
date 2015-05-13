@@ -1,34 +1,25 @@
-// flex children sizing types
-// keyword sizes
-.K-flexChild-share {
-  @include K-flexChild-share;
-}
-.K-flexChild-addon {
-  @include K-flexChild-addon;
-}
-.K-flexChild-full {
-  @include K-flexChild-full;
-}
+// special sizes
+.K-flexItem-none { @include K-flexItem-none; } // flex: 0 0 auto;
+.K-flexItem-share { @include K-flexItem-share; } // flex: 12 0 0%;
+
+// auto sizes
+.K-flexItem-auto { @include K-flexItem-auto; } // flex: 12 0 auto;
+.K-flexItem-1 { @include K-flexItem-1; } // flex: 1 0 auto;
+.K-flexItem-2 { @include K-flexItem-2; } // flex: 2 0 auto;
+.K-flexItem-3 { @include K-flexItem-3; } // flex: 3 0 auto;
+.K-flexItem-4 { @include K-flexItem-4; } // flex: 4 0 auto;
+.K-flexItem-6 { @include K-flexItem-6; } // flex: 6 0 auto;
+.K-flexItem-8 { @include K-flexItem-8; } // flex: 8 0 auto;
+.K-flexItem-10 { @include K-flexItem-10; } // flex: 10 0 auto;
 
 // main sizes
-.K-flexChild-1of2 {
-  @include K-flexChild-1of2;
-}
-.K-flexChild-1of3 {
-  @include K-flexChild-1of3;
-}
-.K-flexChild-1of4 {
-  @include K-flexChild-1of4;
-}
-.K-flexChild-1of5 {
-  @include K-flexChild-1of5;
-}
-.K-flexChild-1of6 {
-  @include K-flexChild-1of6;
-}
-.K-flexChild-1of12 {
-  @include K-flexChild-1of12;
-}
+.K-flexItem-full { @include K-flexItem-full; } // flex: 12 0 100%;
+.K-flexItem-1of2 { @include K-flexItem-1of2; } // flex: 0 0 50%;
+.K-flexItem-1of3 { @include K-flexItem-1of3; } // flex: 0 0 33.33333%;
+.K-flexItem-1of4 { @include K-flexItem-1of4; } // flex: 0 0 25%;
+.K-flexItem-1of5 { @include K-flexItem-1of5; } // flex: 0 0 20%;
+.K-flexItem-1of6 { @include K-flexItem-1of6; } // flex: 0 0 16.66666%;
+.K-flexItem-1of12 { @include K-flexItem-1of12; } // flex: 0 0 8.33333%;
 
 
 

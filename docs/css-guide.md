@@ -100,7 +100,10 @@ When declaring properties, do so in this order:
   display: inline-block;
   overflow: hidden;
   box-sizing: border-box;
+  flex: 12 34 56%;
+  min-width: 50px;
   width: 100px;
+  max-width: 150px;
   height: 100px;
   padding: 10px;
   border: 10px solid #333;

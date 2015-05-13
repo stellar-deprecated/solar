@@ -13,36 +13,28 @@
 // basis, they must write their own flex values or explicitly set flex-basis.
 // The reason is to preserve simplicity.
 
-// keyword sizes
-@mixin K-flexChild-share {
-  flex: 12 0 0%;
-}
-@mixin K-flexChild-addon {
-  flex: 0 0 auto;
-}
-@mixin K-flexChild-full {
-  flex: 12 0 100%;
-}
+// special sizes
+@mixin K-flexItem-none { flex: 0 0 auto; }
+@mixin K-flexItem-share { flex: 12 0 0%; }
+
+// auto sizes
+@mixin K-flexItem-auto { flex: 12 0 auto; }
+@mixin K-flexItem-1 { flex: 1 0 auto; }
+@mixin K-flexItem-2 { flex: 2 0 auto; }
+@mixin K-flexItem-3 { flex: 3 0 auto; }
+@mixin K-flexItem-4 { flex: 4 0 auto; }
+@mixin K-flexItem-6 { flex: 6 0 auto; }
+@mixin K-flexItem-8 { flex: 8 0 auto; }
+@mixin K-flexItem-10 { flex: 10 0 auto; }
 
 // main sizes
-@mixin K-flexChild-1of2 {
-  flex: 0 0 50%;
-}
-@mixin K-flexChild-1of3 {
-  flex: 0 0 33.33333%;
-}
-@mixin K-flexChild-1of4 {
-  flex: 0 0 25%;
-}
-@mixin K-flexChild-1of5 {
-  flex: 0 0 20%;
-}
-@mixin K-flexChild-1of6 {
-  flex: 0 0 16.66666%;
-}
-@mixin K-flexChild-1of12 {
-  flex: 0 0 8.33333%;
-}
+@mixin K-flexItem-full { flex: 0 0 100%; }
+@mixin K-flexItem-1of2 { flex: 0 0 50%; }
+@mixin K-flexItem-1of3 { flex: 0 0 33.33333%; }
+@mixin K-flexItem-1of4 { flex: 0 0 25%; }
+@mixin K-flexItem-1of5 { flex: 0 0 20%; }
+@mixin K-flexItem-1of6 { flex: 0 0 16.66666%; }
+@mixin K-flexItem-1of12 { flex: 0 0 8.33333%; }
 
 @mixin K-flex-item($basis:12) {
   flex: 12 0 auto;
