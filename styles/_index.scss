@@ -8,14 +8,14 @@
 
 @import 'typography';
 
-@import 'layout.flex';
-@import 'layout.flexUtil';
-
 @import 'elements.links';
 
 @import 'forms.base';
 @import 'forms.buttons';
 @import 'forms.inputGroup';
+
+@import 'layout.flex';
+@import 'layout.flexUtil';
 
 // incubated kelp-theme-base, a slightly opinionated base styles aiming for usability and themability
 @import 'theme-base.index';

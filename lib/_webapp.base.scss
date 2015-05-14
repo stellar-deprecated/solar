@@ -13,7 +13,7 @@
 }
 
 @mixin k-webApp-content {
-  @include K-flex-item;
+  @include K-flexItem-auto;
 
   height: 0;
   overflow-y: scroll;
@@ -26,7 +26,7 @@
   list-style-type: none;
 
   li {
-    @include K-flex-item;
+    @include K-flexItem-auto;
     display: inline-block;
     text-align: center;
   }

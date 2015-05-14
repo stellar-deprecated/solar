@@ -1,6 +1,4 @@
 
-.k-form {
-}
 
 .k-inputGroup {
   @include K-flex-row();
@@ -10,15 +8,15 @@
 // Unfortunately, consumer developers are unable to change classes. They may
 // override the flex settings. Stylings should be set on the base item (and not modifiers) much as possible.
 .k-inputGroup__item {
-  flex: 12 0 0;
+  @include K-flexItem-auto;
 }
 // primary flex modifiers
-.k-inputGroup__item--full {
-  flex: 12 0 100%;
-}
-.k-inputGroup__item--addon {
-  flex: 0 0 auto;
-}
+// .k-inputGroup__item--full {
+//   flex: 12 0 100%;
+// }
+// .k-inputGroup__item--addon {
+//   flex: 0 0 auto;
+// }
 
 // auxiliary position modifiers
 .k-inputGroup__item--flexEnd {
@@ -30,30 +28,5 @@
 .k-inputGroup__item--block,
 .k-inputGroup__item--tag {
   align-items: center;
-  justify-content: center;
-  align-self: stretch;
   display: flex;
-}
-
-
-// Prevent double borders by targeting form items that have something on their
-// left. In effect, this consistently gives border to the higher layered elements (the ones
-// that appear later) by allowing their borders be the dominant one that shows up.
-// The later ones already cover the previous ones' bow-shadow and outline glow.
-// If the theme uses other colors for borders, an alternate way to do this is by
-// setting margin-right to -1px;
-//
-// This does not get applied to full because full has the whole row. In
-// [mobile first] responsive layouts from full to main, the consumer developer
-// would simply remove border-right themself. This covers most use cases in which
-// responsiveness goes from full to just a main item.
-//
-// TL;DR this removes border-right sizing on the right side of inputs with
-// (supposedly) nothing on their right.
-//
-// EDIT: wait nvm the above is false. margin-right: -1px is much better than border-right: 0;
-// Styles look better this way and are easier to reset
-.k-inputGroup__item:not(:last-child):not(.k-inputGroup__item--full) {
-  // border-right: 0;
-  margin-right: -1px;
 }

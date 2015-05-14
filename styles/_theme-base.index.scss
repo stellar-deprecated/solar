@@ -65,7 +65,6 @@ select:focus {
 // k-inputGroup
 .k-inputGroup {
   margin-bottom: 0.66666em;
-  align-items: center;
 }
 .k-inputGroup__item--tag {
   border: 1px solid $k-color-F;
@@ -74,6 +73,38 @@ select:focus {
 .k-inputGroup__item--block {
   // Keep the box model consistent with tags
   border: 1px solid transparent;
+}
+
+
+// border collapse management
+
+// Prevent double borders by targeting form items that have something on their
+// left. In effect, this consistently gives border to the higher layered elements (the ones
+// that appear later) by allowing their borders be the dominant one that shows up.
+// The later ones already cover the previous ones' bow-shadow and outline glow.
+// If the theme uses other colors for borders, an alternate way to do this is by
+// setting margin-right to -1px;
+//
+// This does not get applied to full because full has the whole row. In
+// [mobile first] responsive layouts from full to main, the consumer developer
+// would simply remove border-right themself. This covers most use cases in which
+// responsiveness goes from full to just a main item.
+//
+// TL;DR this removes border-right sizing on the right side of inputs with
+// (supposedly) nothing on their right.
+//
+// EDIT: wait nvm the above is false. margin-right: -1px is much better than border-right: 0;
+// Styles look better this way and are easier to reset
+//
+// EDIT2: Keep it simple and decouple from flex
+// EDIT3: it is possible to make everything have a bit of negative margin and cancel it out
+.k-inputGroup {
+  padding-right: 1px;
+  padding-bottom: 1px;
+}
+.k-inputGroup__item {
+  margin-bottom: -1px;
+  margin-right: -1px;
 }
 
 // We want things to line up in an input group when things get bigger

@@ -37,7 +37,7 @@ auto,`K-flexItem-auto`,12,0,auto,<small>extra space distributed; basis of 12</sm
 auto1,`K-flexItem-1`,1,0,auto,<small>extra space distributed; basis of 1</small>
 auto2,`K-flexItem-2`,2,0,auto,<small>extra space distributed; basis of 2</small>
 autoN,`K-flexItem-N`,N,0,auto,<small>extra space distributed; basis of N: 1 2 3 4 6 8 10</small>
-full,`K-flexItem-full`,0,0,100%,<small>always takes up the main size (same as the nonexistent 1of1)</small>
+full,`K-flexItem-full`,12,0,100%,<small>always takes up the main size (same as the nonexistent 1of1)</small>
 1of2,`K-flexItem-1of2`,0,0,50%,<small>always takes up 1/2th of the main size</small>
 1of3,`K-flexItem-1of3`,0,0,33.3%,<small>always takes up 1/3th of the main size</small>
 MofN,`K-flexItem-MofN`,0,0,100%*M/N,<small>available MofN sizes: 1of2 1of3 1of4 1of6 1of12 2of3 3of4 5of6</small>
@@ -53,7 +53,7 @@ MofN,`K-flexItem-MofN`,0,0,100%*M/N,<small>available MofN sizes: 1of2 1of3 1of4 
 <tr><td>auto1</td><td style="white-space: nowrap">`K-flexItem-1`</td><td>1</td><td>0</td><td>auto</td><td><small>extra space distributed; basis of 1</small></td></tr>
 <tr><td>auto2</td><td style="white-space: nowrap">`K-flexItem-2`</td><td>2</td><td>0</td><td>auto</td><td><small>extra space distributed; basis of 2</small></td></tr>
 <tr><td>autoN</td><td style="white-space: nowrap">`K-flexItem-N`</td><td>N</td><td>0</td><td>auto</td><td><small>extra space distributed; basis of N: 1 2 3 4 6 8 10</small></td></tr>
-<tr><td>full</td><td style="white-space: nowrap">`K-flexItem-full`</td><td>0</td><td>0</td><td>100%</td><td><small>always takes up the main size (same as the nonexistent 1of1)</small></td></tr>
+<tr><td>full</td><td style="white-space: nowrap">`K-flexItem-full`</td><td>12</td><td>0</td><td>100%</td><td><small>always takes up the main size (same as the nonexistent 1of1)</small></td></tr>
 <tr><td>1of2</td><td style="white-space: nowrap">`K-flexItem-1of2`</td><td>0</td><td>0</td><td>50%</td><td><small>always takes up 1/2th of the main size</small></td></tr>
 <tr><td>1of3</td><td style="white-space: nowrap">`K-flexItem-1of3`</td><td>0</td><td>0</td><td>33.3%</td><td><small>always takes up 1/3th of the main size</small></td></tr>
 <tr><td>MofN</td><td style="white-space: nowrap">`K-flexItem-MofN`</td><td>0</td><td>0</td><td>100%*M/N</td><td><small>available MofN sizes: 1of2 1of3 1of4 1of6 1of12 2of3 3of4 5of6</small></td></tr>
@@ -78,7 +78,7 @@ Source:
 .K-flexItem-10 { @include K-flexItem-10; } // flex: 10 0 auto;
 
 // main sizes
-.K-flexItem-full { @include K-flexItem-full; } // flex: 0 0 100%;
+.K-flexItem-full { @include K-flexItem-full; } // flex: 12 0 100%;
 .K-flexItem-1of2 { @include K-flexItem-1of2; } // flex: 0 0 50%;
 .K-flexItem-1of3 { @include K-flexItem-1of3; } // flex: 0 0 33.33333%;
 .K-flexItem-1of4 { @include K-flexItem-1of4; } // flex: 0 0 25%;
@@ -146,3 +146,20 @@ Grid proportioned flex items are not a direct replacement for traditional grids 
   <div class="K-flexItem-1of12">.K-flexItem-1of12</div>
 </div>
 ```
+
+
+### Example 1: K-flexItem-share vs K-flexItem-auto
+With a auto sized flex element and no specified `width`, the flex item will take up its natural size. For text, this means it the width will be one line. **For text, use share instead of auto**.
+
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of4">.K-flexItem-1of4</span>
+  <input class="k-inputGroup__item K-flexItem-share" placeholder="K-flexItem-share" type="text">
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of3">.K-flexItem-1of3</span>
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-share">K-flexItem-share doesn't assert any space and gets squeezed in here</span>
+</label>
+<label class="k-inputGroup kelpDocs-inputGroup--bordered">
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of4">.K-flexItem-1of4</span>
+  <input class="k-inputGroup__item K-flexItem-share" placeholder="K-flexItem-share" type="text">
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of3">.K-flexItem-1of3</span>
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-auto">K-flexItem-auto (default inputGroup item) gets pushed down to new row</span>
+</label>

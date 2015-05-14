@@ -25,25 +25,25 @@
 
 // Old deprecated stuff
 // flex parents
-.K-flex-row {
-  @include K-flex-row;
-}
-.K-flex-col {
-  @include K-flex-col;
-}
+// .K-flex-row {
+//   @include K-flex-row;
+// }
+// .K-flex-col {
+//   @include K-flex-col;
+// }
 
 // flex children
-.K-flex-grow {
-  flex-grow:  12;
-}
+// .K-flex-grow {
+//   flex-grow:  12;
+// }
 
-.K-flex-item { @include K-flex-item(); }
-.K-flex-2 { flex: 2; }
-.K-flex-4 { flex: 4; }
-.K-flex-6 { flex: 6; }
-.K-flex-8 { flex: 8; }
-.K-flex-10 { flex: 10; }
-.K-flex-12 { flex: 12; }
+// .K-flex-item { @include K-flex-item(); }
+// .K-flex-2 { flex: 2; }
+// .K-flex-4 { flex: 4; }
+// .K-flex-6 { flex: 6; }
+// .K-flex-8 { flex: 8; }
+// .K-flex-10 { flex: 10; }
+// .K-flex-12 { flex: 12; }
 
 // I think we should only limit it to numbers less than 12
 // .kelp-flex-18 { flex: 18; }
