@@ -150,45 +150,59 @@ By default, items in k-inputGroup are aligned to stretch via [flexbox align](htt
 ```
 
 ### Example 4: k-inputGroup__item modifiers tag, tagFlat, tagMin
-The tag modifiers to the inputGroup item
+The tag modifiers to the inputGroup item.
+
+**Tip**: If the inputGroup__item contains not only a text node, be sure to wrap it with something else like a span. This is because the tag modifiers turn the item into a flex item so that it can vertically center contents.
 
 <label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tag">
-    `.k-inputGroup__item--tag` (the whole package)
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-share">
+    <span>`.k-inputGroup__item--tag` (the whole package)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
 </label>
 <label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tagFlat">
-    `.k-inputGroup__item--tagFlat` (no background/visible border)
+  <span class="k-inputGroup__item k-inputGroup__item--tagFlat K-flexItem-share">
+    <span>`.k-inputGroup__item--tagFlat` (no background/visible border)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
 </label>
 <label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tagMin">
-    `.k-inputGroup__item--tagMin` (no padding)
+  <span class="k-inputGroup__item k-inputGroup__item--tagMin K-flexItem-share">
+    <span>`.k-inputGroup__item--tagMin` (no padding)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
+</label>
+<label class="k-inputGroup">
+  <span class="k-inputGroup__item k-inputGroup__item--tagMin K-flexItem-share">
+    `.k-inputGroup__item--tagMin` This is what <a href="">happens</a> when you don't wrap inner contents with span.
+  </span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
 </label>
 
 ```html
 <label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tag">
-    `.k-inputGroup__item--tag` (the whole package)
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-share">
+    <span>`.k-inputGroup__item--tag` (the whole package)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
 </label>
 <label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tagFlat">
-    `.k-inputGroup__item--tagFlat` (no background/visible border)
+  <span class="k-inputGroup__item k-inputGroup__item--tagFlat K-flexItem-share">
+    <span>`.k-inputGroup__item--tagFlat` (no background/visible border)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
 </label>
 <label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tagMin">
-    `.k-inputGroup__item--tagMin` (no padding)
+  <span class="k-inputGroup__item k-inputGroup__item--tagMin K-flexItem-share">
+    <span>`.k-inputGroup__item--tagMin` (no padding)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
+</label>
+<label class="k-inputGroup">
+  <span class="k-inputGroup__item k-inputGroup__item--tagMin K-flexItem-share">
+    `.k-inputGroup__item--tagMin` This is what <a href="">happens</a> when you don't wrap inner contents with span.
+  </span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
 </label>
 ```
 
