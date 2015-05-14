@@ -1,11 +1,11 @@
 
 // TODO: this function doesn't belong here
 @function kInlineImage-caret-down($fillColor) {
-  @return url('data:image/svg+xml;utf8,<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><path d="M0 0l7 8 7-8h-14z" sketch:type="MSShapeGroup" fill="#{$fillColor}"/></svg>');
+  @return url('data:image/svg+xml;utf8,<svg width="7" height="4" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><path d="M0 0l7 8 7-8h-14z" sketch:type="MSShapeGroup" fill="#{$fillColor}"/></svg>');
 }
 
 
-// general forms
+// general buttons and inputs
 .k-button,
 input,
 select {
@@ -15,16 +15,17 @@ select {
   margin: 0;
   border: 1px solid $k-color-F;
 
-  border-radius: 0;
   background: #fff;
 }
 
+// button
 .k-button {
-  box-shadow: inset 0px -1px 0px $k-color-F;
   &:active {
     background: blacken(#fff, 5%);
-    box-shadow: none;
   }
+}
+.k-button, .k-button:link {
+  text-decoration: none;
 }
 
 select {
@@ -39,28 +40,18 @@ select {
     ;
 }
 
-// Accessibility :hover glow
+// starter z-indexes
 .k-button:hover,
 input:hover,
 select:hover {
-  // box-shadow: 0 0 3px $k-color-F;
+  z-index: 1;
 }
-
-// Accessibility :focus glow
 .k-button:focus,
 input:focus,
 select:focus {
-  position: relative;
   z-index: 2;
-  //
-  // box-shadow: inset 0 0 3px $k-color-A;
-  border: 1px solid $k-color-A;
-
-  // remove the default webkit glow without causing permanent damage
-  // webkit default is -webkit-focus-ring-color. Other browsers might be
-  // different. Leave it to the UA defaults
-  outline-width: 0;
 }
+
 
 // k-inputGroup
 .k-inputGroup {

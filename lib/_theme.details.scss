@@ -1,5 +1,8 @@
+// border radius intentionally big by default to encourage widget developers to
+// remember about them
+
 // border radius for small elements
-$k-details-borderRadiusSmall: 2px;
+$k-details-borderRadiusSmall: 3px;
 
 // border radius for large elements
-$k-details-borderRadiusLarge: 4px;
+$k-details-borderRadiusLarge: 6px;

@@ -6,7 +6,7 @@
 @import 'base.basic-elements';
 @import 'base.page';
 
-@import 'typography';
+@import 'typography.base';
 
 @import 'elements.links';
 
@@ -18,8 +18,10 @@
 @import 'layout.flex';
 @import 'layout.flexUtil';
 
-// incubated kelp-theme-starter, a slightly opinionated base styles aiming for usability and themability
-@import 'theme-starter.index';
+// the following are themes that should belong outside of kelp-core but are here
+// for simplicity's sake for now
+@import 'theme-starter.index'; // a slightly opinionated base styles aiming for usability and themability
+// @import 'theme-well.index'; // builds on top of starter
 
 // incubated kelp-webApp module
 @import 'webapp.index';

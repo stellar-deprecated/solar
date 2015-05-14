@@ -5,3 +5,14 @@
 .k-buttonGroup .k-button:not(:last-child) {
   margin-right: -1px;
 }
+
+
+.k-buttonGroup .k-button {
+  border-radius: 0;
+}
+.k-buttonGroup .k-button:first-child {
+  border-radius: $k-details-borderRadiusSmall 0 0 $k-details-borderRadiusSmall;
+}
+.k-buttonGroup .k-button:last-child {
+  border-radius: 0 $k-details-borderRadiusSmall $k-details-borderRadiusSmall 0;
+}

@@ -31,3 +31,13 @@
   align-items: center;
   display: flex;
 }
+
+
+// border radius is a part of the core kelp so that widget developers will
+// remember to use the correct radius for special cases such as multi-line inputGroups
+.k-inputGroup__item:first-child {
+  border-radius: $k-details-borderRadiusSmall 0 0 $k-details-borderRadiusSmall;
+}
+.k-inputGroup__item:last-child {
+  border-radius: 0 $k-details-borderRadiusSmall $k-details-borderRadiusSmall 0;
+}
