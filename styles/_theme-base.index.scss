@@ -81,7 +81,7 @@ select:focus {
 // Prevent double borders by targeting form items that have something on their
 // left. In effect, this consistently gives border to the higher layered elements (the ones
 // that appear later) by allowing their borders be the dominant one that shows up.
-// The later ones already cover the previous ones' bow-shadow and outline glow.
+// The later ones already cover the previous ones' box-shadow and outline glow.
 // If the theme uses other colors for borders, an alternate way to do this is by
 // setting margin-right to -1px;
 //
@@ -112,7 +112,7 @@ select:focus {
 .k-inputGroup select,
 .k-inputGroup .k-button,
 .k-inputGroup__item--tag,
-.k-inputGroup__item--block {
+.k-inputGroup__item--tagFlat {
   // padding left and right: in inputGroups, even the big items should line up
   padding-left: 12px;
   padding-right: 12px;

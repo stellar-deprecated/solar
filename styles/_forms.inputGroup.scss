@@ -25,8 +25,9 @@
 .k-inputGroup__item--flexStart {
   align-self: flex-start;
 }
-.k-inputGroup__item--block,
-.k-inputGroup__item--tag {
+.k-inputGroup__item--tag,
+.k-inputGroup__item--tagFlat,
+.k-inputGroup__item--tagMin {
   align-items: center;
   display: flex;
 }

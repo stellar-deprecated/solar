@@ -15,13 +15,15 @@ k-inputGroup is an wrapping flex row component for laying out form elements and 
 
 Here are some examples to illustrate how inputGroup works.
 
-### Auto negative margin management to collapse borders
+### Auto negative margin management to collapse borders (theme base)
 By default all items except for the last have a margin-right of `-1px` to prevent the double borders.
 ```css
+.k-inputGroup {
+  padding-right: 1px;
+  padding-bottom: 1px;
+}
 .k-inputGroup__item {
   margin-bottom: -1px;
-}
-.k-inputGroup__item:not(:last-child) {
   margin-right: -1px;
 }
 ```
@@ -72,8 +74,8 @@ By default, items in k-inputGroup are aligned to stretch via [flexbox align](htt
   <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="by default, text is aligned to flex-start" type="text">
 </label>
 <label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item k-inputGroup__item--block K-flexItem-1of3">`.k-inputGroup__item--block`</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="using a --block will vertically align the text" type="text">
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of3">`.k-inputGroup__item--tag`</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="using a --tag will vertically align the text" type="text">
 </label>
 <label class="k-inputGroup kelpDocs-inputGroup--bordered">
   <span class="k-inputGroup__item kelpDocs-inputGroup__label kelpDocs-inputGroup__label--end">align-self: flex-end</span>
@@ -94,7 +96,7 @@ By default, items in k-inputGroup are aligned to stretch via [flexbox align](htt
   <input class="k-inputGroup__item" placeholder="by default, text is aligned to flex-start" type="text">
 </label>
 <label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item k-inputGroup__item--block K-flexItem-1of3">.k-inputGroup_<wbr></wbr>_item--block</span>
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of3">.k-inputGroup_<wbr></wbr>_item--tag</span>
   <input class="k-inputGroup__item kelpDocs-inputGroup__item" placeholder="using a block will vertically align the text" type="text">
 </label>
 <label class="k-inputGroup kelpDocs-inputGroup--bordered">
@@ -131,48 +133,46 @@ By default, items in k-inputGroup are aligned to stretch via [flexbox align](htt
 }
 ```
 
-### Example 4: k-inputGroup__item--tag and k-inputGroup__item--block
-Tags and blocks are inputGroup items that wrap vertically center contents.
-
-A block is functionally the same as a tag except that blocks are flat and don't have a background. Blocks still have a 1px transparent border to maintain consistent sizing with tags.
+### Example 4: k-inputGroup__item modifiers tag, tagFlat, tagMin
+The tag modifiers to the inputGroup item
 
 <label class="k-inputGroup">
   <span class="k-inputGroup__item k-inputGroup__item--tag">
-    `.k-inputGroup__item--tag`
+    `.k-inputGroup__item--tag` (the whole package)
   </span>
   <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
 </label>
 <label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--block">
-    `.k-inputGroup__item--block`
+  <span class="k-inputGroup__item k-inputGroup__item--tagFlat">
+    `.k-inputGroup__item--tagFlat` (no background/visible border)
   </span>
   <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
 </label>
 <label class="k-inputGroup">
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
-  <span class="k-inputGroup__item k-inputGroup__item--tag">
-    `.k-inputGroup__item--tag`
+  <span class="k-inputGroup__item k-inputGroup__item--tagMin">
+    `.k-inputGroup__item--tagMin` (no padding)
   </span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
 </label>
 
 ```html
 <label class="k-inputGroup">
   <span class="k-inputGroup__item k-inputGroup__item--tag">
-    `.k-inputGroup__item--tag`
+    `.k-inputGroup__item--tag` (the whole package)
   </span>
   <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
 </label>
 <label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--block">
-    `.k-inputGroup__item--block`
+  <span class="k-inputGroup__item k-inputGroup__item--tagFlat">
+    `.k-inputGroup__item--tagFlat` (no background/visible border)
   </span>
   <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
 </label>
 <label class="k-inputGroup">
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
-  <span class="k-inputGroup__item k-inputGroup__item--tag">
-    `.k-inputGroup__item--tag`
+  <span class="k-inputGroup__item k-inputGroup__item--tagMin">
+    `.k-inputGroup__item--tagMin` (no padding)
   </span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of4" placeholder="..." type="text">
 </label>
 ```
 
@@ -180,7 +180,7 @@ A block is functionally the same as a tag except that blocks are flat and don't 
   <button class="k-inputGroup__item k-button">Mix</button>
   <input class="k-inputGroup__item" id="kelpDocs-inputGroup-and" type="text" placeholder="and">
   <label for="kelpDocs-inputGroup-and" class="k-inputGroup__item k-inputGroup__item--tag">
-    <span>match! (remember to use label `for` carefully)</span>
+    match! (remember to use label `for` carefully)
   </label>
 </div>
 
@@ -189,7 +189,7 @@ A block is functionally the same as a tag except that blocks are flat and don't 
   <button class="k-inputGroup__item k-button">Mix</button>
   <input class="k-inputGroup__item" id="kelpDocs-inputGroup-and" type="text" placeholder="and">
   <label for="kelpDocs-inputGroup-and" class="k-inputGroup__item k-inputGroup__item--tag">
-    <span>match! (remember to use label `for` carefully)</span>
+    match! (remember to use label `for` carefully)
   </label>
 </div>
 ```
@@ -199,7 +199,7 @@ A block is functionally the same as a tag except that blocks are flat and don't 
     <input type="checkbox">
   </span>
   <span class="k-inputGroup__item k-inputGroup__item--tag">
-    <span>item--tag/block can be used with inputs inside them too</span>
+    <span>tags can be used with inputs inside them too</span>
   </span>
 </label>
 
@@ -209,7 +209,7 @@ A block is functionally the same as a tag except that blocks are flat and don't 
     <input type="checkbox">
   </span>
   <span class="k-inputGroup__item k-inputGroup__item--tag">
-    <span>item--tag/block can be used with inputs inside them too</span>
+    <span>tags can be used with inputs inside them too</span>
   </span>
 </label>
 ```
