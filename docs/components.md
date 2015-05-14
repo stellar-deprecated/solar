@@ -216,23 +216,6 @@ A block is functionally the same as a tag except that blocks are flat and don't 
 
 
 
-### Example 7: K-flexItem-share vs K-flexItem-auto
-Some times, you would want to do something with custom sizes like this:
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of4">.K-flexItem-1of4</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main K-flexItem-1of4" placeholder="k-inputGroup__item is K-flexItem-auto" type="text">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of3">.K-flexItem-1of3</span>
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-share">.K-flexItem-share doesn't assert any space and gets squeezed in here</span>
-</label>
-
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of4">.K-flexItem-1of4</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup3__main K-flexItem-1of4" placeholder="k-inputGroup__item is K-flexItem-auto" type="text">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of3">.K-flexItem-1of3</span>
-  <span class="k-inputGroup__item k-inputGroup__item--tag">default (.K-flexItem-auto) gets pushed down to new row</span>
-</label>
-
-To learn more about flexItem, take a look at the flexItem documentation.
 
 ### Advanced notes:
 
