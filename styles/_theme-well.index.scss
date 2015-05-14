@@ -1,0 +1,52 @@
+// In the Well theme, when the user activates interactive elements in the
+// screen, she creates a "well" pushing the item into the screen. With the light
+// source at the top of the screen, it casts a shadow into the wells of the
+// focused items.
+
+// soften the z layer movements
+.k-button,
+input,
+select {
+  transition: box-shadow 0.1s ease-out, border 0.1s ease-out;
+}
+
+// In the Well theme, hovered items appear above focused items so we must reflect that
+.k-button:hover,
+input:hover,
+select:hover {
+  z-index: 2;
+}
+.k-button:focus,
+input:focus,
+select:focus {
+  z-index: 1;
+}
+
+// When the user hovers over an item, her magic powers lift up elements towards her
+// pulling items towards the user (out of screen; towards user)
+.k-button:hover,
+input:hover,
+select:hover {
+  border: 1px solid $k-color-primary;
+  box-shadow: 0px 1px 2px $k-color-shadow;
+}
+
+// a "well" effect (into screen; away from user)
+// buttons shouldn't have these since they are meant to be clicked once
+input:focus,
+select:focus,
+.k-button:active {
+  box-shadow: inset 0px 1px 2px $k-color-shadow;
+  border: 1px solid $k-color-primary;
+  box-shadow: inset 0px 1px 2px $k-color-shadow;
+}
+
+// remove default outline glow
+.k-button:focus,
+input:focus,
+select:focus {
+  // remove the default webkit glow without causing permanent damage
+  // webkit default is -webkit-focus-ring-color. Other browsers might be
+  // different. Leave it to the UA defaults
+  outline-width: 0;
+}
