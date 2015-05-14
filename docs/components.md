@@ -15,7 +15,7 @@ k-inputGroup is an wrapping flex row component for laying out form elements and 
 
 Here are some examples to illustrate how inputGroup works.
 
-### Auto negative margin management to collapse borders (theme base)
+### Auto negative margin management to collapse borders (theme starter)
 By default all items except for the last have a margin-right of `-1px` to prevent the double borders.
 ```css
 .k-inputGroup {
