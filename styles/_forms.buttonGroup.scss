@@ -1,0 +1,7 @@
+.k-buttonGroup {
+  display: flex;
+  flex-direction: row;
+}
+.k-buttonGroup .k-button:not(:last-child) {
+  margin-right: -1px;
+}

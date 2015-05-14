@@ -1,12 +1,28 @@
 # Kelp components (themable)
 
 ## Button `.k-button`
+<a href="" class="k-button">This is an a.button</a>
+<button class="k-button">This is a button.button</button>
 ```html
 <div href="" class="k-button">This is an a.button</div>
 <button class="k-button">This is a button.button</button>
 ```
-<a href="" class="k-button">This is an a.button</a>
-<button class="k-button">This is a button.button</button>
+
+## buttonGroup `.k-buttonGroup`
+k-buttonGroup is a way to group multiple buttons together into one bar. These can only be single rows.
+<div class="k-buttonGroup">
+  <button class="k-button">Left</button>
+  <button class="k-button">Middle</button>
+  <button class="k-button">Right</button>
+</div>
+
+```html
+<div class="k-buttonGroup">
+  <button class="k-button">Left</button>
+  <button class="k-button">Middle</button>
+  <button class="k-button">Right</button>
+</div>
+```
 
 ## inputGroup `.k-inputGroup`
 k-inputGroup is an wrapping flex row component for laying out form elements and addons. It is often used inside a form but can be used in other places dealing with buttons and addons too.
