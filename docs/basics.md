@@ -3,6 +3,8 @@
 ## K-flex (K-flexItem)[layout]
 [Flexbox](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes) is a new powerful layout mode. K-flex is a set of predefined common flex use cases. It assumes the developer using it has at least a basic understand of the flexbox model.
 
+**Warning: examples and usages in code elsewhere may be out of date. The most up to date reference is in the sections labeled `Reference source code (styles/_layout.flex.scss)`**
+
 ### What it provides:
 - a set of common flex children sizes
 
