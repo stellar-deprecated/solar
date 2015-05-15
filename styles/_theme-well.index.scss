@@ -7,7 +7,7 @@
 .k-button,
 input,
 select {
-  transition: box-shadow 0.1s ease-out, border 0.1s ease-out;
+  transition: box-shadow 0.05s ease-out, border 0.05s ease-out;
 }
 
 // In the Well theme, hovered items appear above focused items so we must reflect that
@@ -37,14 +37,14 @@ input:focus,
 select:focus,
 .k-button:active {
   box-shadow: inset 0px 1px 2px $k-color-shadow;
-  border: 1px solid $k-color-primary;
-  box-shadow: inset 0px 1px 2px $k-color-shadow;
 }
 
-// remove default outline glow
+// remove default outline glow and add a primary color border
 .k-button:focus,
 input:focus,
 select:focus {
+  border: 1px solid $k-color-primary;
+
   // remove the default webkit glow without causing permanent damage
   // webkit default is -webkit-focus-ring-color. Other browsers might be
   // different. Leave it to the UA defaults
