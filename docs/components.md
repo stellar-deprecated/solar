@@ -27,8 +27,6 @@ k-buttonGroup is a way to group multiple buttons together into one bar. These ca
 ## inputGroup `.k-inputGroup`
 k-inputGroup is an wrapping flex row component for laying out form elements and addons. It is often used inside a form but can be used in other places dealing with buttons and addons too.
 
-**Note: this documentation for inputGroup is a bit out of date, especially with regards to flex children. Flex items are to be separate from inputGroup.**
-
 Here are some examples to illustrate how inputGroup works.
 
 ### Auto negative margin management to collapse borders (theme starter)
@@ -71,7 +69,12 @@ With `kelp-theme-base` (a base theme that currently lives inside `kelp`), the fi
 
 Each line should fill up the whole row.
 ```html
-<div class="k-inputGroup"></div>
+<div class="k-inputGroup">
+  <input class="k-inputGroup__item" value="default (K-flexItem-auto)" type="text">
+  <input class="k-inputGroup__item K-flexItem-1of3" value="default (K-flexItem-1of3)" type="text">
+  <input class="k-inputGroup__item K-flexItem-full" value="k-flexItem-full" type="text">
+  <button class="k-button k-inputGroup__item" value="addon">addon</button>
+</div>
 ```
 <div class="k-inputGroup">
   <input class="k-inputGroup__item" value="default (K-flexItem-auto)" type="text">
@@ -109,11 +112,11 @@ By default, items in k-inputGroup are aligned to stretch via [flexbox align](htt
 ```html
 <label class="k-inputGroup kelpDocs-inputGroup--bordered">
   <span class="k-inputGroup__item K-flexItem-1of3">.K-flexItem-1of3</span>
-  <input class="k-inputGroup__item" placeholder="by default, text is aligned to flex-start" type="text">
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="by default, text is aligned to flex-start" type="text">
 </label>
 <label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of3">.k-inputGroup_<wbr></wbr>_item--tag</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item" placeholder="using a block will vertically align the text" type="text">
+  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of3">`.k-inputGroup__item--tag`</span>
+  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="using a --tag will vertically align the text" type="text">
 </label>
 <label class="k-inputGroup kelpDocs-inputGroup--bordered">
   <span class="k-inputGroup__item kelpDocs-inputGroup__label kelpDocs-inputGroup__label--end">align-self: flex-end</span>
@@ -174,7 +177,7 @@ The tag modifiers to the inputGroup item.
 </label>
 <label class="k-inputGroup">
   <span class="k-inputGroup__item k-inputGroup__item--tagMin K-flexItem-share">
-    `.k-inputGroup__item--tagMin` This is what <a href="">happens</a> when you don't wrap inner contents with span.
+    <button class="k-button">hi</button>
   </span>
   <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
 </label>

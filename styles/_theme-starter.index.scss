@@ -28,6 +28,11 @@ select {
   text-decoration: none;
 }
 
+// reset ios safari default inset shadow
+input[type="text"] {
+  -webkit-appearance:none;
+}
+
 select {
   padding-right: 28px; // 14 + 7*2 space so the text does not collide with the caret
   -webkit-appearance: none;
