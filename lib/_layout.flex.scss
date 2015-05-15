@@ -1,40 +1,20 @@
-
+// flex containers
 @mixin K-flex-row {
   display: flex;
   flex-direction: row;
 }
-
+@mixin K-flex-rowWrap {
+  display: flex;
+  flex-flow: row wrap;
+}
 @mixin K-flex-col {
   display: flex;
   flex-direction: column;
 }
-
-// These will not take in any arguments. If a developer wants to use custom
-// basis, they must write their own flex values or explicitly set flex-basis.
-// The reason is to preserve simplicity.
-
-// special sizes
-// @mixin K-flexItem-none { flex: 0 0 auto; }
-// @mixin K-flexItem-share { flex: 12 0 0%; }
-//
-// // auto sizes
-// @mixin K-flexItem-auto { flex: 12 0 auto; }
-// @mixin K-flexItem-1 { flex: 1 0 auto; }
-// @mixin K-flexItem-2 { flex: 2 0 auto; }
-// @mixin K-flexItem-3 { flex: 3 0 auto; }
-// @mixin K-flexItem-4 { flex: 4 0 auto; }
-// @mixin K-flexItem-6 { flex: 6 0 auto; }
-// @mixin K-flexItem-8 { flex: 8 0 auto; }
-// @mixin K-flexItem-10 { flex: 10 0 auto; }
-//
-// // main sizes
-// @mixin K-flexItem-full { flex: 12 0 100%; }
-// @mixin K-flexItem-1of2 { flex: 0 0 50%; }
-// @mixin K-flexItem-1of3 { flex: 0 0 33.33333%; }
-// @mixin K-flexItem-1of4 { flex: 0 0 25%; }
-// @mixin K-flexItem-1of5 { flex: 0 0 20%; }
-// @mixin K-flexItem-1of6 { flex: 0 0 16.66666%; }
-// @mixin K-flexItem-1of12 { flex: 0 0 8.33333%; }
+@mixin K-flex-colWrap {
+  display: flex;
+  flex-direction: column wrap;
+}
 
 
 // no flexing
@@ -75,16 +55,3 @@
 @mixin K-flexItem-1of4 {  flex: 0 0 25%; }        // 3of12
 @mixin K-flexItem-1of6 {  flex: 0 0 16.66666%; }  // 2of12
 @mixin K-flexItem-1of12 { flex: 0 0 8.33333%; }   // 1of12
-
-
-
-
-// @mixin K-flex-item($basis:12) {
-//   flex: 12 0 auto;
-// }
-// @mixin K-flex-item--full($basis:12) {
-//   flex: $basis 0 100%;
-// }
-// @mixin K-flex-item--addon {
-//   flex: 0 0 auto;
-// }

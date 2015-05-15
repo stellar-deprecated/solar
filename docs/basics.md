@@ -25,6 +25,22 @@ When adjusting basis, stay at basis 12 or under.
 
 For now, flex-shrink values assume a default of 1 while flex-grow assumes a default of 12.
 
+### flex container reference
+There are 4 different types of containers available:
+- K-flex-row
+- K-flex-rowWrap
+- K-flex-col
+- K-flex-colWrap
+
+Reference source code (styles/_layout.flex.scss):
+```
+// flex containers (all of them have display: flex)
+.K-flex-row     { @include K-flex-row; } // flex-direction: row;
+.K-flex-rowWrap { @include K-flex-rowWrap; } // flex-flow: row wrap;
+.K-flex-col     { @include K-flex-col; } // flex-direction: column;
+.K-flex-colWrap { @include K-flex-colWrap; } // flex-direction: column wrap;
+```
+
 ### flex item reference
 These classes are not meant to be comprehensive and for complex cases, you may need to write your own.
 <!-- csv to markdown table style="white-space: nowrap"
@@ -51,7 +67,7 @@ MofN,`K-flexItem-MofN`,0,0,100%*M/N,<small>non-resizing column sizes. available 
 
 Note: CSSWG might (or might not) rename flex-basis of `auto` to `main-size` in future versions of flex
 
-Reference source code:
+Reference source code (styles/_layout.flex.scss):
 ```scss
 // no flexing
 .K-flexItem-none { @include K-flexItem-none; } // flex: 0 0 auto;
@@ -94,20 +110,20 @@ Reference source code:
 ```
 
 ### Demos
-<div class="kelpDocs-flexDemo-container">
+<div class="K-flex-rowWrap kelpDocs-flexDemo-container">
   <div class="K-flexItem-share">.K-flexItem-share</div>
   <div class="K-flexItem-share">.K-flexItem-share</div>
 </div>
-<div class="kelpDocs-flexDemo-container">
+<div class="K-flex-rowWrap kelpDocs-flexDemo-container">
   <div class="K-flexItem-addon">.K-flexItem-addon</div>
   <div class="K-flexItem-share">.K-flexItem-share</div>
 </div>
-<div class="kelpDocs-flexDemo-container">
+<div class="K-flex-rowWrap kelpDocs-flexDemo-container">
   <div class="K-flexItem-addon">.K-flexItem-addon</div>
   <div class="K-flexItem-share">.K-flexItem-share</div>
   <div class="K-flexItem-share">.K-flexItem-share</div>
 </div>
-<div class="kelpDocs-flexDemo-container">
+<div class="K-flex-rowWrap kelpDocs-flexDemo-container">
   <div class="K-flexItem-addon">.K-flexItem-addon</div>
   <div class="K-flexItem-full">.K-flexItem-full</div>
   <div class="K-flexItem-share">.K-flexItem-share</div>
@@ -115,22 +131,22 @@ Reference source code:
 
 Grid proportioned flex items are not a direct replacement for traditional grids since this does not take into account the gutters (and no, adding a bit of margin-right does not make it a true grid column). They do add a quick simple way to proportionally take up space and this is useful for inputGroups.
 
-<div class="kelpDocs-flexDemo-container">
+<div class="K-flex-rowWrap kelpDocs-flexDemo-container">
   <div class="K-flexItem-1of4">.K-flexItem-1of4</div>
   <div class="K-flexItem-share">.K-flexItem-share</div>
 </div>
-<div class="kelpDocs-flexDemo-container">
+<div class="K-flex-rowWrap kelpDocs-flexDemo-container">
   <div class="K-flexItem-1of4">.K-flexItem-1of4</div>
   <div class="K-flexItem-1of2">.K-flexItem-1of2</div>
   <div class="K-flexItem-1of4">.K-flexItem-1of4</div>
 </div>
-<div class="kelpDocs-flexDemo-container">
+<div class="K-flex-rowWrap kelpDocs-flexDemo-container">
   <div class="K-flexItem-1of4">.K-flexItem-1of4</div>
   <div class="K-flexItem-1of2">.K-flexItem-1of2</div>
   <div class="K-flexItem-1of3">.K-flexItem-1of3</div>
 </div>
 
-<div class="kelpDocs-flexDemo-container">
+<div class="K-flex-rowWrap kelpDocs-flexDemo-container">
   <div class="K-flexItem-share">.K-flexItem-share</div>
   <div class="K-flexItem-addon">.K-flexItem-addon</div>
   <div class="K-flexItem-full">.K-flexItem-full</div>
@@ -141,7 +157,7 @@ Grid proportioned flex items are not a direct replacement for traditional grids 
   <div class="K-flexItem-1of12">.K-flexItem-1of12</div>
 </div>
 ```html
-<div class="kelpDocs-flexDemo-container">
+<div class="K-flex-rowWrap kelpDocs-flexDemo-container">
   <div class="K-flexItem-share">.K-flexItem-share</div>
   <div class="K-flexItem-addon">.K-flexItem-addon</div>
   <div class="K-flexItem-full">.K-flexItem-full</div>

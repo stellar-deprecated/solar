@@ -1,3 +1,10 @@
+// flex containers (all of them have display: flex)
+.K-flex-row     { @include K-flex-row; } // flex-direction: row;
+.K-flex-rowWrap { @include K-flex-rowWrap; } // flex-flow: row wrap;
+.K-flex-col     { @include K-flex-col; } // flex-direction: column;
+.K-flex-colWrap { @include K-flex-colWrap; } // flex-direction: column wrap;
+
+
 // no flexing
 .K-flexItem-none { @include K-flexItem-none; } // flex: 0 0 auto;
 
