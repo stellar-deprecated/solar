@@ -40,7 +40,7 @@ Reference source code (styles/_layout.flex.scss):
 .K-flex-row     { @include K-flex-row; } // flex-direction: row;
 .K-flex-rowWrap { @include K-flex-rowWrap; } // flex-flow: row wrap;
 .K-flex-col     { @include K-flex-col; } // flex-direction: column;
-.K-flex-colWrap { @include K-flex-colWrap; } // flex-direction: column wrap;
+.K-flex-colWrap { @include K-flex-colWrap; } // flex-flow: column wrap;
 ```
 
 ### flex item reference

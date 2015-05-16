@@ -13,7 +13,7 @@
 }
 @mixin K-flex-colWrap {
   display: flex;
-  flex-direction: column wrap;
+  flex-flow: column wrap;
 }
 
 
