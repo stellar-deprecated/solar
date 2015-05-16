@@ -177,7 +177,7 @@ The tag modifiers to the inputGroup item.
 </label>
 <label class="k-inputGroup">
   <span class="k-inputGroup__item k-inputGroup__item--tagMin K-flexItem-share">
-    <button class="k-button">hi</button>
+    `.k-inputGroup__item--tagMin` This is what <a href="">happens</a> when you don't wrap inner contents with span.
   </span>
   <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
 </label>
