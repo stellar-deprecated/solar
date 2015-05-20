@@ -18,11 +18,15 @@
 @import 'layout.flex';
 @import 'layout.flexUtil';
 
-// the following are themes that should belong outside of kelp-core but are here
-// for simplicity's sake for now
-@import 'theme-starter.index'; // a slightly opinionated base styles aiming for usability and themability
-@import 'theme-well.index'; // builds on top of starter
-// @import 'theme-material.index'; // builds on top of starter
+// INCUBATED theme layers
 
-// incubated kelp-webApp module
+// a slightly opinionated base styles aiming for usability and themability
+// for basic things that has to do with theming
+@import 'theme-starter.index';
+
+// for extra items not considered starters
+// could be moved to kelp-sdf in the future
+@import 'theme-stellarBasic.index';
+
+// (likely deprecated) incubated kelp-webApp module
 @import 'webapp.index';

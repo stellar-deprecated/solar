@@ -1,8 +1,3 @@
-// In the Well theme, when the user activates interactive elements in the
-// screen, she creates a "well" pushing the item into the screen. With the light
-// source at the top of the screen, it casts a shadow into the wells of the
-// focused items.
-
 // soften the z layer movements
 .k-button,
 input,
@@ -10,7 +5,7 @@ select {
   transition: box-shadow 0.05s ease-out, border 0.05s ease-out;
 }
 
-// In the Well theme, hovered items appear above focused items so we must reflect that
+// Hovered items appear above focused items so we must reflect that
 .k-button:hover,
 input:hover,
 select:hover {
@@ -22,8 +17,7 @@ select:focus {
   z-index: 1;
 }
 
-// When the user hovers over an item, her magic powers lift up elements towards her
-// pulling items towards the user (out of screen; towards user)
+// pull items towards the user (out of screen; towards user)
 .k-button:hover,
 input:hover,
 select:hover {
