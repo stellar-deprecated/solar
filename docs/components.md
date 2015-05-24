@@ -1,19 +1,7 @@
 # Kelp components (themable)
 
 ## Button `.k-button`
-
-### Usage
-
-<a href="" class="k-button">This is an a.button</a>
-<button class="k-button">This is a button.button</button>
-```html
-<div href="" class="k-button">This is an a.button</div>
-<button class="k-button">This is a button.button</button>
-```
-
-### Button weights
-
-There are three types of buttons: light, medium (default), and heavy. These are the visual strengths of the buttons to vary the emphasis.
+There are three types of buttons: light, medium (default; no modifier), and heavy. The differences in visual strengths are used to vary the emphasis of buttons.
 
 - light: less important buttons
 - medium: default should be used in most places
@@ -21,15 +9,30 @@ There are three types of buttons: light, medium (default), and heavy. These are 
 
 Kelp core does not enforce how they look like--this job belongs to themes. For example, a theme might choose their light to be flat and their heavy to have a box shadow. Another might want to have a border on light and primary background color on heavy.
 
-<a href="" class="k-button k-buton--light">a.button.k-button.k-button--light</a>
-<a href="" class="k-button">a.button.k-button (default)</a>
-<a href="" class="k-button k-buton--heavy">a.button.k-button.k-button--heavy</a>
+<button class="k-button k-buton--light">a.k-button.k-button--light</button>
+<button class="k-button">a.k-button (default; no modifier)</button>
+<button class="k-button k-buton--heavy">a.k-button.k-button--heavy</button>
 ```html
-<a href="" class="k-button k-buton--light">a.button.k-button.k-button--light</a>
-<a href="" class="k-button">a.button.k-button (default)</a>
-<a href="" class="k-button k-buton--heavy">a.button.k-button.k-button--heavy</a>```
+<button class="k-button k-buton--light">a.k-button.k-button--light</button>
+<button class="k-button">a.k-button (default; no modifier)</button>
+<button class="k-button k-buton--heavy">a.k-button.k-button--heavy</button>
+```
 
-## buttonGroup `.k-buttonGroup`
+
+### `<a>` vs `<button>`
+Using both the `<a>` tag and the `<button>` should look the same.
+
+- `<a>`: Used with a meaningful href for state/page navigation
+- `<button>`: Used inside a form or as a control
+
+<a href="#somewhere" class="k-button">This is an a.button</a>
+<button class="k-button">This is a button.button</button>
+```html
+<a href="#somewhere" class="k-button">This is an a.button</a>
+<button class="k-button">This is a button.button</button>
+```
+
+### buttonGroup `.k-buttonGroup`
 k-buttonGroup is a way to group multiple buttons together into one bar. These can only be single rows.
 <div class="k-buttonGroup">
   <button class="k-button">Left</button>
