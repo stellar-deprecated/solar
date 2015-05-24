@@ -39,8 +39,10 @@
   border-radius: 0;
 }
 .k-inputGroup__item:first-child {
-  border-radius: $k-details-borderRadiusSmall 0 0 $k-details-borderRadiusSmall;
+  border-top-left-radius: $k-details-borderRadiusSmall;
+  border-bottom-left-radius: $k-details-borderRadiusSmall;
 }
 .k-inputGroup__item:last-child {
-  border-radius: 0 $k-details-borderRadiusSmall $k-details-borderRadiusSmall 0;
+  border-top-right-radius: $k-details-borderRadiusSmall;
+  border-bottom-right-radius: $k-details-borderRadiusSmall;
 }
