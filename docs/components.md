@@ -1,12 +1,33 @@
 # Kelp components (themable)
 
 ## Button `.k-button`
+
+### Usage
+
 <a href="" class="k-button">This is an a.button</a>
 <button class="k-button">This is a button.button</button>
 ```html
 <div href="" class="k-button">This is an a.button</div>
 <button class="k-button">This is a button.button</button>
 ```
+
+### Button weights
+
+There are three types of buttons: light, medium (default), and heavy. These are the visual strengths of the buttons to vary the emphasis.
+
+- light: less important buttons
+- medium: default should be used in most places
+- heavy: emphasis for important actions such as form submission
+
+Kelp core does not enforce how they look like--this job belongs to themes. For example, a theme might choose their light to be flat and their heavy to have a box shadow. Another might want to have a border on light and primary background color on heavy.
+
+<a href="" class="k-button k-buton--light">a.button.k-button.k-button--light</a>
+<a href="" class="k-button">a.button.k-button (default)</a>
+<a href="" class="k-button k-buton--heavy">a.button.k-button.k-button--heavy</a>
+```html
+<a href="" class="k-button k-buton--light">a.button.k-button.k-button--light</a>
+<a href="" class="k-button">a.button.k-button (default)</a>
+<a href="" class="k-button k-buton--heavy">a.button.k-button.k-button--heavy</a>```
 
 ## buttonGroup `.k-buttonGroup`
 k-buttonGroup is a way to group multiple buttons together into one bar. These can only be single rows.
