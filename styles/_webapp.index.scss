@@ -1,14 +1,21 @@
 // may be deprecated
-.k-webApp {
+.k-webApp, .K-webApp {
   @include k-webApp();
 }
+.K-webApp--scrollable {
+  @include k-webApp--scrollable();
+}
 
-.k-webApp-bar {
+.k-webApp-bar, .K-webApp__bar {
   @include k-webApp-bar();
 }
 
-.k-webApp-content {
+.k-webApp-content, .K-webApp__content {
   @include k-webApp-content();
+}
+
+.k-webApp__fill, .K-webApp__fill {
+  @include k-webApp__fill();
 }
 
 .k-webApp-tabBar {
