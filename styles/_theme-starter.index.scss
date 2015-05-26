@@ -20,6 +20,9 @@ select {
 
 // button
 .k-button {
+    background: $k-color-primary;
+    color: $k-color-button-text;
+    border: 1px solid darken($k-color-primary, 10%);
   &:active {
     background: blacken(#fff, 5%);
   }

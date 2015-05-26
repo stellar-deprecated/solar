@@ -40,7 +40,7 @@ select:focus,
 .k-button:hover,
 input:hover,
 select:hover {
-  border: 1px solid $k-color-primary;
+  border: 1px solid darken($k-color-primary,30%);
 
   // remove the default webkit glow without causing permanent damage
   // webkit default is -webkit-focus-ring-color. Other browsers might be
