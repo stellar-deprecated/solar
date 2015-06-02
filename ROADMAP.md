@@ -1,11 +1,11 @@
-# Roadmap of kelp framework
-This is a roadmap of the kelp framework. Roadmap currently centered around developing for mcs.
+# Roadmap of solar framework
+This is a roadmap of the solar framework. Roadmap currently centered around developing for mcs.
 
 Do not proceed try to worry about items that have yet to be implemented.
 
 Each item has a title, condition of when we will need it, and the tasks associated with it. The version number is tentative. This list may and will change at any time. Each item is the order of urgency.
 
-## v0.1: mcs mvp; kelp beginnings
+## v0.1: mcs mvp; solar beginnings
 - [x] buttons
 - [x] webapp chrome (with sticky bottoms)
 - [ ] flex inputs
@@ -13,10 +13,10 @@ Each item has a title, condition of when we will need it, and the tasks associat
   - [ ] dropdown usability
 
 ## v: gulp utility
-Necessary when we want to use kelp in other projects
-- [x] gulp-kelp
-  - [x] kelp packet
-  - [x] kelp bundle
+Necessary when we want to use solar in other projects
+- [x] gulp-solar
+  - [x] solar packet
+  - [x] solar bundle
 
 ## v0.2: widget helpers
 - [ ] themable padding
@@ -30,9 +30,9 @@ Necessary when we want to use kelp in other projects
   - [ ] custom font
 
 ## v0.4: theming details
-- [ ] kelp-colors
+- [ ] solar-colors
 - [ ] figure out theming variable structure
-- [ ] kelp theming
+- [ ] solar theming
 
 ## v?: scale to desktop
 When the consumer code will actually need to scale bigger.

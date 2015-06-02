@@ -1,4 +1,4 @@
-$kelp-colors: (
+$solar-colors: (
   primary: lime, // placeholder
   secondary: #777777,
 
@@ -7,26 +7,26 @@ $kelp-colors: (
   ui-light: #ccc,
 );
 
-// These k-colors are temporary until we have a proper color system defined
-$k-color-A: gray;
-$k-color-B: black;
-$k-color-C: lightcyan;
-$k-color-D: pink;
-$k-color-E: #555;
-$k-color-F: #AAA;
-$k-color-G: #EEE;
+// These s-colors are temporary until we have a proper color system defined
+$s-color-A: gray;
+$s-color-B: black;
+$s-color-C: lightcyan;
+$s-color-D: pink;
+$s-color-E: #555;
+$s-color-F: #AAA;
+$s-color-G: #EEE;
 
-$k-color-primary: $k-color-A; // a bright brand color
-$k-color-secondary: $k-color-B; // secondary/highlight color
-$k-color-neutralDark: $k-color-E; // a dark "neutral" color like a dark gray
-$k-color-neutralLight: $k-color-G; // a light "neutral" color like a dark gray
-$k-color-shadow: #aaa; // color for shadows
-$k-color-button-text: $k-color-G;
+$s-color-primary: $s-color-A; // a bright brand color
+$s-color-secondary: $s-color-B; // secondary/highlight color
+$s-color-neutralDark: $s-color-E; // a dark "neutral" color like a dark gray
+$s-color-neutralLight: $s-color-G; // a light "neutral" color like a dark gray
+$s-color-shadow: #aaa; // color for shadows
+$s-color-button-text: $s-color-G;
 
 
 // Feature: add support for tint and shade (mix)
-@function kelp-color($color-name) {
-  @return map-get($kelp-colors, $color-name);
+@function solar-color($color-name) {
+  @return map-get($solar-colors, $color-name);
 }
 
 @function whiten($color, $percent){

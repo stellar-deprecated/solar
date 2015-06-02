@@ -1,75 +1,45 @@
 // flex containers (all of them have display: flex)
-.K-flex-row     { @include K-flex-row; } // flex-direction: row;
-.K-flex-rowWrap { @include K-flex-rowWrap; } // flex-flow: row wrap;
-.K-flex-col     { @include K-flex-col; } // flex-direction: column;
-.K-flex-colWrap { @include K-flex-colWrap; } // flex-direction: column wrap;
+.S-flex-row     { @include S-flex-row; } // flex-direction: row;
+.S-flex-rowWrap { @include S-flex-rowWrap; } // flex-flow: row wrap;
+.S-flex-col     { @include S-flex-col; } // flex-direction: column;
+.S-flex-colWrap { @include S-flex-colWrap; } // flex-direction: column wrap;
 
 
 // no flexing
-.K-flexItem-none { @include K-flexItem-none; } // flex: 0 0 auto;
+.S-flexItem-none { @include S-flexItem-none; } // flex: 0 0 auto;
 
 // full row
-.K-flexItem-full { @include K-flexItem-full; }   // flex: 12 0 100%;
+.S-flexItem-full { @include S-flexItem-full; }   // flex: 12 0 100%;
 
 // share sizes (all space distributed)
-.K-flexItem-share1  { @include K-flexItem-share1; }  // flex: 1 0 0%;
-.K-flexItem-share2  { @include K-flexItem-share2; }  // flex: 2 0 0%;
-.K-flexItem-share3  { @include K-flexItem-share3; }  // flex: 3 0 0%;
-.K-flexItem-share4  { @include K-flexItem-share4; }  // flex: 4 0 0%;
-.K-flexItem-share6  { @include K-flexItem-share6; }  // flex: 6 0 0%;
-.K-flexItem-share8  { @include K-flexItem-share8; }  // flex: 8 0 0%;
-.K-flexItem-share10 { @include K-flexItem-share10; } // flex: 10 0 0%;
-.K-flexItem-share   { @include K-flexItem-share; }   // flex: 12 0 0%;
+.S-flexItem-share1  { @include S-flexItem-share1; }  // flex: 1 0 0%;
+.S-flexItem-share2  { @include S-flexItem-share2; }  // flex: 2 0 0%;
+.S-flexItem-share3  { @include S-flexItem-share3; }  // flex: 3 0 0%;
+.S-flexItem-share4  { @include S-flexItem-share4; }  // flex: 4 0 0%;
+.S-flexItem-share6  { @include S-flexItem-share6; }  // flex: 6 0 0%;
+.S-flexItem-share8  { @include S-flexItem-share8; }  // flex: 8 0 0%;
+.S-flexItem-share10 { @include S-flexItem-share10; } // flex: 10 0 0%;
+.S-flexItem-share   { @include S-flexItem-share; }   // flex: 12 0 0%;
 
 // auto sizes (extra space distributed)
-.K-flexItem-auto1  { @include K-flexItem-auto1; }  // flex: 1 0 auto;
-.K-flexItem-auto2  { @include K-flexItem-auto2; }  // flex: 2 0 auto;
-.K-flexItem-auto3  { @include K-flexItem-auto3; }  // flex: 3 0 auto;
-.K-flexItem-auto4  { @include K-flexItem-auto4; }  // flex: 4 0 auto;
-.K-flexItem-auto6  { @include K-flexItem-auto6; }  // flex: 6 0 auto;
-.K-flexItem-auto8  { @include K-flexItem-auto8; }  // flex: 8 0 auto;
-.K-flexItem-auto10 { @include K-flexItem-auto10; } // flex: 10 0 auto;
-.K-flexItem-auto   { @include K-flexItem-auto; }   // flex: 12 0 auto;
+.S-flexItem-auto1  { @include S-flexItem-auto1; }  // flex: 1 0 auto;
+.S-flexItem-auto2  { @include S-flexItem-auto2; }  // flex: 2 0 auto;
+.S-flexItem-auto3  { @include S-flexItem-auto3; }  // flex: 3 0 auto;
+.S-flexItem-auto4  { @include S-flexItem-auto4; }  // flex: 4 0 auto;
+.S-flexItem-auto6  { @include S-flexItem-auto6; }  // flex: 6 0 auto;
+.S-flexItem-auto8  { @include S-flexItem-auto8; }  // flex: 8 0 auto;
+.S-flexItem-auto10 { @include S-flexItem-auto10; } // flex: 10 0 auto;
+.S-flexItem-auto   { @include S-flexItem-auto; }   // flex: 12 0 auto;
 
 // column sizes
-.K-flexItem-5of6 { @include K-flexItem-11of12; } // flex: 0 0 91.66666%; // 11of12
-.K-flexItem-5of6 { @include K-flexItem-5of6; }   // flex: 0 0 83.33333%; // 10of12
-.K-flexItem-3of4 { @include K-flexItem-3of4; }   // flex: 0 0 75%;       // 9of12
-.K-flexItem-2of3 { @include K-flexItem-2of3; }   // flex: 0 0 66.66666%; // 8of12
-.K-flexItem-1of3 { @include K-flexItem-7of12; }  // flex: 0 0 58.33333%; // 5of12
-.K-flexItem-1of2 { @include K-flexItem-1of2; }   // flex: 0 0 50%;       // 6of12
-.K-flexItem-1of3 { @include K-flexItem-5of12; }  // flex: 0 0 41.66666%; // 5of12
-.K-flexItem-1of3 { @include K-flexItem-1of3; }   // flex: 0 0 33.33333%; // 4of12
-.K-flexItem-1of4 { @include K-flexItem-1of4; }   // flex: 0 0 25%;       // 3of12
-.K-flexItem-1of6 { @include K-flexItem-1of6; }   // flex: 0 0 16.66666%; // 2of12
-.K-flexItem-1of12 { @include K-flexItem-1of12; } // flex: 0 0 8.33333%;  // 1of12
-
-
-
-// Old deprecated stuff
-// flex parents
-// .K-flex-row {
-//   @include K-flex-row;
-// }
-// .K-flex-col {
-//   @include K-flex-col;
-// }
-
-// flex children
-// .K-flex-grow {
-//   flex-grow:  12;
-// }
-
-// .K-flex-item { @include K-flex-item(); }
-// .K-flex-2 { flex: 2; }
-// .K-flex-4 { flex: 4; }
-// .K-flex-6 { flex: 6; }
-// .K-flex-8 { flex: 8; }
-// .K-flex-10 { flex: 10; }
-// .K-flex-12 { flex: 12; }
-
-// I think we should only limit it to numbers less than 12
-// .kelp-flex-18 { flex: 18; }
-// .kelp-flex-24 { flex: 24; }
-// .kelp-flex-36 { flex: 36; }
-// .kelp-flex-48 { flex: 48; }
+.S-flexItem-5of6 { @include S-flexItem-11of12; } // flex: 0 0 91.66666%; // 11of12
+.S-flexItem-5of6 { @include S-flexItem-5of6; }   // flex: 0 0 83.33333%; // 10of12
+.S-flexItem-3of4 { @include S-flexItem-3of4; }   // flex: 0 0 75%;       // 9of12
+.S-flexItem-2of3 { @include S-flexItem-2of3; }   // flex: 0 0 66.66666%; // 8of12
+.S-flexItem-1of3 { @include S-flexItem-7of12; }  // flex: 0 0 58.33333%; // 5of12
+.S-flexItem-1of2 { @include S-flexItem-1of2; }   // flex: 0 0 50%;       // 6of12
+.S-flexItem-1of3 { @include S-flexItem-5of12; }  // flex: 0 0 41.66666%; // 5of12
+.S-flexItem-1of3 { @include S-flexItem-1of3; }   // flex: 0 0 33.33333%; // 4of12
+.S-flexItem-1of4 { @include S-flexItem-1of4; }   // flex: 0 0 25%;       // 3of12
+.S-flexItem-1of6 { @include S-flexItem-1of6; }   // flex: 0 0 16.66666%; // 2of12
+.S-flexItem-1of12 { @include S-flexItem-1of12; } // flex: 0 0 8.33333%;  // 1of12

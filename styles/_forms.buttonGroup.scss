@@ -1,18 +1,18 @@
-.k-buttonGroup {
+.s-buttonGroup {
   display: flex;
   flex-direction: row;
 }
-.k-buttonGroup .k-button:not(:last-child) {
+.s-buttonGroup .s-button:not(:last-child) {
   margin-right: -1px;
 }
 
 
-.k-buttonGroup .k-button {
+.s-buttonGroup .s-button {
   border-radius: 0;
 }
-.k-buttonGroup .k-button:first-child {
-  border-radius: $k-details-borderRadiusSmall 0 0 $k-details-borderRadiusSmall;
+.s-buttonGroup .s-button:first-child {
+  border-radius: $s-details-borderRadiusSmall 0 0 $s-details-borderRadiusSmall;
 }
-.k-buttonGroup .k-button:last-child {
-  border-radius: 0 $k-details-borderRadiusSmall $k-details-borderRadiusSmall 0;
+.s-buttonGroup .s-button:last-child {
+  border-radius: 0 $s-details-borderRadiusSmall $s-details-borderRadiusSmall 0;
 }

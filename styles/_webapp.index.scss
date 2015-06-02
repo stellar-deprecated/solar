@@ -1,23 +1,23 @@
 // may be deprecated
-.k-webApp, .K-webApp {
-  @include k-webApp();
+.s-webApp, .K-webApp {
+  @include s-webApp();
 }
 .K-webApp--scrollable {
-  @include k-webApp--scrollable();
+  @include s-webApp--scrollable();
 }
 
-.k-webApp-bar, .K-webApp__bar {
-  @include k-webApp-bar();
+.s-webApp-bar, .K-webApp__bar {
+  @include s-webApp-bar();
 }
 
-.k-webApp-content, .K-webApp__content {
-  @include k-webApp-content();
+.s-webApp-content, .K-webApp__content {
+  @include s-webApp-content();
 }
 
-.k-webApp__fill, .K-webApp__fill {
-  @include k-webApp__fill();
+.s-webApp__fill, .K-webApp__fill {
+  @include s-webApp__fill();
 }
 
-.k-webApp-tabBar {
-  @include k-webApp-tabBar();
+.s-webApp-tabBar {
+  @include s-webApp-tabBar();
 }

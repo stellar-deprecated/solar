@@ -1,8 +1,8 @@
-# Misc kelp things
+# Misc solar things
 
 ## Responsiveness
 ### Breakpoints
-Kelp is build in a mobile first way and breakpoints only use `min-width`. Styles in smaller breakpoints cascade to larger breakpoints until overwritten by those larger breakpoints. These breakpoints are shared by both media queries and element queries. The smallest screen we reasonably design for is 240px.
+Solar is built in a mobile first way and breakpoints only use `min-width`. Styles in smaller breakpoints cascade to larger breakpoints until overwritten by those larger breakpoints. These breakpoints are shared by both media queries and element queries. The smallest screen we reasonably design for is 240px.
 
 - **x-small** `xs`: `min-width: 360px`
 - **small** `s`: `min-width: 480px`

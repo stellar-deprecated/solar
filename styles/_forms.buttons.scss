@@ -4,13 +4,13 @@ p {
 }
 
 // Some button styles in the common forms.base to consolidate properties
-.k-button {
+.s-button {
   display: inline-block;
   margin: 0;
   // background: none;
-  border-radius: $k-details-borderRadiusSmall;
+  border-radius: $s-details-borderRadiusSmall;
 }
 
-.k-button.is-disabled {
+.s-button.is-disabled {
   cursor: not-allowed;
 }
