@@ -174,9 +174,9 @@ SVG images sometimes use as inline background values. You can use the sass varia
 -->
 
 ### Sass variables and functions
-The syntax for naming solar core variables are similar to that of basics and components. First, it starts out with a prefix: `k` for themable and `K` for non-themable. Then, the category, and then subcategories or name of the variable.
+The syntax for naming solar core variables are similar to that of basics and components. First, it starts out with a prefix: `s` for themable and `S` for non-themable. Then, the category, and then subcategories or name of the variable.
 ```
-Syntax: (k|K)-category[-subCategory|-name]
+Syntax: (s|S)-category[-subCategory|-name]
 ```
 
 It is prefixed in such a unique way because.
@@ -216,7 +216,7 @@ The `px` unit is an absolute measurement of a css "pixel". 1px will always be 1p
 ### rem
 The `rem` unit inherits its size from the html base font size.
 
-`rem` is good for browsers that give the option to zoom text only. However, this is mostly relevant to a previous era of web development (IE6,7) where text would only be zoomable if em or rem units inherited from the browser stylesheet. Now, most browsers zoom the reference pixel instead of the base font size. In mobile devices, zooming is often in the form of pinch to zoom. Due to these changes, rem provides very little benefit over px. Additionally, using rem requires conversion from px to rem, adding cognitive load for something basely affects users. Lastly, rem support is still a bit weird in some browsers.
+`rem` is good for browsers that give the option to zoom text only. However, this is mostly relevant to a previous era of web development (IE6,7) where text would only be zoomable if em or rem units inherited from the browser stylesheet. Now, most browsers zoom the reference pixel instead of the base font size. In mobile devices, zooming is often in the form of pinch to zoom. Due to these changes, rem provides very little benefit over px. Additionally, using rem requires conversion from px to rem, adding cognitive load for something barely affects users. Lastly, rem support is still a bit weird in some browsers.
 
 ### Rounding and subpixels
 We should treat font sizes as if they were exact to the sub pixel. Browsers are moving towards that direction and even in ones that don't support subpixel rendering, font sizes still look and work mostly fine.

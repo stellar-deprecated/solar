@@ -1,21 +1,21 @@
 # Solar css framework
 
-Solar is a front-end framework developed specifically for modular apps with cross organization shared widgets.
-
-## Getting started
-To gain a general understanding of how to use the Solar framework, read the [Solar css framework overview] and view the components demos.
-
-To learn about how to write css consistent with the design laid out in solar, read the [solar css guide].
-
-To learn about the different parts of the solar ecosystem and how extensions and themes come in, read the [Solar ecosystem architecture].
+Solar is a front-end css framework developed specifically for cross organizational modularity.
 
 ## Design philosophies/goals
-The design decisions of `solar` has been influenced by these goals of what it wants to enable:
-- **Mobile first**: creating a mobile site THEN scaling up to desktop
-- **Unopinionated design core**: including simple unopinionated look and feel for the core
+The `solar` css framework is:
+- **Mobile first**: concepts designed with a mobile first philosophy
+- **Unopinionated**: the core is unopinionated in design so developers don't need to
 - **Themable**: enabling others to easily theme the look and feel
-- **Simple and productive workflow**: favoring simplicity for the 90% of use cases over the 10% complex
-- **Cross organizational**: enabling easy sharing of widgets to work across multiple organizations
+- **Cross organizational**: helps code (like widgets and modules) be shared across multiple organizations
+
+## Getting started
+To see an example of solar in use, see the new client.
+
+To learn about the different parts of the solar ecosystem and how extensions and themes come in, read the [Solar css framework architecture](https://github.com/stellar/solar/blob/master/docs/architecture.md).
+
+To learn about how to write css consistent with the design laid out in solar, read the [solar css guide](https://github.com/stellar/solar/blob/master/docs/css-guide.md).
+
 
 ## Conventions
 Solar is more than just a set of sass/js files. It is also set of conventions. Solar extensions and consumers should follow the solar conventions. These conventions are designed to enable developers to write css in a unified, clean, and modular way.
