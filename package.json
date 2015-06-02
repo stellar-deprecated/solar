@@ -1,5 +1,5 @@
 {
-  "name": "kelp",
+  "name": "solar",
   "version": "0.3.1",
   "description": "A front-end framework for modular web apps",
   "main": "index.json",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stellar/kelp.git"
+    "url": "https://github.com/stellar/solar.git"
   },
   "author": "Iris Li <iris@stellar.org> (https://www.stellar.org/)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/stellar/kelp/issues"
+    "url": "https://github.com/stellar/solar/issues"
   },
-  "homepage": "https://github.com/stellar/kelp"
+  "homepage": "https://github.com/stellar/solar"
 }
