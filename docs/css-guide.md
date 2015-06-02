@@ -1,8 +1,8 @@
-#Kelp css guide
+#Solar css guide
 
 ## Style guide
 ### CSS Selectors
-Kelp and css should use the following syntax for selectors:
+Solar and css should use the following syntax for selectors:
 ```css
 namespace-itemName[__descendantName|--modifierName]
 ```
@@ -26,17 +26,17 @@ Nope. (except for hash anchor points or css `:target`).
 ### Don't nest selectors
 Media queries and pseudoelements excepted.
 
-### Kelp Namespaces
-You can define your own namespace but make sure that it doesn't clash with these predefined kelp namespaces.
+### Solar Namespaces
+You can define your own namespace but make sure that it doesn't clash with these predefined solar namespaces.
 
 General namespace:
 - **`is-`**: States of modules
-- **`js-`**: Kelp modules (classes for js to use)
+- **`js-`**: Solar modules (classes for js to use)
 
-Kelp framework namespaces:
-- **`K-`**: Kelp components
-- **`k-`**: Kelp modules
-- **`U-`**: General kelp utilities
+Solar framework namespaces:
+- **`S-`**: Solar components
+- **`s-`**: Solar modules
+- **`U-`**: General solar utilities
 
 User defined namespace:
 - **`u-`**: User defined utilities
@@ -174,17 +174,17 @@ SVG images sometimes use as inline background values. You can use the sass varia
 -->
 
 ### Sass variables and functions
-The syntax for naming kelp core variables are similar to that of basics and components. First, it starts out with a prefix: `k` for themable and `K` for non-themable. Then, the category, and then subcategories or name of the variable.
+The syntax for naming solar core variables are similar to that of basics and components. First, it starts out with a prefix: `k` for themable and `K` for non-themable. Then, the category, and then subcategories or name of the variable.
 ```
 Syntax: (k|K)-category[-subCategory|-name]
 ```
 
 It is prefixed in such a unique way because.
 
-Kelp already has a definition for a few types of variables/functions in sass:
-- k-color
+Solar already has a definition for a few types of variables/functions in sass:
+- s-color
 
-Kelp does not use sass maps because it wants to stay as simple as possible so that in the future it may be ported to another system (such as postcss).
+Solar does not use sass maps because it wants to stay as simple as possible so that in the future it may be ported to another system (such as postcss).
 
 ### Readability/clarity/usefulness over perfection
 It is important to follow this styleguide as much as possible. Exceptions can and will occur though, and in those cases, use your best judgement and lean towards the side of making things easy for others to understand.
@@ -193,7 +193,7 @@ It is important to follow this styleguide as much as possible. Exceptions can an
 ## em vs px vs rem
 Whether to use em, px, or rem is a topic that there is no global consensus. px offers simplicity; em offers inheritance; and rem is good for zoom
 
-That said, there are better ways to work. kelp will follow these conventions
+That said, there are better ways to work. solar will follow these conventions
 
 ### em
 The `em` unit inherits its size from the font size of the current element. If not defined, it will be the inherited font sizes. Keep in mind that em will inherit from its parent and thus you must be careful to not have a cascading effect
@@ -230,7 +230,7 @@ Take a look at the scale docs.
 line height should be expressed as unitless numbers
 
 ## Credits & attribution
-Shoutouts to a lot of the people who have written and taught about the practices that kelp uses. Specifically but not limited to: @necolas, @mdo, @fat.
+Shoutouts to a lot of the people who have written and taught about the practices that solar uses. Specifically but not limited to: @necolas, @mdo, @fat.
 
 - Style guide > CSS selector syntax: @necolas (suit), Yandex (BEM)
 - Style guide > format (modified) (CC BY 3.0): @necolas (https://github.com/necolas/idiomatic-css)

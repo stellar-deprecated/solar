@@ -1,48 +1,49 @@
 
 
-.k-inputGroup {
-  @include K-flex-row();
+.s-inputGroup {
+  @include S-flex-row();
   flex-wrap: wrap;
 }
 
 // Unfortunately, consumer developers are unable to change classes. They may
 // override the flex settings. Stylings should be set on the base item (and not modifiers) much as possible.
-.k-inputGroup__item {
-  @include K-flexItem-auto;
+.s-inputGroup__item {
+  @include S-flexItem-auto;
 }
 // primary flex modifiers
-// .k-inputGroup__item--full {
+// .s-inputGroup__item--full {
 //   flex: 12 0 100%;
 // }
-// .k-inputGroup__item--addon {
+// .s-inputGroup__item--addon {
 //   flex: 0 0 auto;
 // }
 
 // auxiliary position modifiers
-.k-inputGroup__item--flexEnd {
+.s-inputGroup__item--flexEnd {
   align-self: flex-end;
 }
-.k-inputGroup__item--flexStart {
+.s-inputGroup__item--flexStart {
   align-self: flex-start;
 }
-.k-inputGroup__item--tag,
-.k-inputGroup__item--tagFlat,
-.k-inputGroup__item--tagMin {
+.s-inputGroup__item--tag,
+.s-inputGroup__item--tagFlat,
+.s-inputGroup__item--tagMin {
   align-items: center;
   display: flex;
 }
 
 
-// border radius is a part of the core kelp so that widget developers will
+// border radius is a part of the core solar so that widget developers will
 // remember to use the correct radius for special cases such as multi-line inputGroups
-.k-inputGroup__item {
-  border-radius: 0;
+.s-inputGroup__item {
+  border-radius: $s-details-borderRadiusSmall;
 }
-.k-inputGroup__item:first-child {
-  border-top-left-radius: $k-details-borderRadiusSmall;
-  border-bottom-left-radius: $k-details-borderRadiusSmall;
-}
-.k-inputGroup__item:last-child {
-  border-top-right-radius: $k-details-borderRadiusSmall;
-  border-bottom-right-radius: $k-details-borderRadiusSmall;
-}
+// TODO: figure out how to do this
+// .s-inputGroup__item:first-child {
+//   border-top-left-radius: $s-details-borderRadiusSmall;
+//   border-bottom-left-radius: $s-details-borderRadiusSmall;
+// }
+// .s-inputGroup__item:last-child {
+//   border-top-right-radius: $s-details-borderRadiusSmall;
+//   border-bottom-right-radius: $s-details-borderRadiusSmall;
+// }

@@ -1,21 +1,21 @@
-# Kelp components (themable)
+# Solar components (themable)
 
-## Button `.k-button`
+## Button `.s-button`
 There are three types of buttons: light, medium (default; no modifier), and heavy. The differences in visual strengths are used to vary the emphasis of buttons.
 
 - light: less important buttons
 - medium: default should be used in most places
 - heavy: emphasis for important actions such as form submission
 
-Kelp core does not enforce how they look like--this job belongs to themes. For example, a theme might choose their light to be flat and their heavy to have a box shadow. Another might want to have a border on light and primary background color on heavy.
+Solar core does not enforce how they look like--this job belongs to themes. For example, a theme might choose their light to be flat and their heavy to have a box shadow. Another might want to have a border on light and primary background color on heavy.
 
-<button class="k-button k-buton--light">a.k-button.k-button--light</button>
-<button class="k-button">a.k-button (default; no modifier)</button>
-<button class="k-button k-buton--heavy">a.k-button.k-button--heavy</button>
+<button class="s-button s-button--light">a.s-button.s-button--light</button>
+<button class="s-button">a.s-button (default; no modifier)</button>
+<button class="s-button s-button--heavy">a.s-button.s-button--heavy</button>
 ```html
-<button class="k-button k-buton--light">a.k-button.k-button--light</button>
-<button class="k-button">a.k-button (default; no modifier)</button>
-<button class="k-button k-buton--heavy">a.k-button.k-button--heavy</button>
+<button class="s-button s-button--light">a.s-button.s-button--light</button>
+<button class="s-button">a.s-button (default; no modifier)</button>
+<button class="s-button s-button--heavy">a.s-button.s-button--heavy</button>
 ```
 
 
@@ -25,42 +25,42 @@ Using both the `<a>` tag and the `<button>` should look the same.
 - `<a>`: Used with a meaningful href for state/page navigation
 - `<button>`: Used inside a form or as a control
 
-<a href="#somewhere" class="k-button">This is an a.button</a>
-<button class="k-button">This is a button.button</button>
+<a href="#somewhere" class="s-button">This is an a.button</a>
+<button class="s-button">This is a button.button</button>
 ```html
-<a href="#somewhere" class="k-button">This is an a.button</a>
-<button class="k-button">This is a button.button</button>
+<a href="#somewhere" class="s-button">This is an a.button</a>
+<button class="s-button">This is a button.button</button>
 ```
 
-### buttonGroup `.k-buttonGroup`
-k-buttonGroup is a way to group multiple buttons together into one bar. These can only be single rows.
-<div class="k-buttonGroup">
-  <button class="k-button">Left</button>
-  <button class="k-button">Middle</button>
-  <button class="k-button">Right</button>
+### buttonGroup `.s-buttonGroup`
+s-buttonGroup is a way to group multiple buttons together into one bar. These can only be single rows.
+<div class="s-buttonGroup">
+  <button class="s-button">Left</button>
+  <button class="s-button">Middle</button>
+  <button class="s-button">Right</button>
 </div>
 
 ```html
-<div class="k-buttonGroup">
-  <button class="k-button">Left</button>
-  <button class="k-button">Middle</button>
-  <button class="k-button">Right</button>
+<div class="s-buttonGroup">
+  <button class="s-button">Left</button>
+  <button class="s-button">Middle</button>
+  <button class="s-button">Right</button>
 </div>
 ```
 
-## inputGroup `.k-inputGroup`
-k-inputGroup is an wrapping flex row component for laying out form elements and addons. It is often used inside a form but can be used in other places dealing with buttons and addons too.
+## inputGroup `.s-inputGroup`
+s-inputGroup is an wrapping flex row component for laying out form elements and addons. It is often used inside a form but can be used in other places dealing with buttons and addons too.
 
 Here are some examples to illustrate how inputGroup works.
 
 ### Auto negative margin management to collapse borders (theme starter)
 By default all items except for the last have a margin-right of `-1px` to prevent the double borders.
 ```css
-.k-inputGroup {
+.s-inputGroup {
   padding-right: 1px;
   padding-bottom: 1px;
 }
-.k-inputGroup__item {
+.s-inputGroup__item {
   margin-bottom: -1px;
   margin-right: -1px;
 }
@@ -74,198 +74,198 @@ See example 2 for what this helps achieve
 
 ### Example 1: main + addon (aka "none")
 ```html
-<div class="k-inputGroup">
-  <input class="k-inputGroup__item" placeholder="main (auto)" type="text">
-  <select class="k-inputGroup__item K-flexItem-none">
+<div class="s-inputGroup">
+  <input class="s-inputGroup__item" placeholder="main (auto)" type="text">
+  <select class="s-inputGroup__item S-flexItem-none">
     <option value="addon">addon</option>
   </select>
 </div>
 ```
-<div class="k-inputGroup">
-  <input class="k-inputGroup__item" placeholder="main (auto)" type="text">
-  <select class="k-inputGroup__item K-flexItem-none">
+<div class="s-inputGroup">
+  <input class="s-inputGroup__item" placeholder="main (auto)" type="text">
+  <select class="s-inputGroup__item S-flexItem-none">
     <option value="addon">addon</option>
   </select>
 </div>
 
 ### Example 2: mixing different flex sizes
-With `kelp-theme-base` (a base theme that currently lives inside `kelp`), the first item is expected to not have a right border because there is usually other elements on the same row. The full should have a border on the right because it is not expected to have something on the right.
+With `solar-theme-base` (a base theme that currently lives inside `solar`), the first item is expected to not have a right border because there is usually other elements on the same row. The full should have a border on the right because it is not expected to have something on the right.
 
 Each line should fill up the whole row.
 ```html
-<div class="k-inputGroup">
-  <input class="k-inputGroup__item" value="default (K-flexItem-auto)" type="text">
-  <input class="k-inputGroup__item K-flexItem-1of3" value="default (K-flexItem-1of3)" type="text">
-  <input class="k-inputGroup__item K-flexItem-full" value="k-flexItem-full" type="text">
-  <button class="k-button k-inputGroup__item" value="addon">addon</button>
+<div class="s-inputGroup">
+  <input class="s-inputGroup__item" value="default (S-flexItem-auto)" type="text">
+  <input class="s-inputGroup__item S-flexItem-1of3" value="default (S-flexItem-1of3)" type="text">
+  <input class="s-inputGroup__item S-flexItem-full" value="S-flexItem-full" type="text">
+  <button class="s-button s-inputGroup__item" value="addon">addon</button>
 </div>
 ```
-<div class="k-inputGroup">
-  <input class="k-inputGroup__item" value="default (K-flexItem-auto)" type="text">
-  <input class="k-inputGroup__item K-flexItem-1of3" value="default (K-flexItem-1of3)" type="text">
-  <input class="k-inputGroup__item K-flexItem-full" value="k-flexItem-full" type="text">
-  <button class="k-button k-inputGroup__item" value="addon">addon</button>
+<div class="s-inputGroup">
+  <input class="s-inputGroup__item" value="default (S-flexItem-auto)" type="text">
+  <input class="s-inputGroup__item S-flexItem-1of3" value="default (S-flexItem-1of3)" type="text">
+  <input class="s-inputGroup__item S-flexItem-full" value="S-flexItem-full" type="text">
+  <button class="s-button s-inputGroup__item" value="addon">addon</button>
 </div>
 
 ### Example 3: `<label>`s and vertical alignment (flex align)
-Labels aid usability by effectively expanding the click area for the input. By using the label as the parent `k-inputGroup`, we get simpler markup by not needing the `for` attribute.
+Labels aid usability by effectively expanding the click area for the input. By using the label as the parent `s-inputGroup`, we get simpler markup by not needing the `for` attribute.
 
-By default, items in k-inputGroup are aligned to stretch via [flexbox align](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items).
+By default, items in s-inputGroup are aligned to stretch via [flexbox align](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items).
 
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item K-flexItem-1of3">.K-flexItem-1of3</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="by default, text is aligned to flex-start" type="text">
+<label class="s-inputGroup solarDocs-inputGroup--bordered">
+  <span class="s-inputGroup__item S-flexItem-1of3">.S-flexItem-1of3</span>
+  <input class="s-inputGroup__item solarDocs-inputGroup__item--huge" placeholder="by default, text is aligned to flex-start" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of3">`.k-inputGroup__item--tag`</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="using a --tag will vertically align the text" type="text">
+<label class="s-inputGroup solarDocs-inputGroup--bordered">
+  <span class="s-inputGroup__item s-inputGroup__item--tag S-flexItem-1of3">`.s-inputGroup__item--tag`</span>
+  <input class="s-inputGroup__item solarDocs-inputGroup__item solarDocs-inputGroup__item--huge" placeholder="using a --tag will vertically align the text" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item kelpDocs-inputGroup__label kelpDocs-inputGroup__label--end">align-self: flex-end</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="Label aligned to flex-end" type="text">
+<label class="s-inputGroup solarDocs-inputGroup--bordered">
+  <span class="s-inputGroup__item solarDocs-inputGroup__label solarDocs-inputGroup__label--end">align-self: flex-end</span>
+  <input class="s-inputGroup__item solarDocs-inputGroup__item solarDocs-inputGroup__item--huge" placeholder="Label aligned to flex-end" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item kelpDocs-inputGroup__label">The input can be aligned to the end if desired<br />---<br />(align-self: flex-start)</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--flexStart" placeholder="align-self: flex-start" type="text">
+<label class="s-inputGroup solarDocs-inputGroup--bordered">
+  <span class="s-inputGroup__item solarDocs-inputGroup__label">The input can be aligned to the end if desired<br />---<br />(align-self: flex-start)</span>
+  <input class="s-inputGroup__item solarDocs-inputGroup__item solarDocs-inputGroup__item--flexStart" placeholder="align-self: flex-start" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item kelpDocs-inputGroup__label">Or it could be at the end too<br />---<br />(align-self: flex-end)</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--flexEnd" placeholder="align-self: flex-end" type="text">
+<label class="s-inputGroup solarDocs-inputGroup--bordered">
+  <span class="s-inputGroup__item solarDocs-inputGroup__label">Or it could be at the end too<br />---<br />(align-self: flex-end)</span>
+  <input class="s-inputGroup__item solarDocs-inputGroup__item solarDocs-inputGroup__item--flexEnd" placeholder="align-self: flex-end" type="text">
 </label>
 
 ```html
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item K-flexItem-1of3">.K-flexItem-1of3</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="by default, text is aligned to flex-start" type="text">
+<label class="s-inputGroup solarDocs-inputGroup--bordered">
+  <span class="s-inputGroup__item S-flexItem-1of3">.S-flexItem-1of3</span>
+  <input class="s-inputGroup__item solarDocs-inputGroup__item--huge" placeholder="by default, text is aligned to flex-start" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-1of3">`.k-inputGroup__item--tag`</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="using a --tag will vertically align the text" type="text">
+<label class="s-inputGroup solarDocs-inputGroup--bordered">
+  <span class="s-inputGroup__item s-inputGroup__item--tag S-flexItem-1of3">`.s-inputGroup__item--tag`</span>
+  <input class="s-inputGroup__item solarDocs-inputGroup__item solarDocs-inputGroup__item--huge" placeholder="using a --tag will vertically align the text" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item kelpDocs-inputGroup__label kelpDocs-inputGroup__label--end">align-self: flex-end</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--huge" placeholder="Label aligned to flex-end" type="text">
+<label class="s-inputGroup solarDocs-inputGroup--bordered">
+  <span class="s-inputGroup__item solarDocs-inputGroup__label solarDocs-inputGroup__label--end">align-self: flex-end</span>
+  <input class="s-inputGroup__item solarDocs-inputGroup__item solarDocs-inputGroup__item--huge" placeholder="Label aligned to flex-end" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item kelpDocs-inputGroup__label">The input can be aligned to the end if desired<br />---<br />(align-self: flex-start)</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--flexStart" placeholder="align-self: flex-start" type="text">
+<label class="s-inputGroup solarDocs-inputGroup--bordered">
+  <span class="s-inputGroup__item solarDocs-inputGroup__label">The input can be aligned to the end if desired<br />---<br />(align-self: flex-start)</span>
+  <input class="s-inputGroup__item solarDocs-inputGroup__item solarDocs-inputGroup__item--flexStart" placeholder="align-self: flex-start" type="text">
 </label>
-<label class="k-inputGroup kelpDocs-inputGroup--bordered">
-  <span class="k-inputGroup__item kelpDocs-inputGroup__label">Or it could be at the end too<br />---<br />(align-self: flex-end)</span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item kelpDocs-inputGroup__item--flexEnd" placeholder="align-self: flex-end" type="text">
+<label class="s-inputGroup solarDocs-inputGroup--bordered">
+  <span class="s-inputGroup__item solarDocs-inputGroup__label">Or it could be at the end too<br />---<br />(align-self: flex-end)</span>
+  <input class="s-inputGroup__item solarDocs-inputGroup__item solarDocs-inputGroup__item--flexEnd" placeholder="align-self: flex-end" type="text">
 </label>
 ```
 
 ```css
-.kelpDocs-inputGroup--bordered {
+.solarDocs-inputGroup--bordered {
   outline: 1px solid pink;
 }
 
 // modifiers
-.kelpDocs-inputGroup__label--end {
+.solarDocs-inputGroup__label--end {
   align-self: flex-end;
 }
-.kelpDocs-inputGroup__item--huge {
-  font-size: $k-scale-up2;
+.solarDocs-inputGroup__item--huge {
+  font-size: $s-scale-up2;
 }
-.kelpDocs-inputGroup__item--flexStart {
+.solarDocs-inputGroup__item--flexStart {
   align-self: flex-start;
 }
-.kelpDocs-inputGroup__item--flexEnd {
+.solarDocs-inputGroup__item--flexEnd {
   align-self: flex-end;
 }
 ```
 
-### Example 4: k-inputGroup__item modifiers tag, tagFlat, tagMin
+### Example 4: s-inputGroup__item modifiers tag, tagFlat, tagMin
 The tag modifiers to the inputGroup item.
 
 **Tip**: If the inputGroup__item contains not only a text node, be sure to wrap it with something else like a span. This is because the tag modifiers turn the item into a flex item so that it can vertically center contents.
 
-<label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-share">
-    <span>`.k-inputGroup__item--tag` (the whole package)</span>
+<label class="s-inputGroup">
+  <span class="s-inputGroup__item s-inputGroup__item--tag S-flexItem-share">
+    <span>`.s-inputGroup__item--tag` (the whole package)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
+  <input class="s-inputGroup__item solarDocs-inputGroup__item--huge S-flexItem-1of3" placeholder="..." type="text">
 </label>
-<label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tagFlat K-flexItem-share">
-    <span>`.k-inputGroup__item--tagFlat` (no background/visible border)</span>
+<label class="s-inputGroup">
+  <span class="s-inputGroup__item s-inputGroup__item--tagFlat S-flexItem-share">
+    <span>`.s-inputGroup__item--tagFlat` (no background/visible border)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
+  <input class="s-inputGroup__item solarDocs-inputGroup__item--huge S-flexItem-1of3" placeholder="..." type="text">
 </label>
-<label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tagMin K-flexItem-share">
-    <span>`.k-inputGroup__item--tagMin` (no padding)</span>
+<label class="s-inputGroup">
+  <span class="s-inputGroup__item s-inputGroup__item--tagMin S-flexItem-share">
+    <span>`.s-inputGroup__item--tagMin` (no padding)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
+  <input class="s-inputGroup__item solarDocs-inputGroup__item--huge S-flexItem-1of3" placeholder="..." type="text">
 </label>
-<label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tagMin K-flexItem-share">
-    `.k-inputGroup__item--tagMin` This is what <a href="">happens</a> when you don't wrap inner contents with span.
+<label class="s-inputGroup">
+  <span class="s-inputGroup__item s-inputGroup__item--tagMin S-flexItem-share">
+    `.s-inputGroup__item--tagMin` This is what <a href="">happens</a> when you don't wrap inner contents with span.
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
+  <input class="s-inputGroup__item solarDocs-inputGroup__item--huge S-flexItem-1of3" placeholder="..." type="text">
 </label>
 
 ```html
-<label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-share">
-    <span>`.k-inputGroup__item--tag` (the whole package)</span>
+<label class="s-inputGroup">
+  <span class="s-inputGroup__item s-inputGroup__item--tag S-flexItem-share">
+    <span>`.s-inputGroup__item--tag` (the whole package)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
+  <input class="s-inputGroup__item solarDocs-inputGroup__item--huge S-flexItem-1of3" placeholder="..." type="text">
 </label>
-<label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tagFlat K-flexItem-share">
-    <span>`.k-inputGroup__item--tagFlat` (no background/visible border)</span>
+<label class="s-inputGroup">
+  <span class="s-inputGroup__item s-inputGroup__item--tagFlat S-flexItem-share">
+    <span>`.s-inputGroup__item--tagFlat` (no background/visible border)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
+  <input class="s-inputGroup__item solarDocs-inputGroup__item--huge S-flexItem-1of3" placeholder="..." type="text">
 </label>
-<label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tagMin K-flexItem-share">
-    <span>`.k-inputGroup__item--tagMin` (no padding)</span>
+<label class="s-inputGroup">
+  <span class="s-inputGroup__item s-inputGroup__item--tagMin S-flexItem-share">
+    <span>`.s-inputGroup__item--tagMin` (no padding)</span>
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
+  <input class="s-inputGroup__item solarDocs-inputGroup__item--huge S-flexItem-1of3" placeholder="..." type="text">
 </label>
-<label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tagMin K-flexItem-share">
-    `.k-inputGroup__item--tagMin` This is what <a href="">happens</a> when you don't wrap inner contents with span.
+<label class="s-inputGroup">
+  <span class="s-inputGroup__item s-inputGroup__item--tagMin S-flexItem-share">
+    `.s-inputGroup__item--tagMin` This is what <a href="">happens</a> when you don't wrap inner contents with span.
   </span>
-  <input class="k-inputGroup__item kelpDocs-inputGroup__item--huge K-flexItem-1of3" placeholder="..." type="text">
+  <input class="s-inputGroup__item solarDocs-inputGroup__item--huge S-flexItem-1of3" placeholder="..." type="text">
 </label>
 ```
 
-<div class="k-inputGroup">
-  <button class="k-inputGroup__item k-button">Mix</button>
-  <input class="k-inputGroup__item" id="kelpDocs-inputGroup-and" type="text" placeholder="and">
-  <label for="kelpDocs-inputGroup-and" class="k-inputGroup__item k-inputGroup__item--tag">
+<div class="s-inputGroup">
+  <button class="s-inputGroup__item s-button">Mix</button>
+  <input class="s-inputGroup__item" id="solarDocs-inputGroup-and" type="text" placeholder="and">
+  <label for="solarDocs-inputGroup-and" class="s-inputGroup__item s-inputGroup__item--tag">
     match! (remember to use label `for` carefully)
   </label>
 </div>
 
 ```html
-<div class="k-inputGroup">
-  <button class="k-inputGroup__item k-button">Mix</button>
-  <input class="k-inputGroup__item" id="kelpDocs-inputGroup-and" type="text" placeholder="and">
-  <label for="kelpDocs-inputGroup-and" class="k-inputGroup__item k-inputGroup__item--tag">
+<div class="s-inputGroup">
+  <button class="s-inputGroup__item s-button">Mix</button>
+  <input class="s-inputGroup__item" id="solarDocs-inputGroup-and" type="text" placeholder="and">
+  <label for="solarDocs-inputGroup-and" class="s-inputGroup__item s-inputGroup__item--tag">
     match! (remember to use label `for` carefully)
   </label>
 </div>
 ```
 
-<label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-none">
+<label class="s-inputGroup">
+  <span class="s-inputGroup__item s-inputGroup__item--tag S-flexItem-none">
     <input type="checkbox">
   </span>
-  <span class="k-inputGroup__item k-inputGroup__item--tag">
+  <span class="s-inputGroup__item s-inputGroup__item--tag">
     <span>tags can be used with inputs inside them too</span>
   </span>
 </label>
 
 ```html
-<label class="k-inputGroup">
-  <span class="k-inputGroup__item k-inputGroup__item--tag K-flexItem-none">
+<label class="s-inputGroup">
+  <span class="s-inputGroup__item s-inputGroup__item--tag S-flexItem-none">
     <input type="checkbox">
   </span>
-  <span class="k-inputGroup__item k-inputGroup__item--tag">
+  <span class="s-inputGroup__item s-inputGroup__item--tag">
     <span>tags can be used with inputs inside them too</span>
   </span>
 </label>
@@ -276,6 +276,6 @@ The tag modifiers to the inputGroup item.
 
 ### Advanced notes:
 
-k-inputGroup also handles edgecases such as maintaining consistent left/right padding with bigger font size. It pulls sizing from `$k-spacing`.
+s-inputGroup also handles edgecases such as maintaining consistent left/right padding with bigger font size. It pulls sizing from `$s-spacing`.
 
-While one could configure k-inputGroup flex direction to be a column, this is not something that kelp supports out of the box since it is a rare use case.
+While one could configure s-inputGroup flex direction to be a column, this is not something that solar supports out of the box since it is a rare use case.

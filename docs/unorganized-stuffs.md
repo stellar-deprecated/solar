@@ -1,8 +1,8 @@
 
 ## Designed with the assumptions
 - Developer might not have access to html code (unable to add/remove classes)
-- Developer either familiar with kelp or has time to learn about kelp (not for hackathons)
-- Bandwidth is somewhat cheap (it's fine to have kelp styles mirror lib for styling with classes)
+- Developer either familiar with solar or has time to learn about solar (not for hackathons)
+- Bandwidth is somewhat cheap (it's fine to have solar styles mirror lib for styling with classes)
 - CSS class namespace is a scarce commodity (careful naming of classes)
 
 ## Design decisions and rationale
@@ -26,10 +26,10 @@ Cons:
 
 
 ## lost grid
-Kelp also uses lost, a postcss grid system.
+Solar also uses lost, a postcss grid system.
 
 
 ### sass function based objects over class based objects
 
 ## Design decisions yet to be made
-- How to define widgets on the `kelp` level
+- How to define widgets on the `solar` level

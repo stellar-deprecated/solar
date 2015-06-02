@@ -1,5 +1,5 @@
-@mixin k-webApp {
-  @include K-flex-col;
+@mixin s-webApp {
+  @include S-flex-col;
 
   position: fixed;
   top: 0;
@@ -7,34 +7,34 @@
   bottom: 0;
   left: 0;
 }
-@mixin k-webApp--scrollable {
+@mixin s-webApp--scrollable {
   overflow-y: scroll;
 }
 
-@mixin k-webApp-bar {
-  @include K-flexItem-none;
-  @include K-flex-row;
+@mixin s-webApp-bar {
+  @include S-flexItem-none;
+  @include S-flex-row;
 }
 
-@mixin k-webApp-content {
-  @include K-flexItem-auto;
+@mixin s-webApp-content {
+  @include S-flexItem-auto;
 
   height: 0;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
-@mixin k-webApp__fill {
-  @include K-flexItem-auto;
+@mixin s-webApp__fill {
+  @include S-flexItem-auto;
 }
 
 // tab bar
-@mixin k-webApp-tabBar {
-  @include K-flex-row;
+@mixin s-webApp-tabBar {
+  @include S-flex-row;
   list-style-type: none;
 
   li {
-    @include K-flexItem-auto;
+    @include S-flexItem-auto;
     display: inline-block;
     text-align: center;
   }
