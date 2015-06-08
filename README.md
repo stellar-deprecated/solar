@@ -1,13 +1,13 @@
 # Solar css framework
 
-Solar is a front-end css framework developed specifically for cross organizational modularity.
+Solar is a front-end css framework. It is developed for anybody to use with the [Interstellar Module System](https://github.com/stellar/interstellar/). It is also to be used by Stellar.org's web properties. 
 
 ## Design philosophies/goals
 The `solar` css framework is:
 - **Mobile first**: concepts designed with a mobile first philosophy
-- **Unopinionated**: the core is unopinionated in design so developers don't need to
-- **Themable**: enabling others to easily theme the look and feel
-- **Cross organizational**: helps code (like widgets and modules) be shared across multiple organizations
+- **Unopinionated**: the core is unopinionated in design 
+- **Themable**: enabling anybody to theme the look and feel
+- **Modular**: enables styles to be shared across multiple web applications, websites, teams or organizations
 
 ## Getting started
 To see an example of solar in use, see the new client.
