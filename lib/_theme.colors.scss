@@ -1,13 +1,5 @@
-$solar-colors: (
-  primary: lime, // placeholder
-  secondary: #777777,
-
-  // ui elements
-  ui-dark: #444,
-  ui-light: #ccc,
-);
-
 // These s-colors are temporary until we have a proper color system defined
+// Do not use any of these in new code
 $s-color-A: gray;
 $s-color-B: black;
 $s-color-C: lightcyan;
@@ -18,16 +10,17 @@ $s-color-G: #EEE;
 
 $s-color-primary: $s-color-A; // a bright brand color
 $s-color-secondary: $s-color-B; // secondary/highlight color
+
+$s-color-success: #383;
+$s-color-alert: #d12;
+$s-color-warning: #ff9;
+
+// UI colors
 $s-color-neutralDark: $s-color-E; // a dark "neutral" color like a dark gray
 $s-color-neutralLight: $s-color-G; // a light "neutral" color like a dark gray
 $s-color-shadow: #aaa; // color for shadows
 $s-color-button-text: $s-color-G;
 
-
-// Feature: add support for tint and shade (mix)
-@function solar-color($color-name) {
-  @return map-get($solar-colors, $color-name);
-}
 
 @function whiten($color, $percent){
   @return mix(white, $color, $percent);
