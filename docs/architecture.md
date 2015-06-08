@@ -69,4 +69,4 @@ In order, this is what happens:
 ```
 
 ## Current gulp support
-`gulp-solar` currently exists to build these two files. It currently does not do much and does not have to ability to flatten the scss files into one file nor does it compile the css-bundle. Still, the plugin can makes it much easier to build the solar bundles.
+[`gulp-solar`](https://github.com/stellar/gulp-solar) currently exists to build these two files. It is currently still a work in progress and does not have to ability to flatten the scss files into one file nor does it compile the css-bundle. Still, the plugin can makes it much easier to build the solar bundles.
