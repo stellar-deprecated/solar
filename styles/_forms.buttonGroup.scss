@@ -11,8 +11,8 @@
   border-radius: 0;
 }
 .s-buttonGroup .s-button:first-child {
-  border-radius: $s-details-borderRadiusSmall 0 0 $s-details-borderRadiusSmall;
+  border-radius: $s-var-radius 0 0 $s-var-radius;
 }
 .s-buttonGroup .s-button:last-child {
-  border-radius: 0 $s-details-borderRadiusSmall $s-details-borderRadiusSmall 0;
+  border-radius: 0 $s-var-radius $s-var-radius 0;
 }

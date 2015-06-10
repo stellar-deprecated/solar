@@ -40,7 +40,7 @@ $s-spacing-widgetPadding: 0.66666em;
 // remember about them
 
 // border radius for small elements
-$s-details-borderRadiusSmall: 3px;
+$s-var-radius: 3px;
 
 // border radius for large elements
 $s-details-borderRadiusLarge: 6px;

@@ -36,14 +36,14 @@
 // border radius is a part of the core solar so that widget developers will
 // remember to use the correct radius for special cases such as multi-line inputGroups
 .s-inputGroup__item {
-  border-radius: $s-details-borderRadiusSmall;
+  border-radius: $s-var-radius;
 }
 // TODO: figure out how to do this
 // .s-inputGroup__item:first-child {
-//   border-top-left-radius: $s-details-borderRadiusSmall;
-//   border-bottom-left-radius: $s-details-borderRadiusSmall;
+//   border-top-left-radius: $s-var-radius;
+//   border-bottom-left-radius: $s-var-radius;
 // }
 // .s-inputGroup__item:last-child {
-//   border-top-right-radius: $s-details-borderRadiusSmall;
-//   border-bottom-right-radius: $s-details-borderRadiusSmall;
+//   border-top-right-radius: $s-var-radius;
+//   border-bottom-right-radius: $s-var-radius;
 // }
