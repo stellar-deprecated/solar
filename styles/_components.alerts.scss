@@ -1,0 +1,23 @@
+.s-alert {
+  display: block;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  // border-radius:
+}
+
+.s-alert--warning {
+  border: 1px solid $s-color-warning;
+  background: whiten($s-color-warning, 80%);
+}
+.s-alert--info {
+  border: 1px solid $s-color-info;
+  background: whiten($s-color-info, 80%);
+}
+.s-alert--alert {
+  border: 1px solid $s-color-alert;
+  background: whiten($s-color-alert, 80%);
+}
+.s-alert--success {
+  border: 1px solid $s-color-success;
+  background: whiten($s-color-success, 80%);
+}

@@ -11,9 +11,11 @@ $s-color-G: #EEE;
 $s-color-primary: $s-color-A; // a bright brand color
 $s-color-secondary: $s-color-B; // secondary/highlight color
 
+// These are saturated colors that can stand alone on a white (#fff) background
 $s-color-success: #383;
+$s-color-info: #69f;
+$s-color-warning: #ee8;
 $s-color-alert: #d12;
-$s-color-warning: #ff9;
 
 // UI colors
 $s-color-neutralDark: $s-color-E; // a dark "neutral" color like a dark gray
