@@ -1,4 +1,8 @@
-# Core variables
+---
+id: variables
+title: Core variables
+category: Documents
+---
 
 These are the real variables that will stay
 ```css

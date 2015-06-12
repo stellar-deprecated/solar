@@ -1,4 +1,8 @@
-# Solar architecture
+---
+id: architecture
+title: Architecture
+category: Documents
+---
 
 The solar css framework is a modular framework allowing (developer) consumers to use modules that build upon and extend the core solar functionality.
 

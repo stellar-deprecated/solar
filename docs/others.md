@@ -1,4 +1,8 @@
-# Misc solar things
+---
+id: others
+title: Misc solar things
+category: Documents
+---
 
 ## Responsiveness
 ### Breakpoints

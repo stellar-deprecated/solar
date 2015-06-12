@@ -1,3 +1,8 @@
+---
+id: unorganized-stuffs
+title: Miscellaneous
+category: Documents
+---
 
 ## Designed with the assumptions
 - Developer might not have access to html code (unable to add/remove classes)
