@@ -1,4 +1,8 @@
-# Solar components (themable)
+---
+id: components
+title: Solar Components (themeable)
+category: Guides
+---
 
 ## Button `.s-button`
 There are three types of buttons: light, medium (default; no modifier), and heavy. The differences in visual strengths are used to vary the emphasis of buttons.

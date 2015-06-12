@@ -1,4 +1,8 @@
-#Solar css guide
+---
+id: css-guide
+title: Solar css guide
+category: Guides
+---
 
 ## Style guide
 ### CSS Selectors
