@@ -2,9 +2,8 @@
   display: block;
   padding: 0.5em 1em;
   margin-bottom: 1em;
-  // border-radius:
+  border-radius: $s-var-radius;
 }
-
 .s-alert--warning {
   border: 1px solid $s-color-warning;
   background: whiten($s-color-warning, 80%);
@@ -20,4 +19,11 @@
 .s-alert--success {
   border: 1px solid $s-color-success;
   background: whiten($s-color-success, 80%);
+}
+.s-alert__close {
+  float: right;
+  border: 1px solid #333; // TODO: color
+  line-height: 1;
+  border-radius: 50%;
+  background: none;
 }
