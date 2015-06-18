@@ -5,8 +5,9 @@ category: Guides
 ---
 
 ## Button `.s-button`
-There are three types of buttons: light, medium (default; no modifier), and heavy. The differences in visual strengths are used to vary the emphasis of buttons.
+There are four types of buttons: disabled, light, medium (default; no modifier), and heavy. The differences in visual strengths are used to vary the emphasis of buttons.
 
+- disabled: should only be used when button is actually disabled
 - light: less important buttons
 - medium: default should be used in most places
 - heavy: emphasis for important actions such as form submission
