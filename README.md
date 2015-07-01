@@ -1,11 +1,11 @@
 # Solar css framework
 
-Solar is a front-end css framework. It is developed for anybody to use with the [Interstellar Module System](https://github.com/stellar/interstellar/). It is also to be used by Stellar.org's web properties. 
+Solar is a front-end css framework. It is developed for anybody to use with the [Interstellar Module System](https://github.com/stellar/interstellar/). It is also to be used by Stellar.org's web properties.
 
 ## Design philosophies/goals
 The `solar` css framework is:
 - **Mobile first**: concepts designed with a mobile first philosophy
-- **Unopinionated**: the core is unopinionated in design 
+- **Unopinionated**: the core is unopinionated in design
 - **Themable**: enabling anybody to theme the look and feel
 - **Modular**: enables styles to be shared across multiple web applications, websites, teams or organizations
 
@@ -16,6 +16,18 @@ To learn about the different parts of the solar ecosystem and how extensions and
 
 To learn about how to write css consistent with the design laid out in solar, read the [solar css guide](https://github.com/stellar/solar/blob/master/docs/css-guide.md).
 
+## Simple usage
+At the top of your css file, import the necessary files in the right order. For example:
+```
+@import '../../node_modules/solar-css/lib/index';
+@import '../../node_modules/solar-stellarorg/lib/index';
+
+@import '../../node_modules/solar-css/styles/index';
+@import '../../node_modules/solar-stellarorg/styles/index';
+@import '../../node_modules/solar-stellarorg-pages/styles/index';
+```
+
+This allows for useful error/warning messages from sass since the direct files are being imported and not just bundled. The downside is that the developer will have to manage this. However, if the developer already understands how Solar works, then it should be easy.
 
 ## Conventions
 Solar is more than just a set of sass/js files. It is also set of conventions. Solar extensions and consumers should follow the solar conventions. These conventions are designed to enable developers to write css in a unified, clean, and modular way.
