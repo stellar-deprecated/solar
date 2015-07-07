@@ -1,0 +1,20 @@
+$r-breakpoint-xs: 360px;
+$r-breakpoint-s: 480px;
+$r-breakpoint-m: 640px;
+$r-breakpoint-l: 840px;
+$r-breakpoint-xl: 1080px;
+
+@mixin r-media($size) {
+  $targetBreakpoint: 0;
+
+       @if $size == xs { $targetBreakpoint: $r-breakpoint-xs; }
+   @else if $size == s { $targetBreakpoint: $r-breakpoint-s; }
+   @else if $size == m { $targetBreakpoint: $r-breakpoint-m; }
+   @else if $size == l { $targetBreakpoint: $r-breakpoint-l; }
+  @else if $size == xl { $targetBreakpoint: $r-breakpoint-xl; }
+  @else { @error 'Invalid breakpoint name'; }
+
+  @media (min-width: $targetBreakpoint) {
+    @content;
+  }
+}
