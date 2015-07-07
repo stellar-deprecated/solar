@@ -8,8 +8,50 @@ $s-color-E: #555;
 $s-color-F: #AAA;
 $s-color-G: #EEE;
 
-$s-color-primary: $s-color-A; // a bright brand color
-$s-color-secondary: $s-color-B; // secondary/highlight color
+
+// important functions for deriving colors
+@function whiten($color, $percent){
+  @return mix(white, $color, $percent);
+}
+@function blacken($color, $percent){
+  @return mix(black, $color, $percent);
+}
+
+// These should only be used to derive main colors
+$s-color-primaryRoot: #08b5e5; // a bright brand color
+$s-color-neutralRoot: #222;
+
+// Themes that override root colors will need to regenerate these
+$s-color-neutral1: $s-color-neutralRoot;
+$s-color-neutral2: whiten($s-color-neutralRoot, 20%);
+$s-color-neutral3: whiten($s-color-neutralRoot, 40%);
+$s-color-neutral4: whiten($s-color-neutralRoot, 60%);
+$s-color-neutral5: whiten($s-color-neutralRoot, 80%);
+$s-color-neutral6: whiten($s-color-neutralRoot, 100%);
+
+$s-color-primary1: blacken($s-color-primaryRoot, 40%);
+$s-color-primary2: blacken($s-color-primaryRoot, 20%);
+$s-color-primary3: $s-color-primaryRoot;
+$s-color-primary4: whiten($s-color-primaryRoot, 25%);
+$s-color-primary5: whiten($s-color-primaryRoot, 50%);
+
+// Lists of all the colors
+$s-color-neutralList:
+  neutral1 $s-color-neutral1,
+  neutral2 $s-color-neutral2,
+  neutral3 $s-color-neutral3,
+  neutral4 $s-color-neutral4,
+  neutral5 $s-color-neutral5,
+  neutral6 $s-color-neutral6;
+
+$s-color-primaryList:
+  primary1 $s-color-primary1,
+  primary2 $s-color-primary2,
+  primary3 $s-color-primary3,
+  primary4 $s-color-primary4,
+  primary5 $s-color-primary5;
+
+$s-color-listList: $s-color-neutralList $s-color-primaryList;
 
 // These are saturated colors that can stand alone on a white (#fff) background
 $s-color-success: #383;
@@ -22,11 +64,3 @@ $s-color-neutralDark: $s-color-E; // a dark "neutral" color like a dark gray
 $s-color-neutralLight: $s-color-G; // a light "neutral" color like a dark gray
 $s-color-shadow: #aaa; // color for shadows
 $s-color-button-text: $s-color-G;
-
-
-@function whiten($color, $percent){
-  @return mix(white, $color, $percent);
-}
-@function blacken($color, $percent){
-  @return mix(black, $color, $percent);
-}
