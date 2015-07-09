@@ -24,7 +24,7 @@ Media queries respond to the screen width. Usage:
 .widget-demo__child {
   // Styles here will show up regardless of screen width
   background: pink;
-  @include r-media(medium) {
+  @include r-media(m) {
     // These styles will show up when widget demo's width is 540px or greater
     border: 2px solid black;
   }
@@ -47,7 +47,7 @@ Warning: Only use element queries on elements that won't change in size due to t
 .widget-demo__child {
   // Styles here will show up regardless of element query width
   background: pink;
-  @include r-element(medium) {
+  @include r-element(m) {
     // These styles will show up when widget demo parent elementQuery width is 540px or greater
     border: 2px solid black;
   }
