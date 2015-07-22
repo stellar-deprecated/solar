@@ -1,6 +1,6 @@
 {
   "name": "solar-css",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A front-end framework for modular web apps",
   "main": "index.json",
   "scripts": {
