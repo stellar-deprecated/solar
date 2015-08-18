@@ -23,11 +23,12 @@ $s-color-neutralRoot: #222;
 
 // Themes that override root colors will need to regenerate these
 $s-color-neutral1: $s-color-neutralRoot;
-$s-color-neutral2: whiten($s-color-neutralRoot, 20%);
-$s-color-neutral3: whiten($s-color-neutralRoot, 40%);
-$s-color-neutral4: whiten($s-color-neutralRoot, 60%);
-$s-color-neutral5: whiten($s-color-neutralRoot, 80%);
-$s-color-neutral6: whiten($s-color-neutralRoot, 100%);
+$s-color-neutral2: whiten($s-color-neutralRoot, 15%);
+$s-color-neutral3: whiten($s-color-neutralRoot, 35%);
+$s-color-neutral4: whiten($s-color-neutralRoot, 55%);
+$s-color-neutral5: whiten($s-color-neutralRoot, 75%);
+$s-color-neutral6: whiten($s-color-neutralRoot, 95%);
+$s-color-neutral7: whiten($s-color-neutralRoot, 100%);
 
 $s-color-primary1: blacken($s-color-primaryRoot, 40%);
 $s-color-primary2: blacken($s-color-primaryRoot, 20%);
@@ -42,7 +43,8 @@ $s-color-neutralList:
   neutral3 $s-color-neutral3,
   neutral4 $s-color-neutral4,
   neutral5 $s-color-neutral5,
-  neutral6 $s-color-neutral6;
+  neutral6 $s-color-neutral6,
+  neutral7 $s-color-neutral7;
 
 $s-color-primaryList:
   primary1 $s-color-primary1,
