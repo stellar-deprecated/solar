@@ -18,7 +18,8 @@
 
 
 // no flexing
-@mixin S-flexItem-none { flex: 0 0 auto; }
+/* Do not use S-flexItem-none. It is here for legacy purposes */ @mixin S-flexItem-none { flex: 0 0 auto; }
+@mixin S-flexItem-noFlex { flex: 0 0 auto; }
 
 // full row
 @mixin S-flexItem-full { flex: 12 0 100%; }

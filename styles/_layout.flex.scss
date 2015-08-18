@@ -6,7 +6,7 @@
 
 
 // no flexing
-.S-flexItem-none { @include S-flexItem-none; } // flex: 0 0 auto;
+.S-flexItem-noFlex { @include S-flexItem-noFlex; } // flex: 0 0 auto;
 
 // full row
 .S-flexItem-full { @include S-flexItem-full; }   // flex: 12 0 100%;
