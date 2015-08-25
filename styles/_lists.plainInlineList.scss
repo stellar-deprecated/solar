@@ -1,0 +1,10 @@
+.s-plainInlineList {
+  list-style: none;
+}
+.s-plainInlineList__item {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+.s-plainInlineList__item:last-child {
+  margin-right: 0;
+}
