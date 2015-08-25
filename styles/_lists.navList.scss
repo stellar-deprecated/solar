@@ -1,0 +1,23 @@
+.s-navList {
+  @include S-flex-row();
+  list-style: none;
+}
+  .s-navList__item {
+    margin-right: 0.25em;
+  }
+  .s-navList__item:hover {
+  }
+  .s-navList__item:last-child {
+    margin-right: 0;
+  }
+
+    .s-navList__item__action {
+      display: block;
+      padding: 0.25em 1em;
+      // transparent border so that hover states don't cause a jitter
+      border: 1px solid transparent;
+      border-radius: $s-var-radius;
+    }
+    .s-navList__item__action:hover {
+      border: 1px solid red;
+    }
