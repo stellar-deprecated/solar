@@ -1,23 +1,26 @@
+// .s-navList is designed to NOT use a <ul><li> list. Instead, anchor links
+// are direct descendents of the parent s-navList
+
 .s-navList {
   @include S-flex-row();
   list-style: none;
 }
   .s-navList__item {
+    display: block;
+
+    padding: 0.25em 1em;
     margin-right: 0.25em;
+    // transparent border so that hover states don't cause a jitter
+    border: 1px solid transparent;
+
+    border-radius: $s-var-radius;
+    background: transparent;
+  }
+  .s-navList__item.is-active {
+    border-color: currentColor;
   }
   .s-navList__item:hover {
   }
   .s-navList__item:last-child {
     margin-right: 0;
   }
-
-    .s-navList__item__action {
-      display: block;
-      padding: 0.25em 1em;
-      // transparent border so that hover states don't cause a jitter
-      border: 1px solid transparent;
-      border-radius: $s-var-radius;
-    }
-    .s-navList__item__action:hover {
-      border: 1px solid red;
-    }
