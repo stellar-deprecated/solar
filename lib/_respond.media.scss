@@ -4,6 +4,10 @@ $r-breakpoint-m: 640px;
 $r-breakpoint-l: 840px;
 $r-breakpoint-xl: 1080px;
 
+// Usage example: @include r-media(xl) { .thing { background: pink; } }
+
+// This is made available through a mixin and not just a breakpoint name since
+// it keeps the constraint that breakpoints be min-width
 @mixin r-media($size) {
   $targetBreakpoint: 0;
 
