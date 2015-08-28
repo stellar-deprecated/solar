@@ -12,7 +12,7 @@
 }
 
 @mixin s-webApp-bar {
-  @include S-flexItem-none;
+  @include S-flexItem-noFlex;
   @include S-flex-row;
 }
 
