@@ -25,9 +25,10 @@ $s-color-light4: whiten($s-color-neutralRoot, 100%);
 $s-color-primary1: blacken($s-color-primaryRoot, 40%);
 $s-color-primary2: blacken($s-color-primaryRoot, 20%);
 $s-color-primary3: $s-color-primaryRoot;
-$s-color-primary4: whiten($s-color-primaryRoot, 25%);
+$s-color-primary4: whiten($s-color-primaryRoot, 30%);
 $s-color-primary5: whiten($s-color-primaryRoot, 50%);
-$s-color-primary6: whiten($s-color-primaryRoot, 75%);
+$s-color-primary6: whiten($s-color-primaryRoot, 70%);
+$s-color-primary7: whiten($s-color-primaryRoot, 90%);
 
 // Lists of all the colors
 $s-color-neutralList:
@@ -46,7 +47,8 @@ $s-color-primaryList:
   primary3 $s-color-primary3,
   primary4 $s-color-primary4,
   primary5 $s-color-primary5,
-  primary6 $s-color-primary6;
+  primary6 $s-color-primary6,
+  primary7 $s-color-primary7;
 
 $s-color-listList: $s-color-neutralList $s-color-primaryList;
 
