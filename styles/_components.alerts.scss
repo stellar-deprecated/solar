@@ -27,3 +27,17 @@
   border-radius: 50%;
   background: none;
 }
+
+
+.s-inputAlert--warning {
+  border: 1px solid $s-color-warning;
+}
+.s-inputAlert--info {
+  border: 1px solid $s-color-info;
+}
+.s-inputAlert--alert {
+  border: 1px solid $s-color-alert;
+}
+.s-inputAlert--success {
+  border: 1px solid $s-color-success;
+}
