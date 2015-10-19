@@ -1,11 +1,11 @@
-// .s-navList is designed to NOT use a <ul><li> list. Instead, anchor links
-// are direct descendents of the parent s-navList
+// .s-buttonList is designed to NOT use a <ul><li> list. Instead, anchor links
+// are direct descendents of the parent s-buttonList
 
-.s-navList {
+.s-buttonList {
   @include S-flex-row();
   list-style: none;
 }
-  .s-navList__item {
+  .s-buttonList__item {
     display: block;
 
     padding: 0.25em 1em;
@@ -16,11 +16,11 @@
     border-radius: $s-var-radius;
     background: transparent;
   }
-  .s-navList__item.is-active {
+  .s-buttonList__item.is-active {
     border-color: currentColor;
   }
-  .s-navList__item:hover {
+  .s-buttonList__item:hover {
   }
-  .s-navList__item:last-child {
+  .s-buttonList__item:last-child {
     margin-right: 0;
   }
