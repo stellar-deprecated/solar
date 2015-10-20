@@ -39,32 +39,32 @@
 // Usage #1: input nested inside label
 // This approach is simpler and does not require management of the "id" and the
 // "for" attribute
-// <div class="s-buttonGroup">
+// <form class="s-buttonGroup">
 //   <label class="s-buttonGroup__wrapper">
-//     <input type="radio" class="s-buttonGroup__radio" name="network" value="A" checked>
+//     <input type="radio" class="s-buttonGroup__radio" name="favorite-letter" value="A" checked>
 //     <span class="s-button">A</span>
 //   </label>
 //   <label class="s-buttonGroup__wrapper">
-//     <input type="radio" class="s-buttonGroup__radio" name="network" value="B" checked>
+//     <input type="radio" class="s-buttonGroup__radio" name="favorite-letter" value="B">
 //     <span class="s-button">B</span>
 //   </label>
 //   <label class="s-buttonGroup__wrapper">
-//     <input type="radio" class="s-buttonGroup__radio" name="network" value="C" checked>
+//     <input type="radio" class="s-buttonGroup__radio" name="favorite-letter" value="C">
 //     <span class="s-button">C</span>
 //   </label>
-// </div>
+// </form>
 
 // Usage #2: input adjacent to label
 // This approach does not nest the input meaning that one must make sure the
 // "id" and "for" attribute match. Some say it is better to do it this way due
 // to accessibility concerns
-// <div class="s-buttonGroup">
-//   <input type="radio" class="s-buttonGroup__radio" id="radio_a" name="network" value="A">
+// <form class="s-buttonGroup">
+//   <input type="radio" class="s-buttonGroup__radio" id="radio_a" name="favorite-letter" value="A" checked>
 //   <label class="s-button" for="radio_a">A</label>
 //
-//   <input type="radio" class="s-buttonGroup__radio" id="radio_b" name="network" value="B">
+//   <input type="radio" class="s-buttonGroup__radio" id="radio_b" name="favorite-letter" value="B">
 //   <label class="s-button" for="radio_b">B</label>
 //
-//   <input type="radio" class="s-buttonGroup__radio" id="radio_c" name="network" value="C">
+//   <input type="radio" class="s-buttonGroup__radio" id="radio_c" name="favorite-letter" value="C">
 //   <label class="s-button" for="radio_c">C</label>
-// </div>
+// </form>
