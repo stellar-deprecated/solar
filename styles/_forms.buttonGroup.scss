@@ -9,10 +9,20 @@
   @include S-flex-row;
 }
 
+.s-buttonGroup--vertical {
+  flex-direction: column;
+}
+
 // make sure spacing is correct
 .s-buttonGroup > .s-button:not(:last-child),
 .s-buttonGroup__wrapper:not(:last-child) {
   margin-right: -1px;
+}
+
+.s-buttonGroup--vertical > .s-button:not(:last-child),
+.s-buttonGroup--vertical > .s-buttonGroup__wrapper:not(:last-child) {
+  margin-right: 0;
+  margin-bottom: -1px;
 }
 
 .s-buttonGroup .s-button,
@@ -26,6 +36,15 @@
 .s-buttonGroup > .s-button:last-of-type,
 .s-buttonGroup__wrapper:last-of-type .s-button {
   border-radius: 0 $s-var-radius $s-var-radius 0;
+}
+
+.s-buttonGroup--vertical .s-button:first-of-type,
+.s-buttonGroup--vertical > .s-buttonGroup__wrapper:first-of-type .s-button {
+  border-radius: $s-var-radius $s-var-radius 0 0;
+}
+.s-buttonGroup--vertical > .s-button:last-of-type,
+.s-buttonGroup--vertical > .s-buttonGroup__wrapper:last-of-type .s-button {
+  border-radius: 0 0 $s-var-radius $s-var-radius;
 }
 
 .s-buttonGroup__radio {
