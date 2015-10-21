@@ -12,6 +12,13 @@ p {
   cursor: pointer;
 }
 
-.s-button.is-disabled {
+.s-button.is-disabled,
+.s-button:disabled {
   cursor: not-allowed;
+}
+
+
+.s-button__min {
+}
+.s-button__light {
 }

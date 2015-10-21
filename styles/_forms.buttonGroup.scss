@@ -68,3 +68,13 @@
 //   <input type="radio" class="s-buttonGroup__radio" id="radio_c" name="favorite-letter" value="C">
 //   <label class="s-button" for="radio_c">C</label>
 // </form>
+
+// TO disable a radio element, you have to disable both the input and the label like so:
+//   <label class="s-buttonGroup__wrapper">
+//     <input type="radio" class="s-buttonGroup__radio" name="favorite-letter" value="B" disabled="disabled">
+//     <span class="s-button is-disabled">B</span>
+//   </label>
+//
+//   <input type="radio" class="s-buttonGroup__radio" id="radio_b" name="favorite-letter" value="B" disabled="disabled">
+//   <label class="s-button is-disabled" for="radio_b">B</label>
+//
