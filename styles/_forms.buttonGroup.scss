@@ -48,7 +48,9 @@
 }
 
 .s-buttonGroup__radio {
-  display: none;
+  position: absolute !important;
+  clip: rect(0px, 0px, 0px, 0px);
+  clip-path: inset(0px, 0px, 0px, 0px);
 }
 
 
