@@ -1,5 +1,6 @@
-// .s-buttonList is designed to NOT use a <ul><li> list. Instead, anchor links
-// are direct descendents of the parent s-buttonList
+// .s-buttonList is designed to NOT use a <ul><li> list. Instead, use any element
+// with .s-button as a direct child of .s-buttonList. The <button> element is
+// preferred since it semantically indicates it is a button.
 
 .s-buttonList {
   @include S-flex-row();
