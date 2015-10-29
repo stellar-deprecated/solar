@@ -42,13 +42,16 @@
 
 .s-buttonGroup--vertical .s-button:first-of-type,
 .s-buttonGroup--vertical > .s-buttonGroup__wrapper:first-of-type .s-button {
-  border-top-left-radius: $s-var-radius;
-  border-top-right-radius: $s-var-radius;
+  border-radius: $s-var-radius $s-var-radius 0 0;
 }
 .s-buttonGroup--vertical > .s-button:last-of-type,
 .s-buttonGroup--vertical > .s-buttonGroup__wrapper:last-of-type .s-button {
-  border-bottom-left-radius: $s-var-radius;
-  border-bottom-right-radius: $s-var-radius;
+  border-radius: 0 0 $s-var-radius $s-var-radius;
+}
+.s-buttonGroup--vertical > .s-button:first-of-type:last-of-type,
+.s-buttonGroup--vertical > .s-buttonGroup__wrapper:first-of-type:last-of-type .s-button {
+  // Only element
+  border-radius: $s-var-radius;
 }
 
 .s-buttonGroup__radio {
