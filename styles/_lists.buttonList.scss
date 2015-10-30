@@ -3,7 +3,7 @@
 // preferred since it semantically indicates it is a button.
 
 .s-buttonList {
-  @include S-flex-row();
+  @include S-flex-rowWrap();
   list-style: none;
 }
   // .s-buttonList__item {
