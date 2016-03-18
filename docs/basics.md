@@ -4,6 +4,8 @@ title: Solar Basics (non themeable)
 category: Guides
 ---
 
+**Note: This guide is outdated and was intended to be viewed in a tool that was never finished.**
+
 ## S-flex (S-flexItem)[layout]
 [Flexbox](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes) is a new powerful layout mode. S-flex is a set of predefined common flex use cases. It assumes the developer using it has at least a basic understand of the flexbox model.
 

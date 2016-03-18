@@ -24,10 +24,10 @@ This does not replace the use of itemName. If you use a modifier, you must also 
 #### itemName.is-stateOfComponent
 States should not be written as modifier names. Also, states should never be independently styled. This is a case where it's good to have specificity `0,2,0`.
 
-### Don't use ID's
+### Don't use IDs
 Nope. (except for hash anchor points or css `:target`).
 
-### Don't nest selectors
+### Don't use the SASS selector nesting feature
 Media queries and pseudoelements excepted.
 
 ### Solar Namespaces
@@ -45,6 +45,11 @@ Solar framework namespaces:
 User defined namespace:
 - **`u-`**: User defined utilities
 - **`r-`**: Responsive utilities
+
+## Verbosity
+Solar aims to keep names understandable for people who are new to using solar or are not familiar with many English abbreviations. Spell out words instead of using acronyms so that the full meaning can be easily understood.
+
+For example, use `background` instead of `bg`.
 
 ## Format
 * Use one discrete selector per line in multi-selector rulesets.
@@ -113,7 +118,7 @@ When declaring properties, do so in this order:
   border: 10px solid #333;
   margin: 10px;
 
-  // Other
+  // Everything else
   background: #000;
   color: #fff;
   font-family: sans-serif;
@@ -121,7 +126,8 @@ When declaring properties, do so in this order:
   text-align: right;
 }
 ```
-Do not include the comments. Newlines are necessary when there are 5 or more items; optional if less than 5.
+The comments in this example above are for demonstration purposes and are actually not necessary.
+Newlines are necessary when there are 5 or more items; optional if less than 5.
 
 ### Exceptions and slight deviations
 
@@ -165,25 +171,11 @@ Do not use block comments (`/* */`). Instead, use the double slash to write comm
 ### Specificity
 The css selector syntax is designed to keep css specificity low (0,1,0). Use as few selectors as by adding classes to things when necessary.
 
-### Embedding colors inside svg inline images
-SVG images sometimes use as inline background values. You can use the sass variable interpolation to put a variable inside a svg fill. When doing so, package them into reusable units:
-```css
-@function kInlineImage-caret($fillColor) {
-  @return url('data:image/svg+xml;utf8,<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><path d="M0 0l7 8 7-8h-14z" sketch:type="MSShapeGroup" fill="#{$fillColor}"/></svg>');
-}
-```
-<!-- '}
-```
- wah my syntax highlighter is messed up
--->
-
 ### Sass variables and functions
 The syntax for naming solar core variables are similar to that of basics and components. First, it starts out with a prefix: `s` for themable and `S` for non-themable. Then, the category, and then subcategories or name of the variable.
 ```
 Syntax: (s|S)-category[-subCategory|-name]
 ```
-
-It is prefixed in such a unique way because.
 
 Solar already has a definition for a few types of variables/functions in sass:
 - s-color
@@ -192,7 +184,6 @@ Solar does not use sass maps because it wants to stay as simple as possible so t
 
 ### Readability/clarity/usefulness over perfection
 It is important to follow this styleguide as much as possible. Exceptions can and will occur though, and in those cases, use your best judgement and lean towards the side of making things easy for others to understand.
-
 
 ## em vs px vs rem
 Whether to use em, px, or rem is a topic that there is no global consensus. px offers simplicity; em offers inheritance; and rem is good for zoom
@@ -234,7 +225,7 @@ Take a look at the scale docs.
 line height should be expressed as unitless numbers
 
 ## Credits & attribution
-Shoutouts to a lot of the people who have written and taught about the practices that solar uses. Specifically but not limited to: @necolas, @mdo, @fat.
+Shoutouts to a lot of the people who have written and taught about the practices that solar builds upon. Specifically but not limited to: @necolas, @mdo, @fat.
 
 - Style guide > CSS selector syntax: @necolas (suit), Yandex (BEM)
 - Style guide > format (modified) (CC BY 3.0): @necolas (https://github.com/necolas/idiomatic-css)

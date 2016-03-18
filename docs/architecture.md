@@ -28,11 +28,9 @@ Each module should contain an `_index.scss` file as its entry point in each of i
 Each module may have a combination of any of the following:
 - **library**: a set of sass files that creates sass functions/mixins/variables without generating output css code
 - **styles**: a set of sass files that consumes sass functions/mixins/variables and generates output css code
-- **js**: javascript files to be included in the browser
 
 ### Entry point
 - Each library should contain an `_index.scss` file as its entry point.
-- package.json will point to a node module in the root of the folder specifying what feature types they provide.
 
 ## Build process overview
 The solar framework build process produces two important files:
@@ -71,6 +69,3 @@ In order, this is what happens:
   c. add `solar-utilities/styles/_index.scss`
   d. sass compilation into one file
 ```
-
-## Current gulp support
-[`gulp-solar`](https://github.com/stellar/gulp-solar) currently exists to build these two files. It is currently still a work in progress and does not have to ability to flatten the scss files into one file nor does it compile the css-bundle. Still, the plugin can makes it much easier to build the solar bundles.

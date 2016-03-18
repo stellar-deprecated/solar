@@ -1,6 +1,8 @@
 # Solar css framework
 
-Solar is a front-end css framework. It is developed for anybody to use with the [Interstellar Module System](https://github.com/stellar/interstellar/). It is also to be used by Stellar.org's web properties.
+Solar is a front-end css framework. It was originally developed for use with the [Stellar Interstellar Module System](https://github.com/stellar/interstellar/). It is currently mainly used on front-end projects by Stellar.org.
+
+This framework was designed to work in layers so that specific layers of the solar framework could be replaced with ease.
 
 ## Design philosophies/goals
 The `solar` css framework is:

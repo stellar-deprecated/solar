@@ -4,6 +4,8 @@ title: Solar Components (themeable)
 category: Guides
 ---
 
+**Note: This guide is outdated and was intended to be viewed in a tool that was never finished.**
+
 ## Button `.s-button`
 There are four types of buttons: disabled, light, medium (default; no modifier), and heavy. The differences in visual strengths are used to vary the emphasis of buttons.
 
