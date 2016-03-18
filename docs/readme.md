@@ -51,8 +51,3 @@ Don't use these features:
 - @extend
 - nesting
 
-### Solar library bundle
-To use solar component mixins, a root scss file (not starting with an underscore) must import the solar library bundle which includes all of this functionality:
-```
-@import 'solar-library-bundle';
-```
